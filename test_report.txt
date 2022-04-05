@@ -3,7 +3,7 @@
 > react-scripts test "--coverage"
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (35 ms)
+  ✕ renders the course name somewhere (48 ms)
 
   ● renders the course name somewhere
 
@@ -18,7 +18,7 @@ FAIL src/App.test.tsx
           [36m<header[39m
             [33mclass[39m=[32m"App-header"[39m
           [36m>[39m
-            [0mNames of Group 13: Clay Wilfong Mathias Heider Brandon Grier[0m
+            [0mNames of Group 13: Clay Wilfong, Mathias Heider, and Brandon Grier[0m
           [36m</header>[39m
           [36m<p>[39m
             [0mEdit [0m
@@ -58,5 +58,5 @@ All files |     100 |      100 |     100 |     100 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        1.471 s
+Time:        2.028 s
 Ran all test suites.
