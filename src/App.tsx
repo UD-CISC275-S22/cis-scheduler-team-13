@@ -6,7 +6,8 @@ function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
-                Names of Group 13: Clay Wilfong Mathias Heider Brandon Grier
+                Names of Group 13: Clay Wilfong, Mathias Heider, and Brandon
+                Grier
             </header>
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
