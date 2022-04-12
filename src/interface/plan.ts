@@ -1,7 +1,7 @@
-import React from "react";
-import { Semester } from "./semester";
+import { semester } from "./semester";
 export interface plan {
     name: string;
     planID: number;
-    semesters: Semester[];
+    credits: number;
+    semesters: semester[];
 }

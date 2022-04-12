@@ -1,7 +1,7 @@
-import React from "react";
 import { course } from "./course";
-export interface Semester {
+export interface semester {
     name: string;
     semesterID: number;
+    credits: number;
     semesters: course[];
 }
