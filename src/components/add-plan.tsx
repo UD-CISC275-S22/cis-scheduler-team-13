@@ -1,4 +1,3 @@
-import {} from "../interface/plan";
 import { plan } from "../interface/plan";
 import React, { useState } from "react";
 import { Button, Modal, Form, Col, Row } from "react-bootstrap";
