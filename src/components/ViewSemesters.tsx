@@ -5,7 +5,7 @@ import { semester } from "../interface/semester";
 import { CourseList } from "./CourseList";
 import { EditSemester } from "./EditSemester";
 
-export function viewSemesters({
+export function ViewSemesters({
     semester,
     editSemester
 }: /*
@@ -14,7 +14,7 @@ export function viewSemesters({
 {
     semester: semester;
     editSemester: (season: string, year: number, newSemester: semester) => void;
-    deleteQuiz: (season: string, year: number) => void;
+    /*deleteSemester: (season: string, year: number) => void;*/
 }): JSX.Element {
     const [editing, setEditing] = useState<boolean>(false);
     const [courses, setCourses] = useState<course[]>(semester.courses);
@@ -51,7 +51,7 @@ export function viewSemesters({
                 <p>{semester.credits} Total Credits</p>
             </Row>
             <Row>
-                <Button onClick={changeVisible}> See Semester</Button>
+                <Button onClick={changeVisible}> See Courses</Button>
                 <Button onClick={changeEditMode}>Edit</Button>
             </Row>
             {visible && (

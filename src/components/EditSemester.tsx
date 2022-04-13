@@ -104,7 +104,7 @@ export function EditSemester({
                             className="me-4"
                             onClick={ShowAddModal}
                         >
-                            Add a Question
+                            Add a Course
                         </Button>
                         <AddCourse
                             appears={show}
