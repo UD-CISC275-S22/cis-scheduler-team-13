@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import { Button, Col, Container, Form, ListGroup, Row } from "react-bootstrap";
 import { course } from "../interface/course";
 import { semester } from "../interface/semester";
 import { AddCourse } from "./addCourse";
@@ -9,16 +9,14 @@ export function EditSemester({
     changeEditMode,
     semester,
     editSemester,
-    /*
     deleteSemester,
-    */
     setCourses,
     courses
 }: {
     changeEditMode: () => void;
     semester: semester;
     editSemester: (season: string, year: number, newSemester: semester) => void;
-    /*deleteSemester: (season: string, year: number) => void;*/
+    deleteSemester: (season: string, year: number) => void;
     setCourses: (courses: course[]) => void;
     courses: course[];
 }): JSX.Element {
@@ -122,17 +120,112 @@ export function EditSemester({
                     <Button onClick={goBack} variant="warning" className="me-5">
                         Cancel
                     </Button>
-                    {/*
                     <Button
-                        onClick={() => deleteSemester(semester.season, semester.year))}
+                        onClick={() =>
+                            deleteSemester(semester.season, semester.year)
+                        }
                         variant="danger"
                         className="me-8"
                     >
                         Delete
                     </Button>
-                                */}
                 </Col>
             </Row>
         </Container>
+    );
+}
+
+interface SemesterEdit {
+    semester: semester;
+    setSemester: (season: string, year: number, newSemester: semester) => void;
+}
+
+export function EditSemesterSeason({
+    semester,
+    setSemester
+}: SemesterEdit): JSX.Element {
+    return (
+        <Form.Control
+            value={semester.season}
+            onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                setSemester(semester.season, semester.year, {
+                    ...semester,
+                    season: event.target.value
+                })
+            }
+        />
+    );
+}
+
+export function EditSemesterYear({
+    semester,
+    setSemester
+}: SemesterEdit): JSX.Element {
+    return (
+        <Form.Control
+            value={semester.season}
+            onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                setSemester(semester.season, semester.year, {
+                    ...semester,
+                    year: parseInt(event.target.value)
+                })
+            }
+        />
+    );
+}
+
+export function EditSemesters({
+    semesters,
+    setSemesters
+}: {
+    semesters: semester[];
+    setSemesters: (semesters: semester[]) => void;
+}): JSX.Element {
+    function setSemester(season: string, year: number, newSemester: semester) {
+        setSemesters(
+            semesters.map((semester: semester) =>
+                semester.season === season && semester.year === year
+                    ? newSemester
+                    : semester
+            )
+        );
+    }
+    return (
+        <ListGroup as="ol" numbered>
+            {semesters.map((semester: semester) => (
+                <ListGroup.Item
+                    as="li"
+                    key={semester.season && semester.year}
+                    className="d-flex align-items-start"
+                >
+                    <div className="ms-2 me-auto">
+                        <Container>
+                            <Row>
+                                <Col>
+                                    <p>Semester Season</p>
+                                </Col>
+                                <Col>
+                                    <EditSemesterSeason
+                                        semester={semester}
+                                        setSemester={setSemester}
+                                    ></EditSemesterSeason>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <p>Semester Year</p>
+                                </Col>
+                                <Col>
+                                    <EditSemesterYear
+                                        semester={semester}
+                                        setSemester={setSemester}
+                                    ></EditSemesterYear>
+                                </Col>
+                            </Row>
+                        </Container>
+                    </div>
+                </ListGroup.Item>
+            ))}
+        </ListGroup>
     );
 }

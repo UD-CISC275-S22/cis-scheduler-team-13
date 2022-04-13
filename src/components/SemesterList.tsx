@@ -5,9 +5,9 @@ import { ViewSemesters } from "./ViewSemesters";
 
 export function SemesterList({
     semesters,
-    editSemester
-}: /*eleteSemester*/
-{
+    editSemester,
+    deleteSemester
+}: {
     semesters: semester[];
     editSemester: (season: string, year: number, newSemester: semester) => void;
     deleteSemester: (season: string, year: number) => void;
@@ -22,7 +22,7 @@ export function SemesterList({
                     <ViewSemesters
                         semester={semester}
                         editSemester={editSemester}
-                        /*deleteSemester={deleteSemester}*/
+                        deleteSemester={deleteSemester}
                     ></ViewSemesters>
                 </div>
             ))}

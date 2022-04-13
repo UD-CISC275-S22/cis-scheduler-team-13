@@ -7,14 +7,12 @@ import { EditSemester } from "./EditSemester";
 
 export function ViewSemesters({
     semester,
-    editSemester
-}: /*
+    editSemester,
     deleteSemester
-*/
-{
+}: {
     semester: semester;
     editSemester: (season: string, year: number, newSemester: semester) => void;
-    /*deleteSemester: (season: string, year: number) => void;*/
+    deleteSemester: (season: string, year: number) => void;
 }): JSX.Element {
     const [editing, setEditing] = useState<boolean>(false);
     const [courses, setCourses] = useState<course[]>(semester.courses);
@@ -33,9 +31,7 @@ export function ViewSemesters({
             changeEditMode={changeEditMode}
             semester={semester}
             editSemester={editSemester}
-            /*
             deleteSemester={deleteSemester}
-            */
             setCourses={setCourses}
             courses={courses}
         ></EditSemester>
