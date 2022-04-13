@@ -11,17 +11,22 @@ export function AddSemester({
     close: () => void;
     addSemester: (newOne: semester) => void;
 }) {
-    const [name, setName] = useState<string>("");
-    const [id, setId] = useState<number>(0);
+    const seasons = ["Summer", "Spring", "Fall", "Winter"];
+    const [season, setSeason] = useState<string>("");
+    const [year, setYear] = useState<number>(0);
 
     function saveChanges() {
         addSemester({
-            name: name,
-            semesterID: id,
+            season: season,
+            year: year,
             credits: 0,
             semesters: []
         });
         close();
+    }
+
+    function updateSeason(event: React.ChangeEvent<HTMLInputElement>) {
+        setSeason(event.target.value);
     }
 
     return (
@@ -30,31 +35,32 @@ export function AddSemester({
                 <Modal.Title>Add New Semester</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                {/* Course Name */}
-                <Form.Group controlId="formSemesterName" as={Row}>
-                    <Form.Label column sm={3}>
-                        Semester Name:
-                    </Form.Label>
-                    <Col>
-                        <Form.Control
-                            value={name}
-                            onChange={(
-                                event: React.ChangeEvent<HTMLInputElement>
-                            ) => setName(event.target.value)}
+                {/* Semester Season */}
+                <Form.Group controlId="picking-a-season">
+                    {seasons.map((option: string) => (
+                        <Form.Check
+                            inline
+                            key={option}
+                            value={option}
+                            type="radio"
+                            name={option}
+                            onChange={updateSeason}
+                            id="season-checker"
+                            label={option}
                         />
-                    </Col>
+                    ))}
                 </Form.Group>
-                {/* Course ID */}
+                {/* Semester Year */}
                 <Form.Group controlId="formSemesterId" as={Row}>
                     <Form.Label column sm={3}>
                         Semester ID:
                     </Form.Label>
                     <Col>
                         <Form.Control
-                            value={id}
+                            value={year}
                             onChange={(
                                 event: React.ChangeEvent<HTMLInputElement>
-                            ) => setId(parseInt(event.target.value))}
+                            ) => setYear(parseInt(event.target.value))}
                         />
                     </Col>
                 </Form.Group>

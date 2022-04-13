@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
+import { course } from "./interface/course";
 
-function App(): JSX.Element {
+export function App(): JSX.Element {
+    {
+        /*
+    const [courses, setCourses] = useState<course[]>([]);
+    */
+    }
+
     return (
         <div className="App">
             <header className="App-header">
