@@ -20,7 +20,7 @@ export function AddSemester({
             season: season,
             year: year,
             credits: 0,
-            semesters: []
+            courses: []
         });
         close();
     }

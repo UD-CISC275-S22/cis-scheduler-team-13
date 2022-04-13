@@ -1,7 +1,7 @@
 import React from "react";
 import { Stack } from "react-bootstrap";
 import { course } from "../interface/course";
-import { ViewCourses } from "./ViewCourse";
+import { ViewCourses } from "./ViewCourses";
 
 export function CourseList({ courses }: { courses: course[] }): JSX.Element {
     return (
