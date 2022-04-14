@@ -2,13 +2,13 @@ import { plan } from "../interface/plan";
 import React, { useState } from "react";
 import { Button, Modal, Form, Col, Row } from "react-bootstrap";
 
-export function addPlan({
-    close,
+export function AddPlan({
+    handleClose,
     addPlan,
-    appears
+    show
 }: {
-    appears: boolean;
-    close: () => void;
+    show: boolean;
+    handleClose: () => void;
     addPlan: (newOne: plan) => void;
 }) {
     const [name, setName] = useState<string>("");
@@ -19,11 +19,11 @@ export function addPlan({
             credits: 0,
             semesters: []
         });
-        close();
+        handleClose();
     }
 
     return (
-        <Modal appears={appears} onHide={close} animation={false}>
+        <Modal show={show} onHide={handleClose} animation={false}>
             <Modal.Header closeButton>
                 <Modal.Title>Add New Plan</Modal.Title>
             </Modal.Header>
@@ -44,7 +44,7 @@ export function addPlan({
                 </Form.Group>
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="secondary" onClick={close}>
+                <Button variant="secondary" onClick={handleClose}>
                     Close
                 </Button>
                 <Button variant="primary" onClick={saveChanges}>

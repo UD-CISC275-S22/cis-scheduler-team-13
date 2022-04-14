@@ -1,7 +1,9 @@
-import { stringify } from "querystring";
 import React, { useState } from "react";
+import { Button } from "react-bootstrap";
 import "./App.css";
+import { AddSemester } from "./components/AddSemesterModal";
 import { EditSemester } from "./components/EditSemester";
+import { SemesterList } from "./components/SemesterList";
 import { course } from "./interface/course";
 import { plan } from "./interface/plan";
 import { semester } from "./interface/semester";
@@ -76,6 +78,30 @@ export function App(): JSX.Element {
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
             </p>
+            <div>
+                <div>
+                    <SemesterList
+                        semesters={semesters}
+                        editSemester={editSemester}
+                        deleteSemester={deleteSemester}
+                    ></SemesterList>
+                </div>
+                <div>
+                    <Button
+                        variant="success"
+                        className="m-4"
+                        onClick={ShowAddModal}
+                    >
+                        Add New Semester
+                    </Button>
+                    <AddSemester
+                        show={show}
+                        handleClose={CloseAddModal}
+                        addSemester={addSemester}
+                    ></AddSemester>
+                </div>
+            </div>
+            );
         </div>
     );
 }

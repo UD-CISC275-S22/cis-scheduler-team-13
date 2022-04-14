@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Col, Container, Form, ListGroup, Row } from "react-bootstrap";
 import { course } from "../interface/course";
 import { semester } from "../interface/semester";
-import { AddCourse } from "./addCourse";
+import { AddCourse } from "./AddCourseModal";
 import { EditCourses } from "./EditCourse";
 
 export function EditSemester({
@@ -105,8 +105,8 @@ export function EditSemester({
                             Add a Course
                         </Button>
                         <AddCourse
-                            appears={show}
-                            close={CloseAddModal}
+                            show={show}
+                            handleClose={CloseAddModal}
                             addCourse={addCourse}
                         ></AddCourse>
                     </div>

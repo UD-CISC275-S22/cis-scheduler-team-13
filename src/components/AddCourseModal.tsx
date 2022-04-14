@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import { Button, Modal, Form, Col, Row } from "react-bootstrap";
 
 export function AddCourse({
-    close,
+    handleClose,
     addCourse,
-    appears
+    show
 }: {
-    appears: boolean;
-    close: () => void;
+    show: boolean;
+    handleClose: () => void;
     addCourse: (newOne: course) => void;
 }) {
     const [name, setName] = useState<string>("");
@@ -21,11 +21,11 @@ export function AddCourse({
             credits: 0,
             prerequisites: []
         });
-        close();
+        handleClose();
     }
 
     return (
-        <Modal appears={appears} onHide={close} animation={false}>
+        <Modal show={show} onHide={handleClose} animation={false}>
             <Modal.Header closeButton>
                 <Modal.Title>Add New Course</Modal.Title>
             </Modal.Header>
@@ -60,7 +60,7 @@ export function AddCourse({
                 </Form.Group>
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="secondary" onClick={close}>
+                <Button variant="secondary" onClick={handleClose}>
                     Close
                 </Button>
                 <Button variant="primary" onClick={saveChanges}>

@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import { Button, Modal, Form, Col, Row } from "react-bootstrap";
 
 export function AddSemester({
-    close,
+    handleClose,
     addSemester,
-    appears
+    show
 }: {
-    appears: boolean;
-    close: () => void;
+    show: boolean;
+    handleClose: () => void;
     addSemester: (newOne: semester) => void;
 }) {
     const seasons = ["Summer", "Spring", "Fall", "Winter"];
@@ -22,7 +22,7 @@ export function AddSemester({
             credits: 0,
             courses: []
         });
-        close();
+        handleClose();
     }
 
     function updateSeason(event: React.ChangeEvent<HTMLInputElement>) {
@@ -30,13 +30,13 @@ export function AddSemester({
     }
 
     return (
-        <Modal appears={appears} onHide={close} animation={false}>
+        <Modal show={show} onHide={handleClose} animation={false}>
             <Modal.Header closeButton>
                 <Modal.Title>Add New Semester</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 {/* Semester Season */}
-                <Form.Group controlId="picking-a-season">
+                <Form.Group controlId="picking-a-season" as={Row}>
                     {seasons.map((option: string) => (
                         <Form.Check
                             inline
@@ -66,7 +66,7 @@ export function AddSemester({
                 </Form.Group>
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="secondary" onClick={close}>
+                <Button variant="secondary" onClick={handleClose}>
                     Close
                 </Button>
                 <Button variant="primary" onClick={saveChanges}>

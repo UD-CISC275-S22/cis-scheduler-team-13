@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Col, Container, Form, ListGroup, Row } from "react-bootstrap";
 import { course } from "../interface/course";
-//import { AddCourse } from "./addCourse";
+import { AddCourse } from "./AddCourseModal";
 
 interface CourseEdit {
     course: course;
