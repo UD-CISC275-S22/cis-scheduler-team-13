@@ -60,12 +60,8 @@ export function App(): JSX.Element {
     function deletePlan(name: string) {
         setPlans(plans.filter((plan: plan): boolean => plan.name !== name));
     }
-<<<<<<< HEAD
     /*
     function deleteExistingSemesters(plan: plan) {
-=======
-    function deleteExistingSemesters() {
->>>>>>> b95587a957f0d026420131cf9678d5800144cb7c
         setSemesters([]);
     }
     */
@@ -101,11 +97,7 @@ export function App(): JSX.Element {
                         deletePlan={deletePlan}
                         editSemester={editSemester}
                         deleteSemester={deleteSemester}
-<<<<<<< HEAD
                         //deleteExistingSemesters={deleteExistingSemesters}
-=======
-                        deleteExistingSemesters={deleteExistingSemesters}
->>>>>>> b95587a957f0d026420131cf9678d5800144cb7c
                     ></PlanList>
                 </div>
                 <div>
