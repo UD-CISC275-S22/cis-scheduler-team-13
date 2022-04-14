@@ -8,16 +8,16 @@ export function PlanList({
     plans,
     editPlan,
     deletePlan,
-    //semester,
     editSemester,
     deleteSemester
-}: {
+}: //deleteExistingSemesters
+{
     plans: plan[];
     editPlan: (name: string, newPlan: plan) => void;
     deletePlan: (name: string) => void;
-    //semester: semester;
     editSemester: (season: string, year: number, newSemester: semester) => void;
     deleteSemester: (season: string, year: number) => void;
+    //deleteExistingSemesters: (plan: plan) => void;
 }): JSX.Element {
     return (
         <Stack gap={3}>
@@ -27,9 +27,9 @@ export function PlanList({
                         plan={plan}
                         editPlan={editPlan}
                         deletePlan={deletePlan}
-                        //semester={semester}
                         editSemester={editSemester}
                         deleteSemester={deleteSemester}
+                        //deleteExistingSemesters={deleteExistingSemesters}
                     ></ViewPlans>
                 </div>
             ))}
