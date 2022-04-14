@@ -60,7 +60,7 @@ export function App(): JSX.Element {
     function deletePlan(name: string) {
         setPlans(plans.filter((plan: plan): boolean => plan.name !== name));
     }
-    function deleteExistingSemesters(sem: semester[]) {
+    function deleteExistingSemesters() {
         setSemesters([]);
     }
 
@@ -96,6 +96,7 @@ export function App(): JSX.Element {
                         deletePlan={deletePlan}
                         editSemester={editSemester}
                         deleteSemester={deleteSemester}
+                        deleteExistingSemesters={deleteExistingSemesters}
                     ></PlanList>
                 </div>
                 <div>

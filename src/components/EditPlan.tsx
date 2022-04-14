@@ -20,7 +20,7 @@ export function EditPlan({
     deletePlan: (name: string) => void;
     setSemesters: (semesters: semester[]) => void;
     semesters: semester[];
-    deleteExistingSemesters: (sem: semester[]) => void;
+    deleteExistingSemesters: (plan: plan) => void;
 }): JSX.Element {
     const [show, setShow] = useState<boolean>(false);
     const CloseAddModal = () => setShow(false);
@@ -102,7 +102,7 @@ export function EditPlan({
                         Delete
                     </Button>
                     <Button
-                        onClick={() => deleteExistingSemesters(plan.semesters)}
+                        onClick={() => deleteExistingSemesters(plan)}
                         variant="success"
                         className="me-4"
                     >
