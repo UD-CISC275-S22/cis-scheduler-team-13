@@ -17,7 +17,6 @@ export function addPlan({
     function saveChanges() {
         addPlan({
             name: name,
-            planID: id,
             credits: 0,
             semesters: []
         });

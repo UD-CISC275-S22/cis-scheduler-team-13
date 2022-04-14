@@ -45,6 +45,27 @@ export function App(): JSX.Element {
         }
     }
 
+    function editPlan(name: string, newPlan: plan) {
+        setPlans(
+            plans.map(
+                (plan: plan): plan => (plan.name === name ? newPlan : plan)
+            )
+        );
+    }
+
+    function deletePlan(name: string) {
+        setPlans(plans.filter((plan: plan): boolean => plan.name !== name));
+    }
+
+    function addPlan(newPlan: plan) {
+        const existing = plans.find(
+            (plan: plan): boolean => plan.name === newPlan.name
+        );
+        if (existing === undefined) {
+            setPlans([...plans, newPlan]);
+        }
+    }
+
     return (
         <div className="App">
             <header className="App-header">
