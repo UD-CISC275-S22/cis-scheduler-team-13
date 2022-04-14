@@ -58,6 +58,9 @@ export function App(): JSX.Element {
     function deletePlan(name: string) {
         setPlans(plans.filter((plan: plan): boolean => plan.name !== name));
     }
+    function deleteExistingSemesters(sem: semester[]) {
+        setSemesters([]);
+    }
 
     function addPlan(newPlan: plan) {
         const existing = plans.find(
