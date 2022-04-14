@@ -3,16 +3,22 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import { plan } from "../interface/plan";
 import { semester } from "../interface/semester";
 import { EditPlan } from "./EditPlan";
-//import { SemesterList } from "./SemesterList";
+import { SemesterList } from "./SemesterList";
 
 export function ViewPlans({
     plan,
     editPlan,
-    deletePlan
+    deletePlan,
+    semester,
+    editSemester,
+    deleteSemester
 }: {
     plan: plan;
     editPlan: (name: string, newPlan: plan) => void;
     deletePlan: (name: string) => void;
+    semester: semester;
+    editSemester: (season: string, year: number, newSemester: semester) => void;
+    deleteSemester: (season: string, year: number) => void;
 }): JSX.Element {
     const [semesters, setSemesters] = useState<semester[]>(plan.semesters);
     const [editMode, setEditMode] = useState<boolean>(false);
@@ -49,7 +55,6 @@ export function ViewPlans({
                 <Button onClick={changeVisible}>View Plan</Button>
                 <Button onClick={changeEditMode}>Edit</Button>
             </Row>
-            {/*
             {visible && (
                 <Row>
                     <SemesterList
@@ -58,9 +63,7 @@ export function ViewPlans({
                         deleteSemester={deleteSemester}
                     ></SemesterList>
                 </Row>
-            
             )}
-            */}
         </Container>
     );
 }

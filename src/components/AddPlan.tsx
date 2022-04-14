@@ -12,7 +12,6 @@ export function addPlan({
     addPlan: (newOne: plan) => void;
 }) {
     const [name, setName] = useState<string>("");
-    const [id, setId] = useState<number>(0);
 
     function saveChanges() {
         addPlan({
@@ -40,20 +39,6 @@ export function addPlan({
                             onChange={(
                                 event: React.ChangeEvent<HTMLInputElement>
                             ) => setName(event.target.value)}
-                        />
-                    </Col>
-                </Form.Group>
-                {/* Plan ID */}
-                <Form.Group controlId="formSemesterId" as={Row}>
-                    <Form.Label column sm={3}>
-                        Plan ID:
-                    </Form.Label>
-                    <Col>
-                        <Form.Control
-                            value={id}
-                            onChange={(
-                                event: React.ChangeEvent<HTMLInputElement>
-                            ) => setId(parseInt(event.target.value))}
                         />
                     </Col>
                 </Form.Group>
