@@ -3,7 +3,7 @@
 > react-scripts test "--coverage"
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (48 ms)
+  ✕ renders the course name somewhere (56 ms)
 
   ● renders the course name somewhere
 
@@ -69,18 +69,18 @@ FAIL src/App.test.tsx
 -----------------------|---------|----------|---------|---------|-------------------
 File                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -----------------------|---------|----------|---------|---------|-------------------
-All files              |    7.56 |        0 |     3.7 |    8.03 |                   
- src                   |   28.57 |        0 |    7.14 |   33.33 |                   
-  App.tsx              |   28.57 |        0 |    7.14 |   33.33 | 22-72             
- src/components        |    3.06 |        0 |    2.98 |    3.19 |                   
+All files              |    7.69 |        0 |    3.79 |    8.18 |                   
+ src                   |      30 |        0 |    7.69 |   35.29 |                   
+  App.tsx              |      30 |        0 |    7.69 |   35.29 | 22-73             
+ src/components        |    3.09 |        0 |    3.03 |    3.22 |                   
   AddCourseModal.tsx   |       0 |      100 |       0 |       0 | 14-57             
   AddPlanModal.tsx     |      40 |      100 |   33.33 |      40 | 17-22,41          
   AddSemesterModal.tsx |       0 |      100 |       0 |       0 | 14-63             
   CourseList.tsx       |       0 |      100 |       0 |       0 | 7-10              
   EditCourse.tsx       |       0 |        0 |       0 |       0 | 16-134            
-  EditPlan.tsx         |       0 |        0 |       0 |       0 | 25-105            
+  EditPlan.tsx         |       0 |        0 |       0 |       0 | 25-98             
   EditSemester.tsx     |       0 |        0 |       0 |       0 | 23-196            
-  PlanList.tsx         |      50 |      100 |      50 |      50 | 27                
+  PlanList.tsx         |      50 |      100 |      50 |      50 | 25                
   SemesterList.tsx     |       0 |        0 |       0 |       0 | 15-18             
   ViewCourses.tsx      |       0 |      100 |       0 |       0 | 6                 
   ViewPlans.tsx        |       0 |        0 |       0 |       0 | 25-37             
@@ -93,5 +93,5 @@ All files              |    7.56 |        0 |     3.7 |    8.03 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.627 s
+Time:        2.644 s
 Ran all test suites.
