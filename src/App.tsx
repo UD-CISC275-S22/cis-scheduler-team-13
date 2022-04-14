@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import "./App.css";
+import { AddPlan } from "./components/AddPlanModal";
 import { AddSemester } from "./components/AddSemesterModal";
 import { EditSemester } from "./components/EditSemester";
+import { PlanList } from "./components/PlanList";
 import { SemesterList } from "./components/SemesterList";
 import { course } from "./interface/course";
 import { plan } from "./interface/plan";
@@ -80,11 +82,13 @@ export function App(): JSX.Element {
             </p>
             <div>
                 <div>
-                    <SemesterList
-                        semesters={semesters}
+                    <PlanList
+                        plans={plans}
+                        editPlan={editPlan}
+                        deletePlan={deletePlan}
                         editSemester={editSemester}
                         deleteSemester={deleteSemester}
-                    ></SemesterList>
+                    ></PlanList>
                 </div>
                 <div>
                     <Button
@@ -92,13 +96,13 @@ export function App(): JSX.Element {
                         className="m-4"
                         onClick={ShowAddModal}
                     >
-                        Add New Semester
+                        Add New Plan
                     </Button>
-                    <AddSemester
+                    <AddPlan
                         show={show}
                         handleClose={CloseAddModal}
-                        addSemester={addSemester}
-                    ></AddSemester>
+                        addPlan={addPlan}
+                    ></AddPlan>
                 </div>
             </div>
             );

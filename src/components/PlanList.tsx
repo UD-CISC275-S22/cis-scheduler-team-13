@@ -8,14 +8,14 @@ export function PlanList({
     plans,
     editPlan,
     deletePlan,
-    semester,
+    //semester,
     editSemester,
     deleteSemester
 }: {
     plans: plan[];
     editPlan: (name: string, newPlan: plan) => void;
     deletePlan: (name: string) => void;
-    semester: semester;
+    //semester: semester;
     editSemester: (season: string, year: number, newSemester: semester) => void;
     deleteSemester: (season: string, year: number) => void;
 }): JSX.Element {
@@ -27,7 +27,7 @@ export function PlanList({
                         plan={plan}
                         editPlan={editPlan}
                         deletePlan={deletePlan}
-                        semester={semester}
+                        //semester={semester}
                         editSemester={editSemester}
                         deleteSemester={deleteSemester}
                     ></ViewPlans>

@@ -9,14 +9,14 @@ export function ViewPlans({
     plan,
     editPlan,
     deletePlan,
-    semester,
+    //semester,
     editSemester,
     deleteSemester
 }: {
     plan: plan;
     editPlan: (name: string, newPlan: plan) => void;
     deletePlan: (name: string) => void;
-    semester: semester;
+    //semester: semester;
     editSemester: (season: string, year: number, newSemester: semester) => void;
     deleteSemester: (season: string, year: number) => void;
 }): JSX.Element {
