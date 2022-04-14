@@ -11,7 +11,8 @@ export function EditPlan({
     editPlan,
     deletePlan,
     setSemesters,
-    semesters
+    semesters,
+    deleteExistingSemesters
 }: {
     changeEditMode: () => void;
     plan: plan;
@@ -19,6 +20,7 @@ export function EditPlan({
     deletePlan: (name: string) => void;
     setSemesters: (semesters: semester[]) => void;
     semesters: semester[];
+    deleteExistingSemesters: (sem: semester[]) => void;
 }): JSX.Element {
     const [show, setShow] = useState<boolean>(false);
     const CloseAddModal = () => setShow(false);
@@ -98,6 +100,13 @@ export function EditPlan({
                         className="me-8"
                     >
                         Delete
+                    </Button>
+                    <Button
+                        onClick={() => deleteExistingSemesters(plan.semesters)}
+                        variant="success"
+                        className="me-4"
+                    >
+                        Clear Existing Semesters
                     </Button>
                 </Col>
             </Row>
