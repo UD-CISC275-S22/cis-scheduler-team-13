@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import "./App.css";
 import { AddPlan } from "./components/AddPlanModal";
-import { AddSemester } from "./components/AddSemesterModal";
-import { EditSemester } from "./components/EditSemester";
+//import { AddSemester } from "./components/AddSemesterModal";
+//import { EditSemester } from "./components/EditSemester";
 import { PlanList } from "./components/PlanList";
-import { SemesterList } from "./components/SemesterList";
-import { course } from "./interface/course";
+//import { SemesterList } from "./components/SemesterList";
+//import { course } from "./interface/course";
 import { plan } from "./interface/plan";
 import { semester } from "./interface/semester";
 
 export function App(): JSX.Element {
-    const [courses, setCourses] = useState<course[]>([]);
+    //const [courses, setCourses] = useState<course[]>([]);
     const [semesters, setSemesters] = useState<semester[]>([]);
     const [plans, setPlans] = useState<plan[]>([]);
     const [show, setShow] = useState<boolean>(false);
@@ -37,7 +37,7 @@ export function App(): JSX.Element {
             )
         );
     }
-
+    /*
     function addSemester(newSemester: semester) {
         const existing = semesters.find(
             (semester: semester): boolean =>
@@ -48,7 +48,7 @@ export function App(): JSX.Element {
             setSemesters([...semesters, newSemester]);
         }
     }
-
+*/
     function editPlan(name: string, newPlan: plan) {
         setPlans(
             plans.map(
@@ -73,12 +73,17 @@ export function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
-                Names of Group 13: Clay Wilfong, Mathias Heider, and Brandon
+                Degree Planner by Clay Wilfong, Mathias Heider, and Brandon
                 Grier
             </header>
+            <p>WELCOME!</p>
             <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload.
+                We Understand That Degrees Are Complicated, We Are Here To Help.
+            </p>
+            <p>
+                If you are new here, start by creating a new degree plan. Press
+                Edit on the degree plan to begin adding your semesters and
+                courses.
             </p>
             <div>
                 <div>
@@ -105,7 +110,6 @@ export function App(): JSX.Element {
                     ></AddPlan>
                 </div>
             </div>
-            );
         </div>
     );
 }
