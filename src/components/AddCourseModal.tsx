@@ -64,7 +64,7 @@ export function AddCourse({
                     Close
                 </Button>
                 <Button variant="primary" onClick={saveChanges}>
-                    Save Quiz
+                    Save Course
                 </Button>
             </Modal.Footer>
         </Modal>
