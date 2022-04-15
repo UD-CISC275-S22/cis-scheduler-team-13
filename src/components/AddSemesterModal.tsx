@@ -70,7 +70,7 @@ export function AddSemester({
                     Close
                 </Button>
                 <Button variant="primary" onClick={saveChanges}>
-                    Save Quiz
+                    Save Semester
                 </Button>
             </Modal.Footer>
         </Modal>
