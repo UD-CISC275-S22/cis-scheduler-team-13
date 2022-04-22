@@ -9,6 +9,7 @@ import { PlanList } from "./components/PlanList";
 //import { course } from "./interface/course";
 import { plan } from "./interface/plan";
 import { semester } from "./interface/semester";
+import { Form } from "react-bootstrap";
 
 export function App(): JSX.Element {
     //const [courses, setCourses] = useState<course[]>([]);
@@ -17,6 +18,11 @@ export function App(): JSX.Element {
     const [show, setShow] = useState<boolean>(false);
     const CloseAddModal = () => setShow(false);
     const ShowAddModal = () => setShow(true);
+    //stuff belowe needs to be edited but im in a rush so o well
+    const [emotion, setEmotion] = useState<string>("CISC181");
+    function updateEmotion(event: React.ChangeEvent<HTMLSelectElement>) {
+        setEmotion(event.target.value);
+    }
 
     function editSemester(season: string, year: number, newSemester: semester) {
         setSemesters(
@@ -113,6 +119,18 @@ export function App(): JSX.Element {
                         handleClose={CloseAddModal}
                         addPlan={addPlan}
                     ></AddPlan>
+                </div>
+                <div>
+                    <Form.Group controlId="courseList">
+                        <Form.Label>Course List</Form.Label>
+                        <Form.Select value={emotion} onChange={updateEmotion}>
+                            <option value="CISC181">CISC181</option>
+                            <option value="CISC210">CISC210</option>
+                            <option value="CISC220">CISC220</option>
+                        </Form.Select>
+                    </Form.Group>
+                    This information: Code: CISC 181 Name: Introduction to
+                    Computer Science II. Credits: 3
                 </div>
             </div>
         </div>
