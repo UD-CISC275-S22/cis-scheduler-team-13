@@ -3,7 +3,7 @@
 > react-scripts test "--coverage"
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (56 ms)
+  ✕ renders the course name somewhere (60 ms)
 
   ● renders the course name somewhere
 
@@ -43,6 +43,37 @@ FAIL src/App.test.tsx
                 [0mAdd New Plan[0m
               [36m</button>[39m
             [36m</div>[39m
+            [36m<div>[39m
+              [36m<div>[39m
+                [36m<label[39m
+                  [33mclass[39m=[32m"form-label"[39m
+                  [33mfor[39m=[32m"courseList"[39m
+                [36m>[39m
+                  [0mCourse List[0m
+                [36m</label>[39m
+                [36m<select[39m
+                  [33mclass[39m=[32m"form-select"[39m
+                  [33mid[39m=[32m"courseList"[39m
+                [36m>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC181"[39m
+                  [36m>[39m
+                    [0mCISC181[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC210"[39m
+                  [36m>[39m
+                    [0mCISC210[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC220"[39m
+                  [36m>[39m
+                    [0mCISC220[0m
+                  [36m</option>[39m
+                [36m</select>[39m
+              [36m</div>[39m
+              [0mThis information: Code: CISC 181 Name: Introduction to Computer Science II. Credits: 3[0m
+            [36m</div>[39m
           [36m</div>[39m
         [36m</div>[39m
       [36m</div>[39m
@@ -69,9 +100,9 @@ FAIL src/App.test.tsx
 -----------------------|---------|----------|---------|---------|-------------------
 File                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -----------------------|---------|----------|---------|---------|-------------------
-All files              |    7.69 |        0 |    3.79 |    8.18 |                   
- src                   |      30 |        0 |    7.69 |   35.29 |                   
-  App.tsx              |      30 |        0 |    7.69 |   35.29 | 22-73             
+All files              |     8.4 |        0 |    3.75 |    8.92 |                   
+ src                   |   31.81 |        0 |    7.14 |   36.84 |                   
+  App.tsx              |   31.81 |        0 |    7.14 |   36.84 | 24-79             
  src/components        |    3.09 |        0 |    3.03 |    3.22 |                   
   AddCourseModal.tsx   |       0 |      100 |       0 |       0 | 14-57             
   AddPlanModal.tsx     |      40 |      100 |   33.33 |      40 | 17-22,41          
@@ -93,5 +124,5 @@ All files              |    7.69 |        0 |    3.79 |    8.18 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.809 s
+Time:        2.58 s
 Ran all test suites.
