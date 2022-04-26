@@ -1214,17 +1214,24 @@ export function App(): JSX.Element {
     ];
     //stuff belowe needs to be edited but im in a rush so o well
     const [emotion, setEmotion] = useState<string>("CISC181");
-    const [courseCS, setCourse] = useState<course>(ciscCourses[0]);
+    //const [courseCS, setCourse] = useState<course>(ciscCourses[0]);
+    function findObject(code: string) {
+        const csCourse = ciscCourses.find(
+            (course: course): boolean => course.code == code
+        );
+        return csCourse;
+    }
     function updateEmotion(event: React.ChangeEvent<HTMLSelectElement>) {
         setEmotion(event.target.value);
     }
-    function changeCourse(code: string) {
-        const oneCourse = ciscCourses.filter(
+    /*function changeCourse(code: string) {
+        const oneCourse = ciscCourses.find(
             (cscourse: course): boolean => cscourse.code !== code
         );
-        const goodCourse = oneCourse[0];
-        setCourse(goodCourse);
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        setCourse(oneCourse!);
     }
+    */
 
     function editSemester(season: string, year: number, newSemester: semester) {
         setSemesters(
@@ -1325,10 +1332,7 @@ export function App(): JSX.Element {
                 <div>
                     <Form.Group controlId="courseList">
                         <Form.Label>Course List</Form.Label>
-                        <Form.Select
-                            value={courseCS.code}
-                            onChange={() => changeCourse(courseCS.code)}
-                        >
+                        <Form.Select value={emotion} onChange={updateEmotion}>
                             {ciscCourses.map((ciscCourse: course) => (
                                 <option
                                     key={ciscCourse.code}
@@ -1339,8 +1343,9 @@ export function App(): JSX.Element {
                             ))}
                         </Form.Select>
                     </Form.Group>
-                    Code: {courseCS.code} Name: {courseCS.name} Credits:{" "}
-                    {courseCS.credits}
+                    Code: {findObject(emotion)?.code} Name:{" "}
+                    {findObject(emotion)?.name} Credits:{" "}
+                    {findObject(emotion)?.credits}
                 </div>
             </div>
         </div>
