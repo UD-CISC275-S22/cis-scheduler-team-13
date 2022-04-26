@@ -8,7 +8,7 @@ import { PlanList } from "./components/PlanList";
 //import { SemesterList } from "./components/SemesterList";
 import { course } from "./interface/course";
 import { plan } from "./interface/plan";
-import { semester } from "./interface/semester";
+//import { semester } from "./interface/semester";
 import { Form } from "react-bootstrap";
 export function App(): JSX.Element {
     //const [courses, setCourses] = useState<course[]>([]);
