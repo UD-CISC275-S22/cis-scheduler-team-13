@@ -42,8 +42,7 @@ export function EditSemester({
     function addCourse(newCourse: course) {
         const exists = courses.find(
             (course: course): boolean =>
-                course.courseID === newCourse.courseID &&
-                course.courseName === newCourse.courseName
+                course.code === newCourse.code && course.name === newCourse.name
         );
         if (exists === undefined) {
             setCourses([...courses, newCourse]);
