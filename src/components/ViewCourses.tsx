@@ -7,7 +7,7 @@ export function ViewCourses({ course }: { course: course }): JSX.Element {
         <Container>
             <Row>
                 <Col>
-                    <h3>{course.courseName + course.courseID}</h3>
+                    <h3>{course.code}</h3>
                 </Col>
             </Row>
             <Row>

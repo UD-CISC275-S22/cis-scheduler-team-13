@@ -12,14 +12,18 @@ export function AddCourse({
     addCourse: (newOne: course) => void;
 }) {
     const [name, setName] = useState<string>("");
-    const [id, setId] = useState<number>(0);
+    const [code, setId] = useState<string>("");
 
     function saveChanges() {
         addCourse({
-            courseName: name,
-            courseID: id,
-            credits: 0,
-            prerequisites: []
+            code: code,
+            name: name,
+            descr: "",
+            credits: "",
+            preReq: "",
+            restrict: "",
+            breadth: "",
+            typ: ""
         });
         handleClose();
     }
@@ -51,10 +55,10 @@ export function AddCourse({
                     </Form.Label>
                     <Col>
                         <Form.Control
-                            value={id}
+                            value={code}
                             onChange={(
                                 event: React.ChangeEvent<HTMLInputElement>
-                            ) => setId(parseInt(event.target.value))}
+                            ) => setId(event.target.value)}
                         />
                     </Col>
                 </Form.Group>
