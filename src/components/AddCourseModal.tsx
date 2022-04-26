@@ -12,15 +12,18 @@ export function AddCourse({
     addCourse: (newOne: course) => void;
 }) {
     const [name, setName] = useState<string>("");
-    const [id, setId] = useState<number>(0);
-    const [credits, setCredits] = useState<number>(0);
+    const [code, setId] = useState<string>("");
 
     function saveChanges() {
         addCourse({
-            courseName: name,
-            courseID: id,
-            credits: credits,
-            prerequisites: []
+            code: code,
+            name: name,
+            descr: "",
+            credits: "",
+            preReq: "",
+            restrict: "",
+            breadth: "",
+            typ: ""
         });
         handleClose();
     }
@@ -52,23 +55,10 @@ export function AddCourse({
                     </Form.Label>
                     <Col>
                         <Form.Control
-                            value={id}
+                            value={code}
                             onChange={(
                                 event: React.ChangeEvent<HTMLInputElement>
-                            ) => setId(parseInt(event.target.value) || 0)}
-                        />
-                    </Col>
-                </Form.Group>
-                <Form.Group controlId="formCourseCredits" as={Row}>
-                    <Form.Label column sm={3}>
-                        Course Credits:
-                    </Form.Label>
-                    <Col>
-                        <Form.Control
-                            value={credits}
-                            onChange={(
-                                event: React.ChangeEvent<HTMLInputElement>
-                            ) => setCredits(parseInt(event.target.value) || 0)}
+                            ) => setId(event.target.value)}
                         />
                     </Col>
                 </Form.Group>

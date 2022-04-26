@@ -5,21 +5,17 @@ import { course } from "../interface/course";
 
 interface CourseEdit {
     course: course;
-    setCourse: (
-        courseID: number,
-        courseName: string,
-        newCourse: course
-    ) => void;
+    setCourse: (code: string, name: string, newCourse: course) => void;
 }
 
 export function EditCourseName({ course, setCourse }: CourseEdit): JSX.Element {
     return (
         <Form.Control
-            value={course.courseName}
+            value={course.code}
             onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-                setCourse(course.courseID, course.courseName, {
+                setCourse(course.code, course.name, {
                     ...course,
-                    courseName: event.target.value || ""
+                    name: event.target.value || ""
                 })
             }
         />
@@ -29,11 +25,11 @@ export function EditCourseName({ course, setCourse }: CourseEdit): JSX.Element {
 export function EditCourseID({ course, setCourse }: CourseEdit): JSX.Element {
     return (
         <Form.Control
-            value={course.courseID}
+            value={course.name}
             onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-                setCourse(course.courseID, course.courseName, {
+                setCourse(course.code, course.name, {
                     ...course,
-                    courseID: parseInt(event.target.value) || 0
+                    code: event.target.value || ""
                 })
             }
         />
@@ -48,9 +44,9 @@ export function EditCourseCredits({
         <Form.Control
             value={course.credits}
             onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-                setCourse(course.courseID, course.courseName, {
+                setCourse(course.code, course.name, {
                     ...course,
-                    credits: parseInt(event.target.value) || 0
+                    credits: event.target.value || ""
                 })
             }
         />
@@ -101,8 +97,8 @@ export function EditCourseDelete({
                 setCourses(
                     courses.filter(
                         (courseF: course): boolean =>
-                            courseF.courseName !== course.courseName &&
-                            courseF.courseID !== course.courseID
+                            courseF.name !== course.name &&
+                            courseF.code !== course.code
                     )
                 )
             }
@@ -119,10 +115,10 @@ export function EditCourses({
     courses: course[];
     setCourses: (courses: course[]) => void;
 }): JSX.Element {
-    function setCourse(id: number, name: string, newCourse: course) {
+    function setCourse(code: string, name: string, newCourse: course) {
         setCourses(
             courses.map((course: course) =>
-                course.courseID === id && course.courseName === name
+                course.code === code && course.name === name
                     ? newCourse
                     : course
             )
@@ -133,7 +129,7 @@ export function EditCourses({
             {courses.map((course: course) => (
                 <ListGroup.Item
                     as="li"
-                    key={course.courseID}
+                    key={course.code}
                     className="d-flex align-items-start"
                 >
                     <div className="ms-2 me-auto">

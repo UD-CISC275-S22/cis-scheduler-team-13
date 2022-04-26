@@ -28,8 +28,8 @@ export function EditSemester({
     const [credits, setCredits] = useState<number>(semester.credits);
 
     function naturalCredits() {
-        const creditList = courses.map(
-            (course: course): number => course.credits
+        const creditList = courses.map((course: course): number =>
+            parseInt(course.credits)
         );
         const sum = creditList.reduce(
             (currentTotal: number, credits: number) => currentTotal + credits,
@@ -56,8 +56,7 @@ export function EditSemester({
     function addCourse(newCourse: course) {
         const exists = courses.find(
             (course: course): boolean =>
-                course.courseID === newCourse.courseID &&
-                course.courseName === newCourse.courseName
+                course.code === newCourse.code && course.name === newCourse.name
         );
         if (exists === undefined) {
             setCourses([...courses, newCourse]);
