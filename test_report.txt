@@ -3,7 +3,7 @@
 > react-scripts test "--coverage"
 
 FAIL src/App.test.tsx
-  ✕ The Start Button Appears (11 ms)
+  ✕ The Start Button Appears (13 ms)
   ✕ Close Button Works (1 ms)
   ✕ Save Plan Works (1 ms)
   ✕ Edit Plan Button Works (1 ms)
@@ -117,14 +117,14 @@ File                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line
 -----------------------|---------|----------|---------|---------|-------------------
 All files              |       0 |        0 |       0 |       0 |                   
  src                   |       0 |        0 |       0 |       0 |                   
-  App.tsx              |       0 |        0 |       0 |       0 | 16-1315           
+  App.tsx              |       0 |        0 |       0 |       0 | 11-1309           
  src/components        |       0 |        0 |       0 |       0 |                   
   AddCourseModal.tsx   |       0 |      100 |       0 |       0 | 15-1238           
   AddPlanModal.tsx     |       0 |        0 |       0 |       0 | 14-41             
   AddSemesterModal.tsx |       0 |        0 |       0 |       0 | 15-92             
   CourseList.tsx       |       0 |      100 |       0 |       0 | 7-10              
   EditCourse.tsx       |       0 |        0 |       0 |       0 | 12-126            
-  EditPlan.tsx         |       0 |        0 |       0 |       0 | 25-106            
+  EditPlan.tsx         |       0 |        0 |       0 |       0 | 25-142            
   EditSemester.tsx     |       0 |        0 |       0 |       0 | 23-280            
   PlanList.tsx         |       0 |      100 |       0 |       0 | 18-21             
   SemesterList.tsx     |       0 |        0 |       0 |       0 | 15-18             
@@ -139,5 +139,5 @@ All files              |       0 |        0 |       0 |       0 |
 Test Suites: 1 failed, 1 total
 Tests:       4 failed, 4 total
 Snapshots:   0 total
-Time:        3.193 s
+Time:        3.757 s
 Ran all test suites.
