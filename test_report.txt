@@ -3,7 +3,7 @@
 > react-scripts test "--coverage"
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (60 ms)
+  ✕ renders the course name somewhere (116 ms)
 
   ● renders the course name somewhere
 
@@ -56,23 +56,587 @@ FAIL src/App.test.tsx
                   [33mid[39m=[32m"courseList"[39m
                 [36m>[39m
                   [36m<option[39m
-                    [33mvalue[39m=[32m"CISC181"[39m
+                    [33mvalue[39m=[32m"CISC 101"[39m
                   [36m>[39m
-                    [0mCISC181[0m
+                    [0mCISC 101[0m
                   [36m</option>[39m
                   [36m<option[39m
-                    [33mvalue[39m=[32m"CISC210"[39m
+                    [33mvalue[39m=[32m"CISC 103"[39m
                   [36m>[39m
-                    [0mCISC210[0m
+                    [0mCISC 103[0m
                   [36m</option>[39m
                   [36m<option[39m
-                    [33mvalue[39m=[32m"CISC220"[39m
+                    [33mvalue[39m=[32m"CISC 106"[39m
                   [36m>[39m
-                    [0mCISC220[0m
+                    [0mCISC 106[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 108"[39m
+                  [36m>[39m
+                    [0mCISC 108[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 166"[39m
+                  [36m>[39m
+                    [0mCISC 166[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 167"[39m
+                  [36m>[39m
+                    [0mCISC 167[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 181"[39m
+                  [36m>[39m
+                    [0mCISC 181[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 187"[39m
+                  [36m>[39m
+                    [0mCISC 187[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 210"[39m
+                  [36m>[39m
+                    [0mCISC 210[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 220"[39m
+                  [36m>[39m
+                    [0mCISC 220[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 250"[39m
+                  [36m>[39m
+                    [0mCISC 250[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 260"[39m
+                  [36m>[39m
+                    [0mCISC 260[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 266"[39m
+                  [36m>[39m
+                    [0mCISC 266[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 267"[39m
+                  [36m>[39m
+                    [0mCISC 267[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 275"[39m
+                  [36m>[39m
+                    [0mCISC 275[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 287"[39m
+                  [36m>[39m
+                    [0mCISC 287[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 303"[39m
+                  [36m>[39m
+                    [0mCISC 303[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 304"[39m
+                  [36m>[39m
+                    [0mCISC 304[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 320"[39m
+                  [36m>[39m
+                    [0mCISC 320[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 355"[39m
+                  [36m>[39m
+                    [0mCISC 355[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 356"[39m
+                  [36m>[39m
+                    [0mCISC 356[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 357"[39m
+                  [36m>[39m
+                    [0mCISC 357[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 360"[39m
+                  [36m>[39m
+                    [0mCISC 360[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 361"[39m
+                  [36m>[39m
+                    [0mCISC 361[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 366"[39m
+                  [36m>[39m
+                    [0mCISC 366[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 367"[39m
+                  [36m>[39m
+                    [0mCISC 367[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 372"[39m
+                  [36m>[39m
+                    [0mCISC 372[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 374"[39m
+                  [36m>[39m
+                    [0mCISC 374[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 387"[39m
+                  [36m>[39m
+                    [0mCISC 387[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 401"[39m
+                  [36m>[39m
+                    [0mCISC 401[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 404"[39m
+                  [36m>[39m
+                    [0mCISC 404[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 410"[39m
+                  [36m>[39m
+                    [0mCISC 410[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 411"[39m
+                  [36m>[39m
+                    [0mCISC 411[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 414"[39m
+                  [36m>[39m
+                    [0mCISC 414[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 436"[39m
+                  [36m>[39m
+                    [0mCISC 436[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 437"[39m
+                  [36m>[39m
+                    [0mCISC 437[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 440"[39m
+                  [36m>[39m
+                    [0mCISC 440[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 442"[39m
+                  [36m>[39m
+                    [0mCISC 442[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 449"[39m
+                  [36m>[39m
+                    [0mCISC 449[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 450"[39m
+                  [36m>[39m
+                    [0mCISC 450[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 453"[39m
+                  [36m>[39m
+                    [0mCISC 453[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 459"[39m
+                  [36m>[39m
+                    [0mCISC 459[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 464"[39m
+                  [36m>[39m
+                    [0mCISC 464[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 465"[39m
+                  [36m>[39m
+                    [0mCISC 465[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 466"[39m
+                  [36m>[39m
+                    [0mCISC 466[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 467"[39m
+                  [36m>[39m
+                    [0mCISC 467[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 471"[39m
+                  [36m>[39m
+                    [0mCISC 471[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 472"[39m
+                  [36m>[39m
+                    [0mCISC 472[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 473"[39m
+                  [36m>[39m
+                    [0mCISC 473[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 474"[39m
+                  [36m>[39m
+                    [0mCISC 474[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 475"[39m
+                  [36m>[39m
+                    [0mCISC 475[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 476"[39m
+                  [36m>[39m
+                    [0mCISC 476[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 479"[39m
+                  [36m>[39m
+                    [0mCISC 479[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 481"[39m
+                  [36m>[39m
+                    [0mCISC 481[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 482"[39m
+                  [36m>[39m
+                    [0mCISC 482[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 483"[39m
+                  [36m>[39m
+                    [0mCISC 483[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 484"[39m
+                  [36m>[39m
+                    [0mCISC 484[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 487"[39m
+                  [36m>[39m
+                    [0mCISC 487[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 489"[39m
+                  [36m>[39m
+                    [0mCISC 489[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 498"[39m
+                  [36m>[39m
+                    [0mCISC 498[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 499"[39m
+                  [36m>[39m
+                    [0mCISC 499[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 567"[39m
+                  [36m>[39m
+                    [0mCISC 567[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 601"[39m
+                  [36m>[39m
+                    [0mCISC 601[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 604"[39m
+                  [36m>[39m
+                    [0mCISC 604[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 605"[39m
+                  [36m>[39m
+                    [0mCISC 605[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 606"[39m
+                  [36m>[39m
+                    [0mCISC 606[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 611"[39m
+                  [36m>[39m
+                    [0mCISC 611[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 612"[39m
+                  [36m>[39m
+                    [0mCISC 612[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 613"[39m
+                  [36m>[39m
+                    [0mCISC 613[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 614"[39m
+                  [36m>[39m
+                    [0mCISC 614[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 615"[39m
+                  [36m>[39m
+                    [0mCISC 615[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 621"[39m
+                  [36m>[39m
+                    [0mCISC 621[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 636"[39m
+                  [36m>[39m
+                    [0mCISC 636[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 637"[39m
+                  [36m>[39m
+                    [0mCISC 637[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 640"[39m
+                  [36m>[39m
+                    [0mCISC 640[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 642"[39m
+                  [36m>[39m
+                    [0mCISC 642[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 649"[39m
+                  [36m>[39m
+                    [0mCISC 649[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 650"[39m
+                  [36m>[39m
+                    [0mCISC 650[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 653"[39m
+                  [36m>[39m
+                    [0mCISC 653[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 655"[39m
+                  [36m>[39m
+                    [0mCISC 655[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 659"[39m
+                  [36m>[39m
+                    [0mCISC 659[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 662"[39m
+                  [36m>[39m
+                    [0mCISC 662[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 663"[39m
+                  [36m>[39m
+                    [0mCISC 663[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 664"[39m
+                  [36m>[39m
+                    [0mCISC 664[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 665"[39m
+                  [36m>[39m
+                    [0mCISC 665[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 666"[39m
+                  [36m>[39m
+                    [0mCISC 666[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 667"[39m
+                  [36m>[39m
+                    [0mCISC 667[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 670"[39m
+                  [36m>[39m
+                    [0mCISC 670[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 672"[39m
+                  [36m>[39m
+                    [0mCISC 672[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 675"[39m
+                  [36m>[39m
+                    [0mCISC 675[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 681"[39m
+                  [36m>[39m
+                    [0mCISC 681[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 682"[39m
+                  [36m>[39m
+                    [0mCISC 682[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 683"[39m
+                  [36m>[39m
+                    [0mCISC 683[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 684"[39m
+                  [36m>[39m
+                    [0mCISC 684[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 685"[39m
+                  [36m>[39m
+                    [0mCISC 685[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 689"[39m
+                  [36m>[39m
+                    [0mCISC 689[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 691"[39m
+                  [36m>[39m
+                    [0mCISC 691[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 699"[39m
+                  [36m>[39m
+                    [0mCISC 699[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 830"[39m
+                  [36m>[39m
+                    [0mCISC 830[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 844"[39m
+                  [36m>[39m
+                    [0mCISC 844[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 849"[39m
+                  [36m>[39m
+                    [0mCISC 849[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 850"[39m
+                  [36m>[39m
+                    [0mCISC 850[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 852"[39m
+                  [36m>[39m
+                    [0mCISC 852[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 853"[39m
+                  [36m>[39m
+                    [0mCISC 853[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 866"[39m
+                  [36m>[39m
+                    [0mCISC 866[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 867"[39m
+                  [36m>[39m
+                    [0mCISC 867[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 868"[39m
+                  [36m>[39m
+                    [0mCISC 868[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 869"[39m
+                  [36m>[39m
+                    [0mCISC 869[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 879"[39m
+                  [36m>[39m
+                    [0mCISC 879[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 882"[39m
+                  [36m>[39m
+                    [0mCISC 882[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 886"[39m
+                  [36m>[39m
+                    [0mCISC 886[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 889"[39m
+                  [36m>[39m
+                    [0mCISC 889[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 890"[39m
+                  [36m>[39m
+                    [0mCISC 890[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 964"[39m
+                  [36m>[39m
+                    [0mCISC 964[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"CISC 969"[39m
+                  [36m>[39m
+                    [0mCISC 969[0m
                   [36m</option>[39m
                 [36m</select>[39m
               [36m</div>[39m
-              [0mThis information: Code: CISC 181 Name: Introduction to Computer Science II. Credits: 3[0m
+              [0mCode: [0m
+              [0m Name:[0m
+              [0m [0m
+              [0m Credits:[0m
+              [0m [0m
             [36m</div>[39m
           [36m</div>[39m
         [36m</div>[39m
@@ -100,17 +664,17 @@ FAIL src/App.test.tsx
 -----------------------|---------|----------|---------|---------|-------------------
 File                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -----------------------|---------|----------|---------|---------|-------------------
-All files              |     8.4 |        0 |    3.75 |    8.92 |                   
- src                   |   31.81 |        0 |    7.14 |   36.84 |                   
-  App.tsx              |   31.81 |        0 |    7.14 |   36.84 | 24-79             
+All files              |   12.09 |        0 |    7.22 |   12.82 |                   
+ src                   |   44.44 |        0 |   23.52 |      50 |                   
+  App.tsx              |   44.44 |        0 |   23.52 |      50 | 1225-1288         
  src/components        |    3.09 |        0 |    3.03 |    3.22 |                   
-  AddCourseModal.tsx   |       0 |      100 |       0 |       0 | 14-57             
+  AddCourseModal.tsx   |       0 |      100 |       0 |       0 | 14-61             
   AddPlanModal.tsx     |      40 |      100 |   33.33 |      40 | 17-22,41          
   AddSemesterModal.tsx |       0 |      100 |       0 |       0 | 14-63             
   CourseList.tsx       |       0 |      100 |       0 |       0 | 7-10              
-  EditCourse.tsx       |       0 |        0 |       0 |       0 | 16-134            
+  EditCourse.tsx       |       0 |        0 |       0 |       0 | 12-130            
   EditPlan.tsx         |       0 |        0 |       0 |       0 | 25-98             
-  EditSemester.tsx     |       0 |        0 |       0 |       0 | 23-196            
+  EditSemester.tsx     |       0 |        0 |       0 |       0 | 23-195            
   PlanList.tsx         |      50 |      100 |      50 |      50 | 25                
   SemesterList.tsx     |       0 |        0 |       0 |       0 | 15-18             
   ViewCourses.tsx      |       0 |      100 |       0 |       0 | 6                 
@@ -124,5 +688,5 @@ All files              |     8.4 |        0 |    3.75 |    8.92 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        2.58 s
+Time:        3.014 s
 Ran all test suites.
