@@ -12,7 +12,7 @@ import { semester } from "./interface/semester";
 import { Form } from "react-bootstrap";
 export function App(): JSX.Element {
     //const [courses, setCourses] = useState<course[]>([]);
-    const [semesters, setSemesters] = useState<semester[]>([]);
+    //const [semesters, setSemesters] = useState<semester[]>([]);
     const [plans, setPlans] = useState<plan[]>([]);
     const [show, setShow] = useState<boolean>(false);
     const CloseAddModal = () => setShow(false);
@@ -1232,26 +1232,6 @@ export function App(): JSX.Element {
         setCourse(oneCourse!);
     }
     */
-
-    function editSemester(season: string, year: number, newSemester: semester) {
-        setSemesters(
-            semesters.map(
-                (semester: semester): semester =>
-                    semester.season === season && semester.year === year
-                        ? newSemester
-                        : semester
-            )
-        );
-    }
-
-    function deleteSemester(season: string, year: number) {
-        setSemesters(
-            semesters.filter(
-                (semester: semester): boolean =>
-                    semester.season !== season && semester.year !== year
-            )
-        );
-    }
     /*
     function addSemester(newSemester: semester) {
         const existing = semesters.find(
@@ -1310,8 +1290,6 @@ export function App(): JSX.Element {
                         plans={plans}
                         editPlan={editPlan}
                         deletePlan={deletePlan}
-                        editSemester={editSemester}
-                        deleteSemester={deleteSemester}
                         //deleteExistingSemesters={deleteExistingSemesters}
                     ></PlanList>
                 </div>

@@ -2,21 +2,17 @@ import React from "react";
 import { Stack } from "react-bootstrap";
 import { plan } from "../interface/plan";
 import { ViewPlans } from "./ViewPlans";
-import { semester } from "../interface/semester";
+//import { semester } from "../interface/semester";
 
 export function PlanList({
     plans,
     editPlan,
-    deletePlan,
-    editSemester,
-    deleteSemester
+    deletePlan
 }: //deleteExistingSemesters
 {
     plans: plan[];
     editPlan: (name: string, newPlan: plan) => void;
     deletePlan: (name: string) => void;
-    editSemester: (season: string, year: number, newSemester: semester) => void;
-    deleteSemester: (season: string, year: number) => void;
     //deleteExistingSemesters: (plan: plan) => void;
 }): JSX.Element {
     return (
@@ -27,8 +23,6 @@ export function PlanList({
                         plan={plan}
                         editPlan={editPlan}
                         deletePlan={deletePlan}
-                        editSemester={editSemester}
-                        deleteSemester={deleteSemester}
                         //deleteExistingSemesters={deleteExistingSemesters}
                     ></ViewPlans>
                 </div>

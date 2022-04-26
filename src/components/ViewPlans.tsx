@@ -8,18 +8,13 @@ import { SemesterList } from "./SemesterList";
 export function ViewPlans({
     plan,
     editPlan,
-    deletePlan,
-    //semester,
-    editSemester,
-    deleteSemester
+    deletePlan
 }: //deleteExistingSemesters
 {
     plan: plan;
     editPlan: (name: string, newPlan: plan) => void;
     deletePlan: (name: string) => void;
     //semester: semester;
-    editSemester: (season: string, year: number, newSemester: semester) => void;
-    deleteSemester: (season: string, year: number) => void;
     //deleteExistingSemesters: (plan: plan) => void;
 }): JSX.Element {
     const [semesters, setSemesters] = useState<semester[]>(plan.semesters);
@@ -32,6 +27,26 @@ export function ViewPlans({
 
     function changeEditMode() {
         setEditMode(!editMode);
+    }
+
+    function editSemester(season: string, year: number, newSemester: semester) {
+        setSemesters(
+            semesters.map(
+                (semester: semester): semester =>
+                    semester.season === season && semester.year === year
+                        ? newSemester
+                        : semester
+            )
+        );
+    }
+
+    function deleteSemester(season: string, year: number) {
+        setSemesters(
+            semesters.filter(
+                (semester: semester): boolean =>
+                    semester.season !== season && semester.year !== year
+            )
+        );
     }
 
     return editMode ? (
