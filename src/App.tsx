@@ -1224,14 +1224,6 @@ export function App(): JSX.Element {
     function updateEmotion(event: React.ChangeEvent<HTMLSelectElement>) {
         setEmotion(event.target.value);
     }
-    /*function changeCourse(code: string) {
-        const oneCourse = ciscCourses.find(
-            (cscourse: course): boolean => cscourse.code !== code
-        );
-        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-        setCourse(oneCourse!);
-    }
-    */
 
     function editSemester(season: string, year: number, newSemester: semester) {
         setSemesters(

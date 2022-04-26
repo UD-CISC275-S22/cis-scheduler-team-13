@@ -60,27 +60,23 @@ export function blankCourse(name: string, id: number): course{
     const course: course = {courseName: name, courseID: id, credits: 0, prerequisites: []};
     return course;
 }
-
+*/
 export function EditCoursePrereqs({
     course,
     setCourse
 }: CourseEdit): JSX.Element {
     return (
         <Form.Control
-            value={course.prerequisites.toString()}
+            value={course.preReq}
             onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
-                setCourse(course.courseID, course.courseName, {
+                setCourse(course.code, course.name, {
                     ...course,
-                    prerequisites: blankCourse(
-                        event.target.value.substring(0, 3),
-                        parseInt(event.target.value.substring(4, 6)))
-                    )
+                    preReq: event.target.value || ""
                 })
             }
         />
     );
 }
-*/
 
 export function EditCourseDelete({
     course,
@@ -136,7 +132,7 @@ export function EditCourses({
                         <Container>
                             <Row>
                                 <Col>
-                                    <p>Course Name</p>
+                                    <p>Course Code</p>
                                 </Col>
                                 <Col>
                                     <EditCourseName
@@ -147,7 +143,7 @@ export function EditCourses({
                             </Row>
                             <Row>
                                 <Col>
-                                    <p>Course ID</p>
+                                    <p>Course Name</p>
                                 </Col>
                                 <Col>
                                     <EditCourseID
@@ -172,12 +168,12 @@ export function EditCourses({
                                     <p>Prerequisities</p>
                                 </Col>
                                 <Col>
-                                    {/*
-                                    <EditCoursePrereqs
-                                        course={course}
-                                        setCourse={setCourse}
-                                    ></EditCoursePrereqs>
-                                     */}
+                                    {
+                                        <EditCoursePrereqs
+                                            course={course}
+                                            setCourse={setCourse}
+                                        ></EditCoursePrereqs>
+                                    }
                                 </Col>
                             </Row>
                         </Container>

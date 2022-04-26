@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { course } from "../interface/course";
 import React, { useState } from "react";
-import { Button, Modal, Form, Col, Row } from "react-bootstrap";
+import { Button, Modal, Form } from "react-bootstrap";
 
 export function AddCourse({
     handleClose,
@@ -12,7 +12,7 @@ export function AddCourse({
     handleClose: () => void;
     addCourse: (newOne: course) => void;
 }) {
-    const [emotion, setEmotion] = useState<string>("CISC181");
+    const [emotion, setEmotion] = useState<string>("    ");
     function updateEmotion(event: React.ChangeEvent<HTMLSelectElement>) {
         setEmotion(event.target.value);
     }
