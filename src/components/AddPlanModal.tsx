@@ -38,7 +38,7 @@ export function AddPlan({
                             value={name}
                             onChange={(
                                 event: React.ChangeEvent<HTMLInputElement>
-                            ) => setName(event.target.value)}
+                            ) => setName(event.target.value || "")}
                         />
                     </Col>
                 </Form.Group>

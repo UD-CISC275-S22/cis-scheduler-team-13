@@ -39,11 +39,10 @@ export function ViewSemesters({
         <Container>
             <Row>
                 <Col>
-                    <h3>{semester.season}</h3>
+                    <h3>{semester.season + " " + semester.year}</h3>
                 </Col>
             </Row>
             <Row>
-                <p>{semester.year}</p>
                 <p>{semester.credits} Total Credits</p>
             </Row>
             <Row>

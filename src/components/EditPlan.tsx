@@ -62,7 +62,7 @@ export function EditPlan({
                                 value={name}
                                 onChange={(
                                     event: React.ChangeEvent<HTMLInputElement>
-                                ) => setName(event.target.value)}
+                                ) => setName(event.target.value || "")}
                             />
                         </Col>
                     </Form.Group>
@@ -72,6 +72,7 @@ export function EditPlan({
                     ></EditSemesters>
                     <div>
                         <Button
+                            id="edit-plan-add-semester"
                             variant="success"
                             className="me-4"
                             onClick={ShowAddModal}
@@ -85,16 +86,23 @@ export function EditPlan({
                         ></AddSemester>
                     </div>
                     <Button
+                        id="edit-plan-save"
                         onClick={saveChanges}
                         variant="success"
                         className="me-4"
                     >
                         Save
                     </Button>
-                    <Button onClick={goBack} variant="warning" className="me-5">
+                    <Button
+                        id="edit-plan-cancel"
+                        onClick={goBack}
+                        variant="warning"
+                        className="me-5"
+                    >
                         Cancel
                     </Button>
                     <Button
+                        id="edit-plan-delete"
                         onClick={() => deletePlan(plan.name)}
                         variant="danger"
                         className="me-8"

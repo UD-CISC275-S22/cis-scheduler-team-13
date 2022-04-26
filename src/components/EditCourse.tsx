@@ -19,7 +19,7 @@ export function EditCourseName({ course, setCourse }: CourseEdit): JSX.Element {
             onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
                 setCourse(course.courseID, course.courseName, {
                     ...course,
-                    courseName: event.target.value
+                    courseName: event.target.value || ""
                 })
             }
         />
@@ -33,7 +33,7 @@ export function EditCourseID({ course, setCourse }: CourseEdit): JSX.Element {
             onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
                 setCourse(course.courseID, course.courseName, {
                     ...course,
-                    courseID: parseInt(event.target.value)
+                    courseID: parseInt(event.target.value) || 0
                 })
             }
         />
@@ -50,7 +50,7 @@ export function EditCourseCredits({
             onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
                 setCourse(course.courseID, course.courseName, {
                     ...course,
-                    credits: parseInt(event.target.value)
+                    credits: parseInt(event.target.value) || 0
                 })
             }
         />

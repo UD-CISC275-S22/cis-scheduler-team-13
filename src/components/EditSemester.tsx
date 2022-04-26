@@ -20,25 +20,39 @@ export function EditSemester({
     setCourses: (courses: course[]) => void;
     courses: course[];
 }): JSX.Element {
-    const seasons = ["Summer", "Spring", "Fall", "Winter"];
     const [show, setShow] = useState<boolean>(false);
     const CloseAddModal = () => setShow(false);
     const ShowAddModal = () => setShow(true);
     const [season, setSeason] = useState<string>(semester.season);
     const [year, setYear] = useState<number>(semester.year);
+    const [credits, setCredits] = useState<number>(semester.credits);
+
+    function naturalCredits() {
+        const creditList = courses.map(
+            (course: course): number => course.credits
+        );
+        const sum = creditList.reduce(
+            (currentTotal: number, credits: number) => currentTotal + credits,
+            0
+        );
+        setCredits(sum);
+    }
 
     function saveChanges() {
         editSemester(semester.season, semester.year, {
             ...semester,
             season: season,
             year: year,
+            credits: credits,
             courses: courses
         });
-        changeEditMode();
+        changeEditMode(); //gets to here just fine
     }
+
     function goBack() {
         changeEditMode();
     }
+
     function addCourse(newCourse: course) {
         const exists = courses.find(
             (course: course): boolean =>
@@ -62,18 +76,46 @@ export function EditSemester({
                         </Form.Label>
                         <Col>
                             <Form.Group controlId="picking-a-season">
-                                {seasons.map((option: string) => (
-                                    <Form.Check
-                                        inline
-                                        key={option}
-                                        value={option}
-                                        type="radio"
-                                        name={option}
-                                        onChange={updateSeason}
-                                        id="season-checker"
-                                        label={option}
-                                    />
-                                ))}
+                                <Form.Check
+                                    inline
+                                    value="Winter"
+                                    type="radio"
+                                    name="Winter"
+                                    onChange={updateSeason}
+                                    id="season-winter"
+                                    label="Winter"
+                                    checked={season === "Winter"}
+                                ></Form.Check>
+                                <Form.Check
+                                    inline
+                                    value="Spring"
+                                    type="radio"
+                                    name="Spring"
+                                    onChange={updateSeason}
+                                    id="season-spring"
+                                    label="Spring"
+                                    checked={season === "Spring"}
+                                ></Form.Check>
+                                <Form.Check
+                                    inline
+                                    value="Summer"
+                                    type="radio"
+                                    name="Summer"
+                                    onChange={updateSeason}
+                                    id="season-summer"
+                                    label="Summer"
+                                    checked={season === "Summer"}
+                                ></Form.Check>
+                                <Form.Check
+                                    inline
+                                    value="Fall"
+                                    type="radio"
+                                    name="Fall"
+                                    onChange={updateSeason}
+                                    id="season-fall"
+                                    label="Fall"
+                                    checked={season === "Fall"}
+                                ></Form.Check>
                             </Form.Group>
                         </Col>
                     </Form.Group>
@@ -88,7 +130,26 @@ export function EditSemester({
                                 value={year}
                                 onChange={(
                                     event: React.ChangeEvent<HTMLInputElement>
-                                ) => setYear(parseInt(event.target.value))}
+                                ) => setYear(parseInt(event.target.value) || 0)}
+                            />
+                        </Col>
+                    </Form.Group>
+                    <Form.Group controlId="formSemesterCredits" as={Row}>
+                        <Form.Label column sm={2}>
+                            Credits:
+                        </Form.Label>
+                        <Col>
+                            <Form.Control
+                                as="textarea"
+                                rows={3}
+                                value={credits}
+                                onChange={(
+                                    event: React.ChangeEvent<HTMLInputElement>
+                                ) =>
+                                    setCredits(
+                                        parseInt(event.target.value) || 0
+                                    )
+                                }
                             />
                         </Col>
                     </Form.Group>
@@ -110,6 +171,13 @@ export function EditSemester({
                             addCourse={addCourse}
                         ></AddCourse>
                     </div>
+                    <Button
+                        onClick={naturalCredits}
+                        variant="warning"
+                        className="me-4"
+                    >
+                        Set Credits to Actual
+                    </Button>
                     <Button
                         onClick={saveChanges}
                         variant="success"
@@ -150,7 +218,7 @@ export function EditSemesterSeason({
             onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
                 setSemester(semester.season, semester.year, {
                     ...semester,
-                    season: event.target.value
+                    season: event.target.value || ""
                 })
             }
         />
@@ -163,11 +231,28 @@ export function EditSemesterYear({
 }: SemesterEdit): JSX.Element {
     return (
         <Form.Control
-            value={semester.season}
+            value={semester.year}
             onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
                 setSemester(semester.season, semester.year, {
                     ...semester,
-                    year: parseInt(event.target.value)
+                    year: parseInt(event.target.value) || 0
+                })
+            }
+        />
+    );
+}
+
+export function EditSemesterCredits({
+    semester,
+    setSemester
+}: SemesterEdit): JSX.Element {
+    return (
+        <Form.Control
+            value={semester.credits}
+            onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                setSemester(semester.season, semester.year, {
+                    ...semester,
+                    credits: parseInt(event.target.value) || 0
                 })
             }
         />
@@ -220,6 +305,17 @@ export function EditSemesters({
                                         semester={semester}
                                         setSemester={setSemester}
                                     ></EditSemesterYear>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <p>Semester Credits</p>
+                                </Col>
+                                <Col>
+                                    <EditSemesterCredits
+                                        semester={semester}
+                                        setSemester={setSemester}
+                                    ></EditSemesterCredits>
                                 </Col>
                             </Row>
                         </Container>

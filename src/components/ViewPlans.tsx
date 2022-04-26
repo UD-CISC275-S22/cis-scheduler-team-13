@@ -55,8 +55,12 @@ export function ViewPlans({
                 <p>{plan.credits} Total Credits</p>
             </Row>
             <Row>
-                <Button onClick={changeVisible}>View Plan</Button>
-                <Button onClick={changeEditMode}>Edit</Button>
+                <Button id="plan-view" onClick={changeVisible}>
+                    View Plan
+                </Button>
+                <Button id="plan-edit" onClick={changeEditMode}>
+                    Edit
+                </Button>
             </Row>
             {visible && (
                 <Row>
