@@ -26,12 +26,24 @@ export function EditPlan({
     const CloseAddModal = () => setShow(false);
     const ShowAddModal = () => setShow(true);
     const [name, setName] = useState<string>(plan.name);
+    const [credits, setCredits] = useState<number>(plan.credits);
+
+    function naturalCreditsPlan() {
+        const creditList = semesters.map(
+            (semester: semester): number => semester.credits
+        );
+        const sum = creditList.reduce(
+            (currentTotal: number, credits: number) => currentTotal + credits,
+            0
+        );
+        setCredits(sum);
+    }
 
     function saveChanges() {
         editPlan(plan.name, {
             ...plan,
             name: name,
-            credits: plan.credits, //possibly edit this for credits later on
+            credits: credits, //possibly edit this for credits later on
             semesters: semesters
         });
         changeEditMode();
@@ -66,6 +78,23 @@ export function EditPlan({
                             />
                         </Col>
                     </Form.Group>
+                    <Form.Group controlId="formPlanCredits" as={Row}>
+                        <Form.Label column sm={2}>
+                            Total Credits:
+                        </Form.Label>
+                        <Col>
+                            <Form.Control
+                                value={credits}
+                                onChange={(
+                                    event: React.ChangeEvent<HTMLInputElement>
+                                ) =>
+                                    setCredits(
+                                        parseInt(event.target.value) || 0
+                                    )
+                                }
+                            />
+                        </Col>
+                    </Form.Group>
                     <EditSemesters
                         semesters={semesters}
                         setSemesters={setSemesters}
@@ -85,6 +114,13 @@ export function EditPlan({
                             addSemester={addSemester}
                         ></AddSemester>
                     </div>
+                    <Button
+                        onClick={naturalCreditsPlan}
+                        variant="warning"
+                        className="me-4"
+                    >
+                        Set Credits to Actual
+                    </Button>
                     <Button
                         id="edit-plan-save"
                         onClick={saveChanges}

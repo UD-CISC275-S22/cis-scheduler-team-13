@@ -2,17 +2,12 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import "./App.css";
 import { AddPlan } from "./components/AddPlanModal";
-//import { AddSemester } from "./components/AddSemesterModal";
-//import { EditSemester } from "./components/EditSemester";
 import { PlanList } from "./components/PlanList";
-//import { SemesterList } from "./components/SemesterList";
 import { course } from "./interface/course";
 import { plan } from "./interface/plan";
-//import { semester } from "./interface/semester";
 import { Form } from "react-bootstrap";
+
 export function App(): JSX.Element {
-    //const [courses, setCourses] = useState<course[]>([]);
-    //const [semesters, setSemesters] = useState<semester[]>([]);
     const [plans, setPlans] = useState<plan[]>([]);
     const [show, setShow] = useState<boolean>(false);
     const CloseAddModal = () => setShow(false);
@@ -1290,7 +1285,6 @@ export function App(): JSX.Element {
                         plans={plans}
                         editPlan={editPlan}
                         deletePlan={deletePlan}
-                        //deleteExistingSemesters={deleteExistingSemesters}
                     ></PlanList>
                 </div>
                 <div>
