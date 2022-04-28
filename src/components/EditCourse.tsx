@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Col, Container, Form, ListGroup, Row } from "react-bootstrap";
 import { course } from "../interface/course";
+//import { semester } from "../interface/semester";
 //import { AddCourse } from "./AddCourseModal";
 
 interface CourseEdit {
@@ -105,6 +106,7 @@ export function EditCourseDelete({
 }
 
 export function EditCourses({
+    //Add delete button here I believe
     courses,
     setCourses
 }: {
@@ -174,6 +176,18 @@ export function EditCourses({
                                             setCourse={setCourse}
                                         ></EditCoursePrereqs>
                                     }
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <p>Delete</p>
+                                </Col>
+                                <Col>
+                                    <EditCourseDelete
+                                        course={course}
+                                        setCourses={setCourses}
+                                        courses={courses}
+                                    ></EditCourseDelete>
                                 </Col>
                             </Row>
                         </Container>
