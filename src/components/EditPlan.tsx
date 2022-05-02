@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
+//import { course } from "../interface/course";
 import { plan } from "../interface/plan";
 import { semester } from "../interface/semester";
 import { AddSemester } from "./AddSemesterModal";
@@ -27,7 +28,29 @@ export function EditPlan({
     const ShowAddModal = () => setShow(true);
     const [name, setName] = useState<string>(plan.name);
     const [credits, setCredits] = useState<number>(plan.credits);
-
+    /*
+    const [engl, setEngl] = useState<boolean>(plan.engl);
+    const [multicultural, setMulticultural] = useState<boolean>(
+        plan.multicultural
+    );
+    const [seminar, setSeminar] = useState<boolean>(plan.seminar);
+    const [dle, setDle] = useState<boolean>(plan.dle);
+    const [CAH, setCAH] = useState<boolean>(plan.CAH);
+    const [HCC, setHCC] = useState<boolean>(plan.HCC);
+    const [SBS, setSBS] = useState<boolean>(plan.SBS);
+    const [MNST, setMNST] = useState<boolean>(plan.MNST);
+    const [totalCredits, setTotalCredits] = useState<boolean>(
+        plan.totalCredits
+    );
+    const [core, setCore] = useState<boolean>(plan.core);
+    const [relatedWork, setRelatedWork] = useState<boolean>(plan.relatedWork);
+    const [technical, setTechnical] = useState<boolean>(plan.technical);
+    const [capstone, setCapstone] = useState<boolean>(plan.capstone);
+    const [labScience, setLabScience] = useState<boolean>(plan.labScience);
+    const [additionalScience, setAdditionalScience] = useState<boolean>(
+        plan.additionalScience
+    );
+    */
     function naturalCreditsPlan() {
         const creditList = semesters.map(
             (semester: semester): number => semester.credits
@@ -38,12 +61,70 @@ export function EditPlan({
         );
         setCredits(sum);
     }
+    /*
+    function checkAllRequirements() {
+        checkForEngl();
+    }
 
+    function updateRequirements() {
+        checkAllRequirements();
+        editPlan(plan.name, {
+            ...plan,
+            name: name,
+            credits: credits,
+            semesters: semesters,
+            engl: engl,
+            multicultural: multicultural,
+            seminar: seminar,
+            dle: dle,
+            CAH: CAH,
+            HCC: HCC,
+            SBS: SBS,
+            MNST: MNST,
+            totalCredits: totalCredits,
+            core: core,
+            relatedWork: relatedWork,
+            technical: technical,
+            capstone: capstone,
+            labScience: labScience,
+            additionalScience: additionalScience
+        });
+    }
+
+    function checkForEngl() {
+        const courseList = semesters.map(
+            (semester: semester): course[] => semester.courses
+        );
+        let inCommon = courseList.map((course: course): course[] =>
+            "PLACEHOLDER".includes(course)
+                ? (inCommon = [...inCommon, course])
+                : (inCommon = [...inCommon])
+        );
+        const listOfCredits = inCommon.map((course: course): number =>
+            parseInt(course.credits)
+        );
+        const sumOfCredits = listOfCredits.reduce(
+            (currentTotal: number, credits: number): number =>
+                currentTotal + credits,
+            0
+        );
+        if (sumOfCredits > 2) {
+            setEngl(true);
+        }
+    }
+*/
     function saveChanges() {
         editPlan(plan.name, {
             ...plan,
             name: name,
             credits: credits, //possibly edit this for credits later on
+            semesters: semesters
+        });
+        naturalCreditsPlan();
+        editPlan(plan.name, {
+            ...plan,
+            name: name,
+            credits: credits,
             semesters: semesters
         });
         changeEditMode();

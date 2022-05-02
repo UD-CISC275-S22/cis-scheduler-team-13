@@ -1,7 +1,6 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import App from "./App";
+//import React from "react";
+import { screen } from "@testing-library/react";
+//import App from "./App";
 
 test("The Start Button Appears", () => {
     const startButton = screen.getAllByRole("button", {
