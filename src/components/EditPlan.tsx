@@ -113,9 +113,6 @@ export function EditPlan({
                             handleClose={CloseAddModal}
                             addSemester={addSemester}
                         ></AddSemester>
-                        <Button onClick={() => setSemesters([])}>
-                            Clear Semesters
-                        </Button>
                     </div>
                     <Button
                         onClick={naturalCreditsPlan}
