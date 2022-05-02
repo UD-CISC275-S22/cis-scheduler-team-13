@@ -196,9 +196,6 @@ export function EditSemester({
                     >
                         Delete
                     </Button>
-                    <Button onClick={() => setCourses([])}>
-                        Clear Courses
-                    </Button>
                 </Col>
             </Row>
         </Container>
