@@ -119,7 +119,7 @@ All files              |       0 |        0 |       0 |       0 |
  src                   |       0 |        0 |       0 |       0 |                   
   App.tsx              |       0 |        0 |       0 |       0 | 11-1309           
  src/components        |       0 |        0 |       0 |       0 |                   
-  AddCourseModal.tsx   |       0 |      100 |       0 |       0 | 15-1238           
+  AddCourseModal.tsx   |       0 |      100 |       0 |       0 | 14-1238           
   AddPlanModal.tsx     |       0 |        0 |       0 |       0 | 14-41             
   AddSemesterModal.tsx |       0 |        0 |       0 |       0 | 15-92             
   CourseList.tsx       |       0 |      100 |       0 |       0 | 7-10              
@@ -139,5 +139,5 @@ All files              |       0 |        0 |       0 |       0 |
 Test Suites: 1 failed, 1 total
 Tests:       4 failed, 4 total
 Snapshots:   0 total
-Time:        3.107 s
+Time:        3.064 s
 Ran all test suites.
