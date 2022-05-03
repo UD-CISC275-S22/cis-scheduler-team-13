@@ -2,142 +2,59 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
-FAIL src/App.test.tsx
-  ✕ The Start Button Appears (11 ms)
-  ✕ Close Button Works (1 ms)
-  ✕ Save Plan Works (1 ms)
-  ✕ Edit Plan Button Works (1 ms)
+  console.error
+    Warning: You seem to have overlapping act() calls, this is not supported. Be sure to await previous act() calls before making a new one.
 
-  ● The Start Button Appears
+      at console.error (node_modules/@testing-library/react/dist/act-compat.js:55:34)
+      at console.error (node_modules/@testing-library/react/dist/act-compat.js:55:34)
+      at console.error (node_modules/@testing-library/react/dist/act-compat.js:55:34)
+      at printWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom-test-utils.development.js:43:5)
+      at onDone (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1034:9)
+      at node_modules/react-dom/cjs/react-dom-test-utils.development.js:1073:13
 
-    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name `/Add New Plan/i`
+PASS src/App.test.tsx
+  Degree Planner Component Tests
+    ✓ The initial button exists (93 ms)
+    ✓ Add New Plan Button Works and Menu appears (139 ms)
+    ✓ Cancel button and Add Plan Button works (170 ms)
+    ✓ Can Create a Plan with a Name (163 ms)
+    ✓ Edit Plan Works (153 ms)
+    ✓ Cancel Button works (138 ms)
+    ✓ Delete Button works (92 ms)
+    ✓ Can change name and credits and save Button Works (178 ms)
+    ✓ Add A Semester Button works (85 ms)
+    ✓ You can actually add a real semester (147 ms)
 
-    There are no accessible roles. But there might be some inaccessible roles. If you wish to access them, then set the `hidden` option to `true`. Learn more about this here: https://testing-library.com/docs/dom-testing-library/api-queries#byrole
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body />[39m
-
-      4 |
-      5 | test("The Start Button Appears", () => {
-    > 6 |     const startButton = screen.getAllByRole("button", {
-        |                                ^
-      7 |         name: /Add New Plan/i
-      8 |     })[0];
-      9 |     startButton.click();
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at getAllByRole (node_modules/@testing-library/dom/dist/query-helpers.js:130:15)
-      at Object.<anonymous> (src/App.test.tsx:6:32)
-      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
-      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
-      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
-      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
-
-  ● Close Button Works
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name `/Cancel/i`
-
-    There are no accessible roles. But there might be some inaccessible roles. If you wish to access them, then set the `hidden` option to `true`. Learn more about this here: https://testing-library.com/docs/dom-testing-library/api-queries#byrole
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body />[39m
-
-      13 |
-      14 | test("Close Button Works", () => {
-    > 15 |     const cancelButton = screen.getAllByRole("button", {
-         |                                 ^
-      16 |         name: /Cancel/i
-      17 |     })[0];
-      18 |     cancelButton.click();
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at getAllByRole (node_modules/@testing-library/dom/dist/query-helpers.js:130:15)
-      at Object.<anonymous> (src/App.test.tsx:15:33)
-      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
-      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
-      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
-      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
-
-  ● Save Plan Works
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name `/Save Plan/i`
-
-    There are no accessible roles. But there might be some inaccessible roles. If you wish to access them, then set the `hidden` option to `true`. Learn more about this here: https://testing-library.com/docs/dom-testing-library/api-queries#byrole
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body />[39m
-
-      21 |
-      22 | test("Save Plan Works", () => {
-    > 23 |     const savePlan = screen.getAllByRole("button", {
-         |                             ^
-      24 |         name: /Save Plan/i
-      25 |     })[0];
-      26 |     savePlan.click();
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at getAllByRole (node_modules/@testing-library/dom/dist/query-helpers.js:130:15)
-      at Object.<anonymous> (src/App.test.tsx:23:29)
-      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
-      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
-      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
-      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
-
-  ● Edit Plan Button Works
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name `/Edit/i`
-
-    There are no accessible roles. But there might be some inaccessible roles. If you wish to access them, then set the `hidden` option to `true`. Learn more about this here: https://testing-library.com/docs/dom-testing-library/api-queries#byrole
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body />[39m
-
-      30 |
-      31 | test("Edit Plan Button Works", () => {
-    > 32 |     const editPlan = screen.getAllByRole("button", {
-         |                             ^
-      33 |         name: /Edit/i
-      34 |     })[0];
-      35 |     editPlan.click();
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at getAllByRole (node_modules/@testing-library/dom/dist/query-helpers.js:130:15)
-      at Object.<anonymous> (src/App.test.tsx:32:29)
-      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
-      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
-      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
-      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
-
------------------------|---------|----------|---------|---------|-------------------
-File                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
------------------------|---------|----------|---------|---------|-------------------
-All files              |       0 |        0 |       0 |       0 |                   
- src                   |       0 |        0 |       0 |       0 |                   
-  App.tsx              |       0 |        0 |       0 |       0 | 11-1309           
- src/components        |       0 |        0 |       0 |       0 |                   
-  AddCourseModal.tsx   |       0 |      100 |       0 |       0 | 14-1238           
-  AddPlanModal.tsx     |       0 |        0 |       0 |       0 | 14-41             
-  AddSemesterModal.tsx |       0 |        0 |       0 |       0 | 15-92             
-  CourseList.tsx       |       0 |      100 |       0 |       0 | 7-10              
-  EditCourse.tsx       |       0 |        0 |       0 |       0 | 13-128            
-  EditPlan.tsx         |       0 |        0 |       0 |       0 | 26-226            
-  EditSemester.tsx     |       0 |        0 |       0 |       0 | 23-283            
-  PlanList.tsx         |       0 |      100 |       0 |       0 | 18-21             
-  SemesterList.tsx     |       0 |        0 |       0 |       0 | 15-18             
-  ViewCourses.tsx      |       0 |      100 |       0 |       0 | 6                 
-  ViewPlans.tsx        |       0 |        0 |       0 |       0 | 20-52             
-  ViewSemesters.tsx    |       0 |        0 |       0 |       0 | 17-29             
- src/interface         |       0 |        0 |       0 |       0 |                   
-  course.ts            |       0 |        0 |       0 |       0 |                   
-  plan.ts              |       0 |        0 |       0 |       0 |                   
-  semester.ts          |       0 |        0 |       0 |       0 |                   
------------------------|---------|----------|---------|---------|-------------------
-Test Suites: 1 failed, 1 total
-Tests:       4 failed, 4 total
+-----------------------|---------|----------|---------|---------|------------------------
+File                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s      
+-----------------------|---------|----------|---------|---------|------------------------
+All files              |   51.35 |    24.24 |   43.43 |   50.35 |                        
+ src                   |    90.9 |       50 |   84.61 |   89.47 |                        
+  App.tsx              |    90.9 |       50 |   84.61 |   89.47 | 29,69                  
+ src/components        |   44.26 |    22.58 |    36.9 |   44.06 |                        
+  AddCourseModal.tsx   |       0 |      100 |       0 |       0 | 14-1238                
+  AddPlanModal.tsx     |      80 |        0 |   66.66 |      80 | 45                     
+  AddSemesterModal.tsx |     100 |       50 |     100 |     100 | 104                    
+  CourseList.tsx       |       0 |      100 |       0 |       0 | 7-10                   
+  EditCourse.tsx       |       0 |        0 |       0 |       0 | 13-128                 
+  EditPlan.tsx         |    92.3 |     37.5 |   85.71 |   91.66 | 138,201                
+  EditSemester.tsx     |   13.88 |       10 |      20 |    14.7 | 23-202,225,242,260-279 
+  PlanList.tsx         |     100 |      100 |     100 |     100 |                        
+  SemesterList.tsx     |     100 |      100 |     100 |     100 |                        
+  ViewCourses.tsx      |       0 |      100 |       0 |       0 | 6                      
+  ViewPlans.tsx        |      60 |       40 |   42.85 |      60 | 30-44                  
+  ViewSemesters.tsx    |   66.66 |       50 |   33.33 |   66.66 | 22-26                  
+ src/interface         |       0 |        0 |       0 |       0 |                        
+  course.ts            |       0 |        0 |       0 |       0 |                        
+  plan.ts              |       0 |        0 |       0 |       0 |                        
+  semester.ts          |       0 |        0 |       0 |       0 |                        
+ src/lists             |      50 |      100 |      50 |      50 |                        
+  ciscCourses.ts       |     100 |      100 |     100 |     100 |                        
+  multicultCourses.ts  |       0 |      100 |       0 |       0 | 3-300                  
+-----------------------|---------|----------|---------|---------|------------------------
+Test Suites: 1 passed, 1 total
+Tests:       10 passed, 10 total
 Snapshots:   0 total
-Time:        3.064 s
+Time:        4.43 s
 Ran all test suites.
