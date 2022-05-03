@@ -76,6 +76,7 @@ export function EditSemester({
                         <Col>
                             <Form.Group controlId="picking-a-season">
                                 <Form.Check
+                                    data-testid="semesterEditWinter"
                                     inline
                                     value="Winter"
                                     type="radio"
@@ -86,6 +87,7 @@ export function EditSemester({
                                     checked={season === "Winter"}
                                 ></Form.Check>
                                 <Form.Check
+                                    data-testid="semesterEditSpring"
                                     inline
                                     value="Spring"
                                     type="radio"
@@ -96,6 +98,7 @@ export function EditSemester({
                                     checked={season === "Spring"}
                                 ></Form.Check>
                                 <Form.Check
+                                    data-testid="semesterEditSummer"
                                     inline
                                     value="Summer"
                                     type="radio"
@@ -106,6 +109,7 @@ export function EditSemester({
                                     checked={season === "Summer"}
                                 ></Form.Check>
                                 <Form.Check
+                                    data-testid="semesterEditFall"
                                     inline
                                     value="Fall"
                                     type="radio"
@@ -124,6 +128,7 @@ export function EditSemester({
                         </Form.Label>
                         <Col>
                             <Form.Control
+                                data-testid="semesterEditYear"
                                 as="textarea"
                                 rows={3}
                                 value={year}
@@ -172,7 +177,7 @@ export function EditSemester({
                         ></AddCourse>
                     </div>
                     <Button
-                        data-testid="semesterEditSetCredit"
+                        data-testid="semesterEditSetCreditsToActual"
                         onClick={naturalCredits}
                         variant="warning"
                         className="me-4"
@@ -187,10 +192,16 @@ export function EditSemester({
                     >
                         Save
                     </Button>
-                    <Button onClick={goBack} variant="warning" className="me-5">
+                    <Button
+                        data-testid="semesterEditCancel"
+                        onClick={goBack}
+                        variant="warning"
+                        className="me-5"
+                    >
                         Cancel
                     </Button>
                     <Button
+                        data-testid="semesterEditDelete"
                         onClick={() =>
                             deleteSemester(semester.season, semester.year)
                         }

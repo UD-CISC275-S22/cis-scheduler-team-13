@@ -117,7 +117,11 @@ export function App(): JSX.Element {
                         data-testid="courseCatalog"
                     >
                         <Form.Label>Course List</Form.Label>
-                        <Form.Select value={emotion} onChange={updateEmotion}>
+                        <Form.Select
+                            data-testid="courseCatalogForm"
+                            value={emotion}
+                            onChange={updateEmotion}
+                        >
                             {ciscCourse.map((ciscCourse: course) => (
                                 <option
                                     key={ciscCourse.code}
