@@ -15,25 +15,25 @@
 
 PASS src/App.test.tsx
   Degree Planner Component Tests
-    ✓ The initial button exists (89 ms)
-    ✓ Add New Plan Button Works and Menu appears (98 ms)
-    ✓ Cancel button and Add Plan Button works (178 ms)
-    ✓ Can Create a Plan with a Name (176 ms)
-    ✓ Edit Plan Works (163 ms)
-    ✓ Cancel Button works (143 ms)
-    ✓ Delete Button works (98 ms)
-    ✓ Can change name and credits and save Button Works (183 ms)
-    ✓ Add A Semester Button works (86 ms)
-    ✓ You can actually add a real semester (154 ms)
+    ✓ The initial button exists (152 ms)
+    ✓ Add New Plan Button Works and Menu appears (94 ms)
+    ✓ Cancel button and Add Plan Button works (172 ms)
+    ✓ Can Create a Plan with a Name (168 ms)
+    ✓ Edit Plan Works (162 ms)
+    ✓ Cancel Button works (152 ms)
+    ✓ Delete Button works (88 ms)
+    ✓ Can change name and credits and save Button Works (177 ms)
+    ✓ Add A Semester Button works (81 ms)
+    ✓ You can actually add a real semester (164 ms)
 
 -----------------------|---------|----------|---------|---------|------------------------
 File                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s      
 -----------------------|---------|----------|---------|---------|------------------------
-All files              |   50.66 |    24.24 |      43 |   49.65 |                        
+All files              |      50 |    23.52 |      43 |   48.96 |                        
  src                   |    90.9 |       50 |   84.61 |   89.47 |                        
   App.tsx              |    90.9 |       50 |   84.61 |   89.47 | 31,71                  
- src/components        |   44.26 |    22.58 |    36.9 |   44.06 |                        
-  AddCourseModal.tsx   |       0 |      100 |       0 |       0 | 14-1238                
+ src/components        |   43.54 |    21.87 |    36.9 |   43.33 |                        
+  AddCourseModal.tsx   |       0 |        0 |       0 |       0 | 14-1250                
   AddPlanModal.tsx     |      80 |        0 |   66.66 |      80 | 45                     
   AddSemesterModal.tsx |     100 |       50 |     100 |     100 | 104                    
   CourseList.tsx       |       0 |      100 |       0 |       0 | 7-10                   
@@ -57,5 +57,5 @@ All files              |   50.66 |    24.24 |      43 |   49.65 |
 Test Suites: 1 passed, 1 total
 Tests:       10 passed, 10 total
 Snapshots:   0 total
-Time:        4.672 s
+Time:        4.591 s
 Ran all test suites.
