@@ -7,7 +7,7 @@ import { course } from "./interface/course";
 import { plan } from "./interface/plan";
 import { Form } from "react-bootstrap";
 import { ciscCourses } from "./lists/ciscCourses";
-import { multicultCourses } from "./lists/multicultCourses";
+//import { multicultCourses } from "./lists/multicultCourses";
 
 export function App(): JSX.Element {
     const [plans, setPlans] = useState<plan[]>([]);
@@ -15,7 +15,7 @@ export function App(): JSX.Element {
     const CloseAddModal = () => setShow(false);
     const ShowAddModal = () => setShow(true);
     const ciscCourse = [...ciscCourses()];
-    const multicultCourse = [...multicultCourses()];
+    //const multicultCourse = [...multicultCourses()];
     //stuff belowe needs to be edited but im in a rush so o well
     const [emotion, setEmotion] = useState<string>("CISC181");
     //const [courseCS, setCourse] = useState<course>(ciscCourses[0]);

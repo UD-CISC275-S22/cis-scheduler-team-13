@@ -204,7 +204,7 @@ export function EditPlan({
                         </Button>
                     </div>
                     <Button
-                        data-testid="creditsButton"
+                        data-testid="editPlanSetCreditsToActual"
                         onClick={naturalCreditsPlan}
                         variant="warning"
                         className="me-4"

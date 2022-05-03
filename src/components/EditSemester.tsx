@@ -139,6 +139,7 @@ export function EditSemester({
                         </Form.Label>
                         <Col>
                             <Form.Control
+                                data-testid="editSemesterCreditsInputBox"
                                 as="textarea"
                                 rows={3}
                                 value={credits}
@@ -171,6 +172,7 @@ export function EditSemester({
                         ></AddCourse>
                     </div>
                     <Button
+                        data-testid="semesterEditSetCredit"
                         onClick={naturalCredits}
                         variant="warning"
                         className="me-4"
@@ -178,6 +180,7 @@ export function EditSemester({
                         Set Credits to Actual
                     </Button>
                     <Button
+                        data-testid="semesterEditSave"
                         onClick={saveChanges}
                         variant="success"
                         className="me-4"
@@ -216,6 +219,7 @@ export function EditSemesterSeason({
 }: SemesterEdit): JSX.Element {
     return (
         <Form.Control
+            data-testid="editPlanSemesterSeason"
             value={semester.season}
             onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
                 setSemester(semester.season, semester.year, {
@@ -250,6 +254,7 @@ export function EditSemesterCredits({
 }: SemesterEdit): JSX.Element {
     return (
         <Form.Control
+            data-testid="editPlanSemesterCredits"
             value={semester.credits}
             onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
                 setSemester(semester.season, semester.year, {
@@ -315,6 +320,7 @@ export function EditSemesters({
                                 </Col>
                                 <Col>
                                     <EditSemesterCredits
+                                        data-testid="creditInputBox"
                                         semester={semester}
                                         setSemester={setSemester}
                                     ></EditSemesterCredits>

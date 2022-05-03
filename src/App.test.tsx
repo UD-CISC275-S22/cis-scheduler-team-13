@@ -144,4 +144,42 @@ describe("Degree Planner Component Tests", () => {
         viewPlanButton.click();
         expect(screen.getByText("Winter 2022")).toBeInTheDocument();
     });
+    /*
+    test("Set credits to actual works", () => {
+        const newPlanButton = screen.getByTestId("addNewPlanButton");
+        newPlanButton.click();
+        const createNewPlanButton = screen.getByTestId("savePlanButton");
+        createNewPlanButton.click();
+        const editPlanButton = screen.getByTestId("planEdit");
+        editPlanButton.click();
+        const addSemesterButton = screen.getByTestId("addSemesterButton");
+        addSemesterButton.click();
+        const winterButton = screen.getByTestId("winterButton");
+        const yearInputBox = screen.getByTestId("semesterYearInputBox");
+        const addSemesterSaveButton = screen.getByTestId("addSemesterSave");
+        userEvent.click(winterButton);
+        userEvent.type(yearInputBox, "2022");
+        addSemesterSaveButton.click();
+        const editPlanSaveButton = screen.getByTestId("editPlanSaveButton");
+        editPlanSaveButton.click();
+        const viewPlanButton = screen.getByText("View Plan");
+        viewPlanButton.click();
+        const semesterEdit = screen.getByTestId("semesterEditButton");
+        semesterEdit.click();
+        const creditInputBox = screen.getByTestId(
+            "editSemesterCreditsInputBox"
+        );
+        userEvent.type(creditInputBox, "4");
+        const semesterSave = screen.getByTestId("semesterEditSave");
+        semesterSave.click();
+        expect(screen.queryAllByText("4 Total Credits").length === 2);
+        semesterEdit.click();
+        expect(semesterSave);
+        const semesterSetCredits = screen.getByTestId("semesterEditSetCredit"); //fails
+        semesterSetCredits.click();
+        //const semesterSave = screen.getByTestId("semesterEditSave");
+        semesterSave.click();
+        expect(screen.queryAllByText("4 Total Credits").length === 1);
+    });
+    */
 });

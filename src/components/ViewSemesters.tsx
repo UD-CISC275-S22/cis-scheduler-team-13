@@ -47,7 +47,12 @@ export function ViewSemesters({
             </Row>
             <Row>
                 <Button onClick={changeVisible}> See Courses</Button>
-                <Button onClick={changeEditMode}>Edit</Button>
+                <Button
+                    data-testid="semesterEditButton"
+                    onClick={changeEditMode}
+                >
+                    Edit
+                </Button>
             </Row>
             {visible && (
                 <Row>
