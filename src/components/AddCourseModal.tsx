@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { course } from "../interface/course";
 import React, { useState } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
@@ -1220,6 +1219,7 @@ export function AddCourse({
         }
     ];
     function saveChanges() {
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         addCourse(findObject(emotion)!);
         handleClose();
     }
