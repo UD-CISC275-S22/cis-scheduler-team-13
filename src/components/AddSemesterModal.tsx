@@ -37,8 +37,12 @@ export function AddSemester({
             </Modal.Header>
             <Modal.Body>
                 {/* Semester Season */}
-                <Form.Group controlId="picking-a-season">
+                <Form.Group
+                    data-testid="semesterSeasons"
+                    controlId="picking-a-season"
+                >
                     <Form.Check
+                        data-testid="winterButton"
                         inline
                         value="Winter"
                         type="radio"
@@ -49,6 +53,7 @@ export function AddSemester({
                         checked={season === "Winter"}
                     ></Form.Check>
                     <Form.Check
+                        data-testid="springButton"
                         inline
                         value="Spring"
                         type="radio"
@@ -59,6 +64,7 @@ export function AddSemester({
                         checked={season === "Spring"}
                     ></Form.Check>
                     <Form.Check
+                        data-testid="summerButton"
                         inline
                         value="Summer"
                         type="radio"
@@ -69,6 +75,7 @@ export function AddSemester({
                         checked={season === "Summer"}
                     ></Form.Check>
                     <Form.Check
+                        data-testid="fallButton"
                         inline
                         value="Fall"
                         type="radio"
@@ -80,12 +87,17 @@ export function AddSemester({
                     ></Form.Check>
                 </Form.Group>
                 {/* Semester Year */}
-                <Form.Group controlId="formSemesterYear" as={Row}>
+                <Form.Group
+                    data-testid="semesterYear"
+                    controlId="formSemesterYear"
+                    as={Row}
+                >
                     <Form.Label column sm={3}>
                         Semester Year:
                     </Form.Label>
                     <Col>
                         <Form.Control
+                            data-testid="semesterYearInputBox"
                             value={year}
                             onChange={(
                                 event: React.ChangeEvent<HTMLInputElement>
@@ -95,10 +107,18 @@ export function AddSemester({
                 </Form.Group>
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
+                <Button
+                    data-testid="addSemesterClose"
+                    variant="secondary"
+                    onClick={handleClose}
+                >
                     Close
                 </Button>
-                <Button variant="primary" onClick={saveChanges}>
+                <Button
+                    data-testid="addSemesterSave"
+                    variant="primary"
+                    onClick={saveChanges}
+                >
                     Save Semester
                 </Button>
             </Modal.Footer>
