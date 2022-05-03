@@ -152,6 +152,7 @@ export function EditPlan({
                         </Form.Label>
                         <Col>
                             <Form.Control
+                                data-testid="nameInputBox"
                                 value={name}
                                 onChange={(
                                     event: React.ChangeEvent<HTMLInputElement>
@@ -165,6 +166,7 @@ export function EditPlan({
                         </Form.Label>
                         <Col>
                             <Form.Control
+                                data-testid="creditsInputBox"
                                 value={credits}
                                 onChange={(
                                     event: React.ChangeEvent<HTMLInputElement>
@@ -182,7 +184,7 @@ export function EditPlan({
                     ></EditSemesters>
                     <div>
                         <Button
-                            id="edit-plan-add-semester"
+                            data-testid="addSemesterButton"
                             variant="success"
                             className="me-4"
                             onClick={ShowAddModal}
@@ -194,11 +196,15 @@ export function EditPlan({
                             handleClose={CloseAddModal}
                             addSemester={addSemester}
                         ></AddSemester>
-                        <Button onClick={() => setSemesters([])}>
+                        <Button
+                            data-testid="clearSemestersButton"
+                            onClick={() => setSemesters([])}
+                        >
                             Clear Semesters
                         </Button>
                     </div>
                     <Button
+                        data-testid="creditsButton"
                         onClick={naturalCreditsPlan}
                         variant="warning"
                         className="me-4"
@@ -206,7 +212,7 @@ export function EditPlan({
                         Set Credits to Actual
                     </Button>
                     <Button
-                        id="edit-plan-save"
+                        data-testid="editPlanSaveButton"
                         onClick={saveChanges}
                         variant="success"
                         className="me-4"
@@ -214,7 +220,7 @@ export function EditPlan({
                         Save
                     </Button>
                     <Button
-                        id="edit-plan-cancel"
+                        data-testid="editPlanCancelButton"
                         onClick={goBack}
                         variant="warning"
                         className="me-5"
@@ -222,22 +228,13 @@ export function EditPlan({
                         Cancel
                     </Button>
                     <Button
-                        id="edit-plan-delete"
+                        data-testid="editPlanDeleteButton"
                         onClick={() => deletePlan(plan.name)}
                         variant="danger"
                         className="me-8"
                     >
                         Delete
                     </Button>
-                    {/*
-                    <Button
-                        onClick={() => deleteExistingSemesters(plan)}
-                        variant="success"
-                        className="me-4"
-                    >
-                        Clear Existing Semesters
-                    </Button>
-                    */}
                 </Col>
             </Row>
         </Container>

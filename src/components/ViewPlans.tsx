@@ -9,13 +9,10 @@ export function ViewPlans({
     plan,
     editPlan,
     deletePlan
-}: //deleteExistingSemesters
-{
+}: {
     plan: plan;
     editPlan: (name: string, newPlan: plan) => void;
     deletePlan: (name: string) => void;
-    //semester: semester;
-    //deleteExistingSemesters: (plan: plan) => void;
 }): JSX.Element {
     const [semesters, setSemesters] = useState<semester[]>(plan.semesters);
     const [editMode, setEditMode] = useState<boolean>(false);
@@ -57,7 +54,6 @@ export function ViewPlans({
             deletePlan={deletePlan}
             setSemesters={setSemesters}
             semesters={semesters}
-            //deleteExistingSemesters={deleteExistingSemesters}
         ></EditPlan>
     ) : (
         <Container>
@@ -70,10 +66,10 @@ export function ViewPlans({
                 <p>{plan.credits} Total Credits</p>
             </Row>
             <Row>
-                <Button id="plan-view" onClick={changeVisible}>
+                <Button data-testid="planView" onClick={changeVisible}>
                     View Plan
                 </Button>
-                <Button id="plan-edit" onClick={changeEditMode}>
+                <Button data-testid="planEdit" onClick={changeEditMode}>
                     Edit
                 </Button>
             </Row>

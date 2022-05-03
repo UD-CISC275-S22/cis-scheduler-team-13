@@ -98,6 +98,7 @@ export function App(): JSX.Element {
                 </div>
                 <div>
                     <Button
+                        data-testid="addNewPlanButton"
                         variant="success"
                         className="m-4"
                         onClick={ShowAddModal}
@@ -111,7 +112,10 @@ export function App(): JSX.Element {
                     ></AddPlan>
                 </div>
                 <div>
-                    <Form.Group controlId="courseList">
+                    <Form.Group
+                        controlId="courseList"
+                        data-testid="courseCatalog"
+                    >
                         <Form.Label>Course List</Form.Label>
                         <Form.Select value={emotion} onChange={updateEmotion}>
                             {ciscCourse.map((ciscCourse: course) => (
