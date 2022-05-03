@@ -20,7 +20,21 @@ export function AddCourse({
         const csCourse = ciscCourses.find(
             (course: course): boolean => course.code == code
         );
-        return csCourse;
+        if (csCourse == undefined) {
+            return {
+                code: "CISC 101",
+                name: "Principles of Computing",
+                descr: "Introduces students to the central ideas of computing and computer science including programs, algorithms, abstraction, the internet, and information systems. Instills ideas and practices of computational thinking and engages students in activities that show how computing and computer science change the world. Explores computing as a creative activity and empowers students to apply computational thinking to all disciplines including the arts, humanities, business, social and physical sciences, health, and entertainment.",
+                credits: " 3",
+                preReq: "",
+                restrict: "",
+                breadth:
+                    "University: Mathematics, Natural Sciences and Technology; A&S: GROUP D: A&S Math, Nat Sci & Technology",
+                typ: "Fall, Winter and Spring"
+            };
+        } else {
+            return csCourse;
+        }
     }
 
     const ciscCourses: course[] = [
@@ -1219,11 +1233,9 @@ export function AddCourse({
         }
     ];
     function saveChanges() {
-        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-        addCourse(findObject(emotion)!);
+        addCourse(findObject(emotion));
         handleClose();
     }
-
     return (
         <Modal show={show} onHide={handleClose} animation={false}>
             <Modal.Header closeButton>
