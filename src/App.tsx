@@ -9,6 +9,7 @@ import { Form } from "react-bootstrap";
 import { ciscCourses } from "./lists/ciscCourses";
 //import { multicultCourses } from "./lists/multicultCourses";
 //import { dleCourses } from "./lists/dleCourses";
+//import { fyeCourses } from "./lists/fyeCourses";
 
 export function App(): JSX.Element {
     const [plans, setPlans] = useState<plan[]>([]);
@@ -18,6 +19,7 @@ export function App(): JSX.Element {
     const ciscCourse = [...ciscCourses()];
     //const multicultCourse = [...multicultCourses()];
     //const dleCourses = [...dleCourses()];
+    //const fyeCourses = [...fyeCourses()];
     //stuff belowe needs to be edited but im in a rush so o well
     const [emotion, setEmotion] = useState<string>("CISC181");
     //const [courseCS, setCourse] = useState<course>(ciscCourses[0]);
