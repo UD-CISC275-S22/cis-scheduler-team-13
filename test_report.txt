@@ -15,23 +15,23 @@
 
 PASS src/App.test.tsx
   Degree Planner Component Tests
-    ✓ The initial button exists (91 ms)
-    ✓ Add New Plan Button Works and Menu appears (157 ms)
-    ✓ Cancel button and Add Plan Button works (172 ms)
-    ✓ Can Create a Plan with a Name (164 ms)
-    ✓ Edit Plan Works (160 ms)
-    ✓ Cancel Button works (139 ms)
-    ✓ Delete Button works (100 ms)
-    ✓ Can change name and credits and save Button Works (178 ms)
-    ✓ Add A Semester Button works (83 ms)
-    ✓ You can actually add a real semester (153 ms)
+    ✓ The initial button exists (136 ms)
+    ✓ Add New Plan Button Works and Menu appears (96 ms)
+    ✓ Cancel button and Add Plan Button works (174 ms)
+    ✓ Can Create a Plan with a Name (157 ms)
+    ✓ Edit Plan Works (150 ms)
+    ✓ Cancel Button works (138 ms)
+    ✓ Delete Button works (90 ms)
+    ✓ Can change name and credits and save Button Works (179 ms)
+    ✓ Add A Semester Button works (86 ms)
+    ✓ You can actually add a real semester (150 ms)
 
 -----------------------|---------|----------|---------|---------|------------------------
 File                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s      
 -----------------------|---------|----------|---------|---------|------------------------
-All files              |   48.71 |    23.52 |   42.15 |   47.65 |                        
+All files              |   46.34 |    23.52 |   40.56 |   45.22 |                        
  src                   |    90.9 |       50 |   84.61 |   89.47 |                        
-  App.tsx              |    90.9 |       50 |   84.61 |   89.47 | 35,75                  
+  App.tsx              |    90.9 |       50 |   84.61 |   89.47 | 43,83                  
  src/components        |   43.54 |    21.87 |    36.9 |   43.33 |                        
   AddCourseModal.tsx   |       0 |        0 |       0 |       0 | 14-1250                
   AddPlanModal.tsx     |      80 |        0 |   66.66 |      80 | 45                     
@@ -49,15 +49,19 @@ All files              |   48.71 |    23.52 |   42.15 |   47.65 |
   course.ts            |       0 |        0 |       0 |       0 |                        
   plan.ts              |       0 |        0 |       0 |       0 |                        
   semester.ts          |       0 |        0 |       0 |       0 |                        
- src/lists             |      20 |      100 |      20 |      20 |                        
+ src/lists             |   11.11 |      100 |   11.11 |   11.11 |                        
+  cahCourses.ts        |       0 |      100 |       0 |       0 | 3-245                  
   capstoneCourses.ts   |       0 |      100 |       0 |       0 | 3-212                  
   ciscCourses.ts       |     100 |      100 |     100 |     100 |                        
   dleCourses.ts        |       0 |      100 |       0 |       0 | 3-88                   
   fyeCourses.ts        |       0 |      100 |       0 |       0 | 3-139                  
+  hccCourses.ts        |       0 |      100 |       0 |       0 | 3-292                  
+  mnstCourses.ts       |       0 |      100 |       0 |       0 | 3-161                  
   multicultCourses.ts  |       0 |      100 |       0 |       0 | 3-300                  
+  sbsCourses.ts        |       0 |      100 |       0 |       0 | 3-213                  
 -----------------------|---------|----------|---------|---------|------------------------
 Test Suites: 1 passed, 1 total
 Tests:       10 passed, 10 total
 Snapshots:   0 total
-Time:        4.578 s
+Time:        4.781 s
 Ran all test suites.
