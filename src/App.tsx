@@ -11,6 +11,10 @@ import { ciscCourses } from "./lists/ciscCourses";
 //import { dleCourses } from "./lists/dleCourses";
 //import { fyeCourses } from "./lists/fyeCourses";
 //import { capstoneCourses } from "./lists/capstoneCourses";
+//import { cahCourses } from "./lists/cahCourses";
+//import { hccCourses } from "./lists/hccCourses";
+//import { sbsCourses } from "./lists/sbsCourses";
+//import { mnstCourses } from "./lists/mnstCourses";
 
 export function App(): JSX.Element {
     const [plans, setPlans] = useState<plan[]>([]);
@@ -21,6 +25,10 @@ export function App(): JSX.Element {
     //const multicultCourse = [...multicultCourses()];
     //const dleCourses = [...dleCourses()];
     //const fyeCourses = [...fyeCourses()];
+    //const cahCourses = [...cahCourses()];
+    //const hccCourses = [...hccCourses()];
+    //const sbsCourses = [...sbsCourses()];
+    //const mnstCourses = [...mnstCourses()];
     //const capstoneCourses = [...capstoneCourses()];
     //stuff belowe needs to be edited but im in a rush so o well
     const [emotion, setEmotion] = useState<string>("CISC181");
