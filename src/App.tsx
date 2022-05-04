@@ -31,7 +31,7 @@ export function App(): JSX.Element {
     //const mnstCourses = [...mnstCourses()];
     //const capstoneCourses = [...capstoneCourses()];
     //stuff belowe needs to be edited but im in a rush so o well
-    const [emotion, setEmotion] = useState<string>("CISC181");
+    const [emotion, setEmotion] = useState<string>("");
     //const [courseCS, setCourse] = useState<course>(ciscCourses[0]);
     function findObject(code: string) {
         const csCourse = ciscCourse.find(
