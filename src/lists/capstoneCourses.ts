@@ -2075,6 +2075,326 @@ export function capstoneCourses(): course[] {
             restrict: "",
             breadth: "University: ; A&S: ",
             typ: ""
+        },
+        {
+            code: "PSYC 409",
+            name: "Ethics in Psychology",
+            descr: "Focuses on ethical issues, codes, principles, and dilemmas central to animal and human research and clinical applications of Psychology and Neuroscience.",
+            credits: " 3",
+            preReq: "Grades of C- or better in PSYC 209 or substitutes (MATH 202, MATH 205, STAT 200, SOCI 301).",
+            restrict: "Open to PSYC and NSCI majors and minors only.",
+            breadth: "University: ; A&S: ",
+            typ: ""
+        },
+        {
+            code: "PSYC 415",
+            name: "History and Systems of Psychology",
+            descr: "Psychology from a social history perspective, focusing on models explaining human behavior at both group and individual levels.",
+            credits: " 3",
+            preReq: "C- or better in PSYC 100 or NSCI 100.",
+            restrict: "",
+            breadth:
+                "University: History and Cultural Change; A&S: GROUP B: A&S History & Cultural Change",
+            typ: "Fall"
+        },
+        {
+            code: "PSYC 420",
+            name: "Psychotherapy: Historical and Critical Perspectives",
+            descr: "Explores historical and current issues in understanding mental illness from biomedical and social constructionist perspectives. Focuses on recent advances and problems in conceptions of cause, diagnosis, and intervention.",
+            credits: " 3",
+            preReq: "C- or better in PSYC 100 or NSCI 100.",
+            restrict: "",
+            breadth:
+                "University: History and Cultural Change; A&S: GROUP B: A&S History & Cultural Change",
+            typ: "Spring"
+        },
+        {
+            code: "PSYC 435",
+            name: "Developing Concepts of Self",
+            descr: "The class will examine perspectives on the self and how these views may contribute to an individual\u2019s developing personality across the lifespan. Topics will include: neurobiological, social, cognitive, and clinical perspectives on the self and how autobiographical experience may become integrated to form a coherent narrative identity.",
+            credits: " 3",
+            preReq: "PSYC 100.",
+            restrict: "",
+            breadth: "University: ; A&S: ",
+            typ: ""
+        },
+        {
+            code: "PSYC 466",
+            name: "Advanced Research",
+            descr: "Participation in research program of a faculty member. Expected to contribute to conceptualization of research problems, design and methodological discussions. Normally follows PSYC 366.",
+            credits: " 1-6",
+            preReq: "Overall GPA of 3.0 and at least 18 credits in psychology.",
+            restrict: "Open to PSYC majors and minors.",
+            breadth: "University: ; A&S: ",
+            typ: "Fall and Spring"
+        },
+        {
+            code: "PSYC 468",
+            name: "Thesis Research",
+            descr: "Independent work on research project in collaboration with faculty. Prepare and defend a formal research report.",
+            credits: " 3",
+            preReq: "Overall GPA of 3.0 and at least 18 credits in psychology. 6 credits in PSYC 366 and/or PSYC 466.",
+            restrict: "",
+            breadth: "University: ; A&S: ",
+            typ: "Fall and Spring"
+        },
+        {
+            code: "SOCI 407",
+            name: "Sociology of Sex and Gender",
+            descr: "Seminar on sex and gender relations from a sociological perspective. Surveys current research on gender stratification in the paid work force, the feminization of poverty, gender relations in the family, sexual violence, and feminism as a social movement. Special attention given to current theoretical debates on the origins and persistence of sexual inequality and the intersection of gender with race and class in patterns of social stratification.",
+            credits: " 3",
+            preReq: "SOCI 201, and either SOCI 213 or WOMS 201.",
+            restrict:
+                "Restricted to junior and senior sociology and women\u2019s studies majors.",
+            breadth: "University: ; A&S: ",
+            typ: "Verify offering with Dept"
+        },
+        {
+            code: "SOCI 410",
+            name: "Health Services Practicum and Seminar",
+            descr: "Field experience and related seminar. Placement in health service settings where student works for about 160 hours under supervision of health service administrators. Students meet in a weekly seminar with coordinator.",
+            credits: " 4",
+            preReq: "",
+            restrict: "Requires permission of instructor.",
+            breadth: "University: ; A&S: ",
+            typ: "Summer"
+        },
+        {
+            code: "SOCI 413",
+            name: "Race and Health",
+            descr: "Examines the health status of socially disadvantaged racial and ethnic groups in the US. Attention will be focused on the patterned ways in which the health of these groups is embedded in the social, cultural, political, and economic contexts, and arrangements of US society.",
+            credits: " 3",
+            preReq: "",
+            restrict: "",
+            breadth: "University: ; A&S: ",
+            typ: ""
+        },
+        {
+            code: "SOCI 415",
+            name: "Race, Class, and Gender",
+            descr: "Analysis of current American social issues that show interrelationship of race,class and gender. Readings from sociology, Afro-American studies, feminist studies, history and literature.",
+            credits: " 3",
+            preReq: "",
+            restrict: "",
+            breadth: "University: ; A&S: ",
+            typ: "Verify offering with Dept"
+        },
+        {
+            code: "SOCI 416",
+            name: "Social Thought and Contemporary Society",
+            descr: "Seminar focuses on ways in which social thought defines and analyzes contemporary society. Explores how alternative theories and methods serve to create knowledge about contemporary concerns with everyday life, democracy, equality, social structure and power.",
+            credits: " 3",
+            preReq: "SOCI 312 .",
+            restrict: "",
+            breadth: "University: ; A&S: ",
+            typ: "Verify offering with Dept"
+        },
+        {
+            code: "SOCI 418",
+            name: "Race, Gender, and Poverty",
+            descr: "An examination of contemporary American poverty with attention to race and gender as fundamental dimensions of inequality. Social policy, employment and family composition are key topics.",
+            credits: " 3",
+            preReq: "SOCI 201.",
+            restrict: "",
+            breadth: "University: ; A&S: ",
+            typ: "Fall"
+        },
+        {
+            code: "SOCI 420",
+            name: "Race and Sexuality",
+            descr: "Examine sexuality as a structure of power and identity. Study how race is sexualized and sexuality is racialized. Explore the impact of binary thinking (white/non-white, straight/gay) on social relationships. The perspective of racial minorities, particularly African-Americans, is emphasized. Review research on culture, history, and policy.",
+            credits: " 3",
+            preReq: "SOCI 201",
+            restrict: "",
+            breadth: "University: ; A&S: ",
+            typ: "Verify offering with Dept"
+        },
+        {
+            code: "SOCI 425",
+            name: "Sociology of the Body",
+            descr: "Examines the body, not through the lens of the biological sciences, but as the product of complex social arrangements and processes. Considers: What is \u2018natural\u2019 about bodies? How are bodies commodified? How are bodies categorized and constituted by discourses of race, class, gender, sexuality, and biomedicine?",
+            credits: " 3",
+            preReq: "",
+            restrict: "Not open to freshmen.",
+            breadth: "University: ; A&S: ",
+            typ: ""
+        },
+        {
+            code: "SOCI 428",
+            name: "Corporate Crime",
+            descr: "Nature and causes of the deviant behaviors and crimes of large organizations. How organizations act, are accused of deviance and defend themselves in cases such as price-fixing, sale of unsafe drugs and illegal spying.",
+            credits: " 3",
+            preReq: "",
+            restrict: "",
+            breadth: "University: ; A&S: ",
+            typ: ""
+        },
+        {
+            code: "SOCI 430",
+            name: "Comparative Sociology",
+            descr: "Exposes sociological similarities and differences between the United States and a selected country on a number of critical sociological topics. Topics include ethnic and religious diversity, culture, demographic structure, social institutions, social stratification and urbanization.",
+            credits: " 3-6",
+            preReq: "",
+            restrict:
+                "Requires permission of instructor. Only three credits may apply toward departmental requirement of six 400-level credits. Offered only in the study abroad program and subject to acceptance by the Office of International Programs.",
+            breadth: "University: ; A&S: ",
+            typ: "Spring"
+        },
+        {
+            code: "SOCI 433",
+            name: "Gender and Health",
+            descr: "Why are women sicker, but men die younger? In this course we will critically examine the relationship between gender and health. In doing so, we will also consider the contribution of race, class and sexuality in shaping that relationship.",
+            credits: " 3",
+            preReq: "",
+            restrict:
+                "Not open to Freshmen due to the rigorous seminar format, higher-order thinking, and writing requirements in the course.",
+            breadth: "University: ; A&S: ",
+            typ: ""
+        },
+        {
+            code: "SOCI 444",
+            name: "Approaches to Qualitative Inquiry",
+            descr: "Explores such approaches to research as conducting interviews, observing social behavior, content analysis of such material items as films, newspapers, and historical documents, and conducting focus groups. Given opportunity to choose a project and conduct research using these qualitative methods.",
+            credits: " 3",
+            preReq: "",
+            restrict: "",
+            breadth: "University: ; A&S: ",
+            typ: "Verify offering with Dept"
+        },
+        {
+            code: "SOCI 449",
+            name: "Sociology of Art and Culture",
+            descr: "Introduction to sociological perspectives on culture and the arts. Topics include the role of culture in the creation of social inequality, fashion, the social production of art, the culture industry, and outsider art.",
+            credits: " 3",
+            preReq: "",
+            restrict: "",
+            breadth: "University: ; A&S: ",
+            typ: "Verify offering with Dept"
+        },
+        {
+            code: "SOCI 450",
+            name: "Politics and Society",
+            descr: "Analysis of political organization and action, including evaluation of major approaches. Case studies of political structures and behavior.",
+            credits: " 3",
+            preReq: "SOCI 201.",
+            restrict: "",
+            breadth: "University: ; A&S: ",
+            typ: "Verify offering with Dept"
+        },
+        {
+            code: "SOCI 470",
+            name: "Environmental Sociology",
+            descr: "A substantive and theoretical introduction to the major issues in environmentalsociology: the emergence and development of the environmental movement; thedevelopment of environmental issues; and how environmental issues are relatedto structural, contextual and perceptual factors.",
+            credits: " 3",
+            preReq: "",
+            restrict: "Requires upper division status.",
+            breadth: "University: ; A&S: ",
+            typ: "Verify offering with Dept"
+        },
+        {
+            code: "SOCI 471",
+            name: "Disasters, Vulnerability & Development",
+            descr: "Introduces students to social vulnerability analysis of disaster. Students examine how social, geographical, and cultural factors as well as patterns of development put people differentially at risk to disasters. Students will explore how vulnerable social groups are affected by and cope with hazardous conditions and events, as well as study the capacities of these groups to increase resiliency. Readings draw from disaster studies, feminist studies, and development studies.",
+            credits: " 3",
+            preReq: "",
+            restrict: "",
+            breadth:
+                "University: Social and Behavioral Sciences; A&S: GROUP C: A&S Social & Behavioral Sci",
+            typ: "Verify offering with Dept"
+        },
+        {
+            code: "SPAN 491",
+            name: "Spanish Studies Capstone",
+            descr: "Through intensive research and study of texts and artifacts on a theme, students will integrate and focus their knowledge of Spanish and Latin American literatures and/or cultures across several disciplines and periods. Taught in Spanish.",
+            credits: " 3",
+            preReq: "One 400-level literature or culture course.",
+            restrict:
+                "Senior-level Spanish Studies and Latin American &amp; Iberian Studies majors only.",
+            breadth: "University: ; A&S: ",
+            typ: "Verify offering with Dept"
+        },
+        {
+            code: "SPTM 464",
+            name: "Sport Management Capstone Internship",
+            descr: "Practical learning experience in Sport Management. Reflect on the theoretical aspects of the industry by analyzing real world issues and identifying professional ethical obligations. Faculty feedback is intended to enhance students\u2019 skills and competencies in a targeted career orientation.",
+            credits: " 9",
+            preReq: "",
+            restrict: "Requires permission of instructor.",
+            breadth: "University: ; A&S: ",
+            typ: "Fall, Summer and Spring"
+        },
+        {
+            code: "STAT 468",
+            name: "Research Project",
+            descr: "Conduct statistical analysis of data in a project chosen by the student and approved by the Instructor.  The student is responsible for proposing the project; obtaining/collecting data; cleaning and managing the data; doing a statistical analysis; writing a formal paper which describes the process and results; and making a presentation to the class.",
+            credits: " 3",
+            preReq: "STAT 470 and STAT 471.",
+            restrict: "",
+            breadth: "University: ; A&S: ",
+            typ: "Fall and Spring"
+        },
+        {
+            code: "UAPP 440",
+            name: "Public Policy Senior Capstone",
+            descr: "Capstone course serves as a culminating learning experience for students during their senior year. Involves an integration of the policy skills that they have developed within applied contexts related to their minors or areas of interests and their UAPP 300 Field Experience.",
+            credits: " 3",
+            preReq: "",
+            restrict: "",
+            breadth: "University: ; A&S: ",
+            typ: "Spring"
+        },
+        {
+            code: "UAPP 699",
+            name: "Capstone Project in Public Management and Policy",
+            descr: "",
+            credits: " 2",
+            preReq: "",
+            restrict: "",
+            breadth: "University: ; A&S: ",
+            typ: ""
+        },
+        {
+            code: "UNIV 402",
+            name: "Senior Thesis",
+            descr: "Continuation of UNIV401.",
+            credits: " 2-4",
+            preReq: "",
+            restrict:
+                "Total credits for UNIV 401 and UNIV402 not to exceed six.",
+            breadth: "University: ; A&S: ",
+            typ: "Fall and Spring"
+        },
+        {
+            code: "UNIV 468",
+            name: "Undergraduate Research",
+            descr: "Undergraduate research conducted on or off campus, out of class, and under thesupervision of a faculty member.",
+            credits: " 0-6",
+            preReq: "",
+            restrict:
+                "Requires permission of instructor and approval of the Coordinator of Undergraduate Research. May not fulfill course requirements in a major curriculum except by departmental permission.",
+            breadth: "University: ; A&S: ",
+            typ: "Fall and Spring"
+        },
+        {
+            code: "WOMS 403",
+            name: "Capstone in Women and Religion",
+            descr: "",
+            credits: " 3",
+            preReq: "PHIL 204 and WOMS 210 or permission of instructor.",
+            restrict: "",
+            breadth: "University: ; A&S: ",
+            typ: "Spring"
+        },
+        {
+            code: "WOMS 410",
+            name: "The Study of Women and Gender Studies",
+            descr: "Capstone for majors. Explores purpose, development, and developing concerns in fields of Women and Gender studies. Aims to reflect upon what majors have learned in their Women and Gender Studies classes, consider ongoing challenges to the field, and help prepare them for a future in which their Women and Gender Studies major can play a significant and positive role.",
+            credits: " 3",
+            preReq: "",
+            restrict:
+                "Senior majors. Requires approval of women and gender studies advisor and instructor. Required to complete major in Women and Gender Studies.",
+            breadth: "University: ; A&S: ",
+            typ: "Spring"
         }
     ];
     return capstoneCourses;
