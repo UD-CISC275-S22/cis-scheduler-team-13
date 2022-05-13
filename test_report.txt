@@ -13,60 +13,62 @@
       at onDone (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1034:9)
       at node_modules/react-dom/cjs/react-dom-test-utils.development.js:1073:13
 
-PASS src/App.test.tsx
+PASS src/App.test.tsx (5.621 s)
   Degree Planner Component Tests
     ✓ The initial button exists (87 ms)
-    ✓ Add New Plan Button Works and Menu appears (167 ms)
-    ✓ Cancel button and Add Plan Button works (170 ms)
-    ✓ Can Create a Plan with a Name (162 ms)
+    ✓ Add New Plan Button Works and Menu appears (96 ms)
+    ✓ Cancel button and Add Plan Button works (172 ms)
+    ✓ Can Create a Plan with a Name (152 ms)
     ✓ Edit Plan Works (147 ms)
-    ✓ Cancel Button works (136 ms)
-    ✓ Delete Button works (94 ms)
-    ✓ Can change name and credits and save Button Works (179 ms)
-    ✓ Add A Semester Button works (83 ms)
-    ✓ You can actually add a real semester (156 ms)
-    ✓ Set credits to actual works (225 ms)
-    ✓ Clear Semesters Works (252 ms)
-    ✓ Semester Edit Cancel Button Works (155 ms)
+    ✓ Cancel Button works (138 ms)
+    ✓ Delete Button works (88 ms)
+    ✓ Can change name and credits and save Button Works (180 ms)
+    ✓ Add A Semester Button works (81 ms)
+    ✓ You can actually add a real semester (154 ms)
+    ✓ Set credits to actual works (228 ms)
+    ✓ Clear Semesters Works (254 ms)
+    ✓ Semester Edit Cancel Button Works (145 ms)
     ✓ Semester Edit Delete Button Works (132 ms)
-    ✓ Semester Edit Can Actually Edit (208 ms)
+    ✓ Semester Edit Can Actually Edit (210 ms)
 
------------------------|---------|----------|---------|---------|---------------------------------
-File                   | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s               
------------------------|---------|----------|---------|---------|---------------------------------
-All files              |    63.8 |    35.29 |   57.54 |   63.46 |                                 
- src                   |    90.9 |       50 |   84.61 |   89.47 |                                 
-  App.tsx              |    90.9 |       50 |   84.61 |   89.47 | 43,83                           
- src/components        |   66.66 |    34.37 |   58.33 |   67.22 |                                 
-  AddCourseModal.tsx   |   27.27 |        0 |   33.33 |   27.27 | 16-42                           
-  AddPlanModal.tsx     |      80 |        0 |   66.66 |      80 | 45                              
-  AddSemesterModal.tsx |     100 |       50 |     100 |     100 | 104                             
-  CourseList.tsx       |       0 |      100 |       0 |       0 | 7-10                            
-  EditCourse.tsx       |    6.66 |        0 |    6.66 |    6.66 | 13-119,128                      
-  EditPlan.tsx         |     100 |       50 |     100 |     100 | 138-175                         
-  EditSemester.tsx     |   61.11 |       20 |      52 |    64.7 | 32,35,57-62,213,236,253,271-290 
-  PlanList.tsx         |     100 |      100 |     100 |     100 |                                 
-  SemesterList.tsx     |     100 |      100 |     100 |     100 |                                 
-  ViewCourses.tsx      |       0 |      100 |       0 |       0 | 6                               
-  ViewPlans.tsx        |     100 |       80 |     100 |     100 | 33-44                           
-  ViewSemesters.tsx    |   83.33 |       75 |   66.66 |   83.33 | 26                              
- src/interface         |       0 |        0 |       0 |       0 |                                 
-  course.ts            |       0 |        0 |       0 |       0 |                                 
-  plan.ts              |       0 |        0 |       0 |       0 |                                 
-  semester.ts          |       0 |        0 |       0 |       0 |                                 
- src/lists             |   11.11 |      100 |   11.11 |   11.11 |                                 
-  cahCourses.ts        |       0 |      100 |       0 |       0 | 3-2990                          
-  capstoneCourses.ts   |       0 |      100 |       0 |       0 | 3-2400                          
-  ciscCourses.ts       |     100 |      100 |     100 |     100 |                                 
-  dleCourses.ts        |       0 |      100 |       0 |       0 | 3-3249                          
-  fyeCourses.ts        |       0 |      100 |       0 |       0 | 3-139                           
-  hccCourses.ts        |       0 |      100 |       0 |       0 | 3-3554                          
-  mnstCourses.ts       |       0 |      100 |       0 |       0 | 3-1698                          
-  multicultCourses.ts  |       0 |      100 |       0 |       0 | 3-2871                          
-  sbsCourses.ts        |       0 |      100 |       0 |       0 | 3-2391                          
------------------------|---------|----------|---------|---------|---------------------------------
+---------------------------|---------|----------|---------|---------|---------------------------------
+File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s               
+---------------------------|---------|----------|---------|---------|---------------------------------
+All files                  |   44.56 |     22.8 |   45.58 |    44.2 |                                 
+ src                       |   90.47 |       50 |   84.61 |   88.88 |                                 
+  App.tsx                  |   90.47 |       50 |   84.61 |   88.88 | 31,71                           
+ src/components            |   38.33 |    21.81 |   40.98 |   38.46 |                                 
+  AddCourseModal.tsx       |   27.27 |        0 |   33.33 |   27.27 | 16-42                           
+  AddPlanModal.tsx         |      80 |        0 |   66.66 |      80 | 60                              
+  AddSemesterModal.tsx     |     100 |       50 |     100 |     100 | 104                             
+  CourseList.tsx           |       0 |      100 |       0 |       0 | 7-10                            
+  EditCourse.tsx           |    6.66 |        0 |    6.66 |    6.66 | 13-119,128                      
+  EditPlan.tsx             |     100 |       50 |     100 |     100 | 388-425                         
+  EditSemester.tsx         |   61.11 |       20 |      52 |    64.7 | 32,35,57-62,213,236,253,271-290 
+  PlanList.tsx             |     100 |      100 |     100 |     100 |                                 
+  SeeRequirementsModal.tsx |     100 |       50 |     100 |     100 | 22-26                           
+  SemesterList.tsx         |     100 |      100 |     100 |     100 |                                 
+  ViewCourses.tsx          |       0 |      100 |       0 |       0 | 6                               
+  ViewPlans.tsx            |   17.26 |    15.38 |    15.9 |   17.51 | 57-339                          
+  ViewSemesters.tsx        |   83.33 |       75 |   66.66 |   83.33 | 26                              
+ src/interface             |       0 |        0 |       0 |       0 |                                 
+  course.ts                |       0 |        0 |       0 |       0 |                                 
+  plan.ts                  |       0 |        0 |       0 |       0 |                                 
+  semester.ts              |       0 |        0 |       0 |       0 |                                 
+ src/lists                 |     100 |      100 |     100 |     100 |                                 
+  cahCourses.ts            |     100 |      100 |     100 |     100 |                                 
+  capstoneCourses.ts       |     100 |      100 |     100 |     100 |                                 
+  ciscCourses.ts           |     100 |      100 |     100 |     100 |                                 
+  ciscCoursesForSearch.ts  |     100 |      100 |     100 |     100 |                                 
+  dleCourses.ts            |     100 |      100 |     100 |     100 |                                 
+  fyeCourses.ts            |     100 |      100 |     100 |     100 |                                 
+  hccCourses.ts            |     100 |      100 |     100 |     100 |                                 
+  mnstCourses.ts           |     100 |      100 |     100 |     100 |                                 
+  multicultCourses.ts      |     100 |      100 |     100 |     100 |                                 
+  sbsCourses.ts            |     100 |      100 |     100 |     100 |                                 
+---------------------------|---------|----------|---------|---------|---------------------------------
 Test Suites: 1 passed, 1 total
 Tests:       15 passed, 15 total
 Snapshots:   0 total
-Time:        6.843 s
+Time:        6.232 s
 Ran all test suites.
