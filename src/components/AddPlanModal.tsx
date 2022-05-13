@@ -17,7 +17,22 @@ export function AddPlan({
         addPlan({
             name: name,
             credits: 0,
-            semesters: []
+            semesters: [],
+            engl: false,
+            multicultural: false,
+            seminar: false,
+            dle: false,
+            CAH: false,
+            HCC: false,
+            SBS: false,
+            MNST: false,
+            totalCredits: false,
+            core: false,
+            relatedWork: false,
+            technical: false,
+            capstone: false,
+            labScience: false,
+            additionalScience: false
         });
         handleClose();
     }

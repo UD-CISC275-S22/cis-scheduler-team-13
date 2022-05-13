@@ -3,7 +3,6 @@ export interface plan {
     name: string;
     credits: number;
     semesters: semester[];
-    /*
     engl: boolean;
     multicultural: boolean;
     seminar: boolean;
@@ -19,5 +18,4 @@ export interface plan {
     capstone: boolean;
     labScience: boolean;
     additionalScience: boolean;
-    */
 }

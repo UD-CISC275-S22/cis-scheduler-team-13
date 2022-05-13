@@ -1,7 +1,7 @@
 import { course } from "../interface/course";
 import React, { useState } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
-import { ciscCourses } from "../lists/ciscCourses";
+import { ciscCourses } from "../lists/ciscCoursesForSearch";
 export function AddCourse({
     handleClose,
     addCourse,

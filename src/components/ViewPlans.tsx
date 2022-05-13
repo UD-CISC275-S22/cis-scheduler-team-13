@@ -1,8 +1,19 @@
 import React, { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
+import { course } from "../interface/course";
 import { plan } from "../interface/plan";
 import { semester } from "../interface/semester";
+import { cahCourses } from "../lists/cahCourses";
+import { capstoneCourses } from "../lists/capstoneCourses";
+import { ciscCoursesForReq } from "../lists/ciscCourses";
+import { dleCourses } from "../lists/dleCourses";
+import { fyeCourses } from "../lists/fyeCourses";
+import { hccCourses } from "../lists/hccCourses";
+import { mnstCourses } from "../lists/mnstCourses";
+import { multicultCourses } from "../lists/multicultCourses";
+import { sbsCourses } from "../lists/sbsCourses";
 import { EditPlan } from "./EditPlan";
+import { SeeRequirements } from "./SeeRequirementsModal";
 import { SemesterList } from "./SemesterList";
 
 export function ViewPlans({
@@ -17,6 +28,317 @@ export function ViewPlans({
     const [semesters, setSemesters] = useState<semester[]>(plan.semesters);
     const [editMode, setEditMode] = useState<boolean>(false);
     const [visible, setVisible] = useState<boolean>(false);
+    const [show, setShow] = useState<boolean>(false);
+    const ShowAddModal = () => setShow(true);
+    const CloseAddModal = () => setShow(false);
+    const [engl, setEngl] = useState<boolean>(plan.engl);
+    const [multicultural, setMulticultural] = useState<boolean>(
+        plan.multicultural
+    );
+    const [seminar, setSeminar] = useState<boolean>(plan.seminar);
+    const [dle, setDle] = useState<boolean>(plan.dle);
+    const [CAH, setCAH] = useState<boolean>(plan.CAH);
+    const [HCC, setHCC] = useState<boolean>(plan.HCC);
+    const [SBS, setSBS] = useState<boolean>(plan.SBS);
+    const [MNST, setMNST] = useState<boolean>(plan.MNST);
+    const [totalCredits, setTotalCredits] = useState<boolean>(
+        plan.totalCredits
+    );
+    const [core, setCore] = useState<boolean>(plan.core);
+    //const [relatedWork, setRelatedWork] = useState<boolean>(plan.relatedWork);
+    //const [technical, setTechnical] = useState<boolean>(plan.technical);
+    const [capstone, setCapstone] = useState<boolean>(plan.capstone);
+    //const [labScience, setLabScience] = useState<boolean>(plan.labScience);
+    //const [additionalScience, setAdditionalScience] = useState<boolean>(
+    //    plan.additionalScience
+    //);
+
+    function checkAllRequirements() {
+        checkForMulticultural();
+        checkForCAH();
+        checkForCapstone();
+        checkForCiscCourses();
+        checkForHCC();
+        checkForSBS();
+        checkForDLE();
+        checkForMNST();
+        checkForSeminar();
+        checkForEngl();
+        checkForTotalCredits();
+    }
+
+    function updateRequirements() {
+        ShowAddModal();
+        checkAllRequirements();
+        editPlan(plan.name, {
+            ...plan,
+            engl: engl,
+            multicultural: multicultural,
+            seminar: seminar,
+            dle: dle,
+            CAH: CAH,
+            HCC: HCC,
+            SBS: SBS,
+            MNST: MNST,
+            totalCredits: totalCredits,
+            core: core,
+            //relatedWork: relatedWork,
+            //technical: technical,
+            capstone: capstone
+            //labScience: labScience,
+            //additionalScience: additionalScience
+        });
+    }
+
+    function checkForTotalCredits() {
+        let courseListSingleArray: course[] = [];
+        semesters.map(
+            (semester: semester): course[] =>
+                (courseListSingleArray = [
+                    ...courseListSingleArray,
+                    ...semester.courses
+                ])
+        );
+        let totalRequirementCredits = 0;
+        courseListSingleArray.map(
+            (course: course): number =>
+                (totalRequirementCredits =
+                    Number(totalRequirementCredits) + Number(course.credits))
+        );
+        if (totalRequirementCredits > 2) {
+            setTotalCredits(true);
+        } else {
+            setTotalCredits(false);
+        }
+    }
+
+    function checkForEngl() {
+        let courseListSingleArray: course[] = [];
+        semesters.map(
+            (semester: semester): course[] =>
+                (courseListSingleArray = [
+                    ...courseListSingleArray,
+                    ...semester.courses
+                ])
+        );
+        let totalRequirementCredits = 0;
+        courseListSingleArray.map((course: course): number =>
+            course.code === "ENGL 110"
+                ? (totalRequirementCredits =
+                      Number(totalRequirementCredits) + Number(course.credits))
+                : totalRequirementCredits
+        );
+        if (totalRequirementCredits > 2) {
+            setEngl(true);
+        } else {
+            setEngl(false);
+        }
+    }
+    function checkForMulticultural() {
+        let courseListSingleArray: course[] = [];
+        semesters.map(
+            (semester: semester): course[] =>
+                (courseListSingleArray = [
+                    ...courseListSingleArray,
+                    ...semester.courses
+                ])
+        );
+        let totalRequirementCredits = 0;
+        courseListSingleArray.map((course: course): number =>
+            multicultCourses.includes(course)
+                ? (totalRequirementCredits =
+                      Number(totalRequirementCredits) + Number(course.credits))
+                : totalRequirementCredits
+        );
+        if (totalRequirementCredits > 2) {
+            setMulticultural(true);
+        } else {
+            setMulticultural(false);
+        }
+    }
+
+    function checkForCAH() {
+        let courseListSingleArray: course[] = [];
+        semesters.map(
+            (semester: semester): course[] =>
+                (courseListSingleArray = [
+                    ...courseListSingleArray,
+                    ...semester.courses
+                ])
+        );
+        let totalRequirementCredits = 0;
+        courseListSingleArray.map((course: course): number =>
+            cahCourses.includes(course)
+                ? (totalRequirementCredits =
+                      Number(totalRequirementCredits) + Number(course.credits))
+                : totalRequirementCredits
+        );
+        if (totalRequirementCredits > 2) {
+            setCAH(true);
+        } else {
+            setCAH(false);
+        }
+    }
+
+    function checkForCapstone() {
+        let courseListSingleArray: course[] = [];
+        semesters.map(
+            (semester: semester): course[] =>
+                (courseListSingleArray = [
+                    ...courseListSingleArray,
+                    ...semester.courses
+                ])
+        );
+        let totalRequirementCredits = 0;
+        courseListSingleArray.map((course: course): number =>
+            capstoneCourses.includes(course)
+                ? (totalRequirementCredits =
+                      Number(totalRequirementCredits) + Number(course.credits))
+                : totalRequirementCredits
+        );
+        if (totalRequirementCredits > 2) {
+            setCapstone(true);
+        } else {
+            setCapstone(false);
+        }
+    }
+
+    function checkForCiscCourses() {
+        let courseListSingleArray: course[] = [];
+        semesters.map(
+            (semester: semester): course[] =>
+                (courseListSingleArray = [
+                    ...courseListSingleArray,
+                    ...semester.courses
+                ])
+        );
+        let totalRequirementCredits = 0;
+        courseListSingleArray.map((course: course): number =>
+            ciscCoursesForReq.includes(course)
+                ? (totalRequirementCredits =
+                      Number(totalRequirementCredits) + Number(course.credits))
+                : totalRequirementCredits
+        );
+        if (totalRequirementCredits > 2) {
+            setCore(true);
+        } else {
+            setCore(false);
+        }
+    }
+
+    function checkForDLE() {
+        let courseListSingleArray: course[] = [];
+        semesters.map(
+            (semester: semester): course[] =>
+                (courseListSingleArray = [
+                    ...courseListSingleArray,
+                    ...semester.courses
+                ])
+        );
+        let totalRequirementCredits = 0;
+        courseListSingleArray.map((course: course): number =>
+            dleCourses.includes(course)
+                ? (totalRequirementCredits =
+                      Number(totalRequirementCredits) + Number(course.credits))
+                : totalRequirementCredits
+        );
+        if (totalRequirementCredits > 2) {
+            setDle(true);
+        } else {
+            setDle(false);
+        }
+    }
+
+    function checkForSBS() {
+        let courseListSingleArray: course[] = [];
+        semesters.map(
+            (semester: semester): course[] =>
+                (courseListSingleArray = [
+                    ...courseListSingleArray,
+                    ...semester.courses
+                ])
+        );
+        let totalRequirementCredits = 0;
+        courseListSingleArray.map((course: course): number =>
+            sbsCourses.includes(course)
+                ? (totalRequirementCredits =
+                      Number(totalRequirementCredits) + Number(course.credits))
+                : totalRequirementCredits
+        );
+        if (totalRequirementCredits > 2) {
+            setSBS(true);
+        } else {
+            setSBS(false);
+        }
+    }
+
+    function checkForHCC() {
+        let courseListSingleArray: course[] = [];
+        semesters.map(
+            (semester: semester): course[] =>
+                (courseListSingleArray = [
+                    ...courseListSingleArray,
+                    ...semester.courses
+                ])
+        );
+        let totalRequirementCredits = 0;
+        courseListSingleArray.map((course: course): number =>
+            hccCourses.includes(course)
+                ? (totalRequirementCredits =
+                      Number(totalRequirementCredits) + Number(course.credits))
+                : totalRequirementCredits
+        );
+        if (totalRequirementCredits > 2) {
+            setHCC(true);
+        } else {
+            setHCC(false);
+        }
+    }
+
+    function checkForMNST() {
+        let courseListSingleArray: course[] = [];
+        semesters.map(
+            (semester: semester): course[] =>
+                (courseListSingleArray = [
+                    ...courseListSingleArray,
+                    ...semester.courses
+                ])
+        );
+        let totalRequirementCredits = 0;
+        courseListSingleArray.map((course: course): number =>
+            mnstCourses.includes(course)
+                ? (totalRequirementCredits =
+                      Number(totalRequirementCredits) + Number(course.credits))
+                : totalRequirementCredits
+        );
+        if (totalRequirementCredits > 2) {
+            setMNST(true);
+        } else {
+            setMNST(false);
+        }
+    }
+    function checkForSeminar() {
+        let courseListSingleArray: course[] = [];
+        semesters.map(
+            (semester: semester): course[] =>
+                (courseListSingleArray = [
+                    ...courseListSingleArray,
+                    ...semester.courses
+                ])
+        );
+        let totalRequirementCredits = 0;
+        courseListSingleArray.map((course: course): number =>
+            fyeCourses.includes(course)
+                ? (totalRequirementCredits =
+                      Number(totalRequirementCredits) + Number(course.credits))
+                : totalRequirementCredits
+        );
+        if (totalRequirementCredits > 2) {
+            setSeminar(true);
+        } else {
+            setSeminar(false);
+        }
+    }
 
     function changeVisible(): void {
         setVisible(!visible);
@@ -72,6 +394,17 @@ export function ViewPlans({
                 <Button data-testid="planEdit" onClick={changeEditMode}>
                     Edit
                 </Button>
+                <Button
+                    data-testid="editPlanViewRequirements"
+                    onClick={updateRequirements}
+                >
+                    View Requirements
+                </Button>
+                <SeeRequirements
+                    show={show}
+                    handleClose={CloseAddModal}
+                    plan={plan}
+                ></SeeRequirements>
             </Row>
             {visible && (
                 <Row>

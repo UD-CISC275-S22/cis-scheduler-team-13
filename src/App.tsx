@@ -6,35 +6,23 @@ import { PlanList } from "./components/PlanList";
 import { course } from "./interface/course";
 import { plan } from "./interface/plan";
 import { Form } from "react-bootstrap";
-import { ciscCourses } from "./lists/ciscCourses";
+//import { ciscCourses } from "./lists/ciscCoursesForSearch";
 //import { multicultCourses } from "./lists/multicultCourses";
 //import { dleCourses } from "./lists/dleCourses";
 //import { fyeCourses } from "./lists/fyeCourses";
-//import { capstoneCourses } from "./lists/capstoneCourses";
-//import { cahCourses } from "./lists/cahCourses";
-//import { hccCourses } from "./lists/hccCourses";
-//import { sbsCourses } from "./lists/sbsCourses";
-//import { mnstCourses } from "./lists/mnstCourses";
+import { ciscCoursesForReq } from "./lists/ciscCourses";
 
 export function App(): JSX.Element {
     const [plans, setPlans] = useState<plan[]>([]);
     const [show, setShow] = useState<boolean>(false);
     const CloseAddModal = () => setShow(false);
     const ShowAddModal = () => setShow(true);
-    const ciscCourse = [...ciscCourses()];
-    //const multicultCourse = [...multicultCourses()];
-    //const dleCourses = [...dleCourses()];
-    //const fyeCourses = [...fyeCourses()];
-    //const cahCourses = [...cahCourses()];
-    //const hccCourses = [...hccCourses()];
-    //const sbsCourses = [...sbsCourses()];
-    //const mnstCourses = [...mnstCourses()];
-    //const capstoneCourses = [...capstoneCourses()];
+
     //stuff belowe needs to be edited but im in a rush so o well
     const [emotion, setEmotion] = useState<string>("");
     //const [courseCS, setCourse] = useState<course>(ciscCourses[0]);
     function findObject(code: string) {
-        const csCourse = ciscCourse.find(
+        const csCourse = ciscCoursesForReq.find(
             (course: course): boolean => course.code == code
         );
         return csCourse;
@@ -136,7 +124,7 @@ export function App(): JSX.Element {
                             value={emotion}
                             onChange={updateEmotion}
                         >
-                            {ciscCourse.map((ciscCourse: course) => (
+                            {ciscCoursesForReq.map((ciscCourse: course) => (
                                 <option
                                     key={ciscCourse.code}
                                     value={ciscCourse.code}
