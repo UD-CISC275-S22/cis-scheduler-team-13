@@ -105,7 +105,7 @@ export function ViewPlans({
                 (totalRequirementCredits =
                     totalRequirementCredits + parseInt(course.credits))
         );
-        if (totalRequirementCredits > 2) {
+        if (totalRequirementCredits >= 124) {
             setTotalCredits(true);
         } else {
             setTotalCredits(false);
@@ -128,7 +128,7 @@ export function ViewPlans({
                       totalRequirementCredits + parseInt(course.credits))
                 : totalRequirementCredits
         );
-        if (totalRequirementCredits > 2) {
+        if (totalRequirementCredits >= 3) {
             setEngl(true);
         } else {
             setEngl(false);
@@ -150,7 +150,7 @@ export function ViewPlans({
                       totalRequirementCredits + parseInt(course.credits))
                 : totalRequirementCredits
         );
-        if (totalRequirementCredits > 2) {
+        if (totalRequirementCredits >= 3) {
             setMulticultural(true);
         } else {
             setMulticultural(false);
@@ -173,7 +173,7 @@ export function ViewPlans({
                       totalRequirementCredits + parseInt(course.credits))
                 : totalRequirementCredits
         );
-        if (totalRequirementCredits > 2) {
+        if (totalRequirementCredits >= 3) {
             setCAH(true);
         } else {
             setCAH(false);
@@ -196,7 +196,7 @@ export function ViewPlans({
                       totalRequirementCredits + parseInt(course.credits))
                 : totalRequirementCredits
         );
-        if (totalRequirementCredits > 2) {
+        if (totalRequirementCredits >= 3) {
             setCapstone(true);
         } else {
             setCapstone(false);
@@ -219,7 +219,7 @@ export function ViewPlans({
                       totalRequirementCredits + parseInt(course.credits))
                 : totalRequirementCredits
         );
-        if (totalRequirementCredits > 2) {
+        if (totalRequirementCredits >= 30) {
             setCore(true);
         } else {
             setCore(false);
@@ -242,7 +242,7 @@ export function ViewPlans({
                       totalRequirementCredits + parseInt(course.credits))
                 : totalRequirementCredits
         );
-        if (totalRequirementCredits > 2) {
+        if (totalRequirementCredits >= 3) {
             setDle(true);
         } else {
             setDle(false);
@@ -265,7 +265,7 @@ export function ViewPlans({
                       totalRequirementCredits + parseInt(course.credits))
                 : totalRequirementCredits
         );
-        if (totalRequirementCredits > 2) {
+        if (totalRequirementCredits >= 3) {
             setSBS(true);
         } else {
             setSBS(false);
@@ -288,7 +288,7 @@ export function ViewPlans({
                       totalRequirementCredits + parseInt(course.credits))
                 : totalRequirementCredits
         );
-        if (totalRequirementCredits > 2) {
+        if (totalRequirementCredits >= 3) {
             setHCC(true);
         } else {
             setHCC(false);
@@ -311,7 +311,7 @@ export function ViewPlans({
                       totalRequirementCredits + parseInt(course.credits))
                 : totalRequirementCredits
         );
-        if (totalRequirementCredits > 2) {
+        if (totalRequirementCredits >= 3) {
             setMNST(true);
         } else {
             setMNST(false);
@@ -333,7 +333,7 @@ export function ViewPlans({
                       totalRequirementCredits + parseInt(course.credits))
                 : totalRequirementCredits
         );
-        if (totalRequirementCredits > 2) {
+        if (totalRequirementCredits >= 3) {
             setSeminar(true);
         } else {
             setSeminar(false);
