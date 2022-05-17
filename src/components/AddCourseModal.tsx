@@ -1,7 +1,15 @@
 import { course } from "../interface/course";
 import React, { useState } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
-import { ciscCourses } from "../lists/ciscCoursesForSearch";
+import { multicultCourses } from "../lists/multicultCourses";
+import { dleCourses } from "../lists/dleCourses";
+import { fyeCourses } from "../lists/fyeCourses";
+import { cahCourses } from "../lists/cahCourses";
+import { hccCourses } from "../lists/hccCourses";
+import { mnstCourses } from "../lists/mnstCourses";
+import { ciscCoursesForReq } from "../lists/ciscCourses";
+import { sbsCourses } from "../lists/sbsCourses";
+import { capstoneCourses } from "../lists/capstoneCourses";
 
 export function AddCourse({
     handleClose,
@@ -16,9 +24,19 @@ export function AddCourse({
     function updateEmotion(event: React.ChangeEvent<HTMLSelectElement>) {
         setEmotion(event.target.value);
     }
+    const allCourses = ciscCoursesForReq.concat(
+        multicultCourses,
+        dleCourses,
+        fyeCourses,
+        cahCourses,
+        hccCourses,
+        mnstCourses,
+        sbsCourses,
+        capstoneCourses
+    );
 
     function findObject(code: string) {
-        const csCourse = ciscCourses().find(
+        const csCourse = allCourses.find(
             (course: course): boolean => course.code == code
         );
         if (csCourse == undefined) {
@@ -53,7 +71,7 @@ export function AddCourse({
                 <Form.Group controlId="courseList">
                     <Form.Label>Course List</Form.Label>
                     <Form.Select value={emotion} onChange={updateEmotion}>
-                        {ciscCourses().map((ciscCourse: course) => (
+                        {allCourses.map((ciscCourse: course) => (
                             <option
                                 key={ciscCourse.code}
                                 value={ciscCourse.code}

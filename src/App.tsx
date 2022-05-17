@@ -7,10 +7,15 @@ import { course } from "./interface/course";
 import { plan } from "./interface/plan";
 import { Form } from "react-bootstrap";
 //import { ciscCourses } from "./lists/ciscCoursesForSearch";
-//import { multicultCourses } from "./lists/multicultCourses";
-//import { dleCourses } from "./lists/dleCourses";
-//import { fyeCourses } from "./lists/fyeCourses";
+import { multicultCourses } from "./lists/multicultCourses";
+import { dleCourses } from "./lists/dleCourses";
+import { fyeCourses } from "./lists/fyeCourses";
+import { cahCourses } from "./lists/cahCourses";
+import { hccCourses } from "./lists/hccCourses";
+import { mnstCourses } from "./lists/mnstCourses";
 import { ciscCoursesForReq } from "./lists/ciscCourses";
+import { sbsCourses } from "./lists/sbsCourses";
+import { capstoneCourses } from "./lists/capstoneCourses";
 
 export function App(): JSX.Element {
     const [plans, setPlans] = useState<plan[]>([]);
@@ -21,8 +26,19 @@ export function App(): JSX.Element {
     //stuff belowe needs to be edited but im in a rush so o well
     const [emotion, setEmotion] = useState<string>("");
     //const [courseCS, setCourse] = useState<course>(ciscCourses[0]);
+    const allCourses = ciscCoursesForReq.concat(
+        multicultCourses,
+        dleCourses,
+        fyeCourses,
+        cahCourses,
+        hccCourses,
+        mnstCourses,
+        sbsCourses,
+        capstoneCourses
+    );
+
     function findObject(code: string) {
-        const csCourse = ciscCoursesForReq.find(
+        const csCourse = allCourses.find(
             (course: course): boolean => course.code == code
         );
         return csCourse;
@@ -124,7 +140,7 @@ export function App(): JSX.Element {
                             value={emotion}
                             onChange={updateEmotion}
                         >
-                            {ciscCoursesForReq.map((ciscCourse: course) => (
+                            {allCourses.map((ciscCourse: course) => (
                                 <option
                                     key={ciscCourse.code}
                                     value={ciscCourse.code}
