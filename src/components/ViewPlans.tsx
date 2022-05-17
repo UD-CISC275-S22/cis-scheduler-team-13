@@ -384,17 +384,13 @@ export function ViewPlans({
                             Open/Close Plan
                         </Button>
                     </Col>
-                    <Col>
-                        <p> </p>
-                    </Col>
+                    <Col></Col>
                     <Col>
                         <Button data-testid="planEdit" onClick={changeEditMode}>
                             Edit Plan
                         </Button>
                     </Col>
-                    <Col>
-                        <p> </p>
-                    </Col>
+                    <Col></Col>
                     <Col>
                         <Button
                             data-testid="editPlanViewRequirements"
