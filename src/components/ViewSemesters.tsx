@@ -53,9 +53,7 @@ export function ViewSemesters({
                             Open/Close Semester
                         </Button>
                     </Col>
-                    <Col>
-                        <p> </p>
-                    </Col>
+                    <Col></Col>
                     <Col>
                         <Button
                             data-testid="semesterEditButton"
