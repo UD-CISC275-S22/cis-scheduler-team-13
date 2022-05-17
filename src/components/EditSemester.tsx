@@ -21,8 +21,8 @@ export function EditSemester({
     courses: course[];
 }): JSX.Element {
     const [show, setShow] = useState<boolean>(false);
-    const CloseAddModal = () => setShow(false);
-    const ShowAddModal = () => setShow(true);
+    const closeAddModal = () => setShow(false);
+    const showAddModal = () => setShow(true);
     const [season, setSeason] = useState<string>(semester.season);
     const [year, setYear] = useState<number>(semester.year);
     const [credits, setCredits] = useState<number>(semester.credits);
@@ -171,13 +171,13 @@ export function EditSemester({
                         <Button
                             variant="success"
                             className="me-4"
-                            onClick={ShowAddModal}
+                            onClick={showAddModal}
                         >
                             Add a Course
                         </Button>
                         <AddCourse
                             show={show}
-                            handleClose={CloseAddModal}
+                            handleClose={closeAddModal}
                             addCourse={addCourse}
                         ></AddCourse>
                     </div>

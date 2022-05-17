@@ -19,8 +19,8 @@ import { capstoneCourses } from "./lists/capstoneCourses";
 export function App(): JSX.Element {
     const [plans, setPlans] = useState<plan[]>([]);
     const [show, setShow] = useState<boolean>(false);
-    const CloseAddModal = () => setShow(false);
-    const ShowAddModal = () => setShow(true);
+    const closeAddModal = () => setShow(false);
+    const showAddModal = () => setShow(true);
 
     //stuff belowe needs to be edited but im in a rush so o well
     const [emotion, setEmotion] = useState<string>("");
@@ -37,10 +37,10 @@ export function App(): JSX.Element {
     );
 
     function findObject(code: string) {
-        const csCourse = allCourses.find(
+        const selectedCourse = allCourses.find(
             (course: course): boolean => course.code == code
         );
-        return csCourse;
+        return selectedCourse;
     }
     function updateEmotion(event: React.ChangeEvent<HTMLSelectElement>) {
         setEmotion(event.target.value);
@@ -113,13 +113,13 @@ export function App(): JSX.Element {
                         data-testid="addNewPlanButton"
                         variant="success"
                         className="m-4"
-                        onClick={ShowAddModal}
+                        onClick={showAddModal}
                     >
                         Add New Plan
                     </Button>
                     <AddPlan
                         show={show}
-                        handleClose={CloseAddModal}
+                        handleClose={closeAddModal}
                         addPlan={addPlan}
                     ></AddPlan>
                 </div>

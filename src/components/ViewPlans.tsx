@@ -29,8 +29,8 @@ export function ViewPlans({
     const [editMode, setEditMode] = useState<boolean>(false);
     const [visible, setVisible] = useState<boolean>(false);
     const [show, setShow] = useState<boolean>(false);
-    const ShowReqModal = () => setShow(true);
-    const CloseReqModal = () => setShow(false);
+    const showReqModal = () => setShow(true);
+    const closeReqModal = () => setShow(false);
     const [engl, setEngl] = useState<boolean>(plan.engl);
     const [multicultural, setMulticultural] = useState<boolean>(
         plan.multicultural
@@ -68,7 +68,7 @@ export function ViewPlans({
     }
 
     function updateRequirements() {
-        ShowReqModal();
+        showReqModal();
         checkAllRequirements();
         editPlan(plan.name, {
             ...plan,
@@ -402,7 +402,7 @@ export function ViewPlans({
                 </Button>
                 <SeeRequirements
                     show={show}
-                    handleClose={CloseReqModal}
+                    handleClose={closeReqModal}
                     plan={plan}
                 ></SeeRequirements>
             </Row>
