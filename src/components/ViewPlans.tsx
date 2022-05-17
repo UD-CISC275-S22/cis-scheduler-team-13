@@ -389,16 +389,16 @@ export function ViewPlans({
             </Row>
             <Row>
                 <Button data-testid="planView" onClick={changeVisible}>
-                    View Plan
+                    Open/Close Plan
                 </Button>
                 <Button data-testid="planEdit" onClick={changeEditMode}>
-                    Edit
+                    Edit Plan
                 </Button>
                 <Button
                     data-testid="editPlanViewRequirements"
                     onClick={updateRequirements}
                 >
-                    View Requirements
+                    View Degree Requirements
                 </Button>
                 <SeeRequirements
                     show={show}

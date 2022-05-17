@@ -91,15 +91,18 @@ export function App(): JSX.Element {
                 Degree Planner by Clay Wilfong, Mathias Heider, and Brandon
                 Grier
             </header>
-            <p>WELCOME!</p>
-            <p>
+            <h1>WELCOME!</h1>
+            <h3>
                 We Understand That Degrees Are Complicated, We Are Here To Help.
-            </p>
-            <p>
-                If you are new here, start by creating a new degree plan. Press
-                Edit on the degree plan to begin adding your semesters and
-                courses.
-            </p>
+            </h3>
+            <h6>
+                If you are new here, start by creating a new degree plan.
+                Opening/Closing the degree plan or semester may not seem like
+                its working at first. That would be because that plan/semester
+                is empty! Press Edit on the degree plan to start adding your
+                semesters and courses. Pressing Edit also allows you to see the
+                other features available to you as part of this degree planner!
+            </h6>
             <div>
                 <div>
                     <PlanList
