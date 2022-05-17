@@ -22,9 +22,7 @@ export function App(): JSX.Element {
     const closeAddModal = () => setShow(false);
     const showAddModal = () => setShow(true);
 
-    //stuff belowe needs to be edited but im in a rush so o well
     const [emotion, setEmotion] = useState<string>("");
-    //const [courseCS, setCourse] = useState<course>(ciscCourses[0]);
     const allCourses = ciscCoursesForReq.concat(
         multicultCourses,
         dleCourses,
@@ -45,26 +43,7 @@ export function App(): JSX.Element {
     function updateEmotion(event: React.ChangeEvent<HTMLSelectElement>) {
         setEmotion(event.target.value);
     }
-    /*function changeCourse(code: string) {
-        const oneCourse = ciscCourses.find(
-            (cscourse: course): boolean => cscourse.code !== code
-        );
-        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-        setCourse(oneCourse!);
-    }
-    */
-    /*
-    function addSemester(newSemester: semester) {
-        const existing = semesters.find(
-            (semester: semester): boolean =>
-                semester.season === newSemester.season &&
-                semester.year === newSemester.year
-        );
-        if (existing === undefined) {
-            setSemesters([...semesters, newSemester]);
-        }
-    }
-*/
+
     function editPlan(name: string, newPlan: plan) {
         setPlans(
             plans.map(
@@ -102,6 +81,11 @@ export function App(): JSX.Element {
                 is empty! Press Edit on the degree plan to start adding your
                 semesters and courses. Pressing Edit also allows you to see the
                 other features available to you as part of this degree planner!
+            </h6>
+            <h6>
+                (Be sure to click Edit Plan, then Save, then View Degree
+                Requirements to accurately see what requirements you have
+                left!!)
             </h6>
             <div>
                 <div>

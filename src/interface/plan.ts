@@ -13,9 +13,5 @@ export interface plan {
     MNST: boolean;
     totalCredits: boolean;
     core: boolean;
-    relatedWork: boolean;
-    technical: boolean;
     capstone: boolean;
-    labScience: boolean;
-    additionalScience: boolean;
 }

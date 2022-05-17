@@ -36,10 +36,10 @@ export function AddCourse({
     );
 
     function findObject(code: string) {
-        const csCourse = allCourses.find(
+        const selectedCourse = allCourses.find(
             (course: course): boolean => course.code == code
         );
-        if (csCourse == undefined) {
+        if (selectedCourse == undefined) {
             return {
                 code: "CISC 101",
                 name: "Principles of Computing",
@@ -52,7 +52,7 @@ export function AddCourse({
                 typ: "Fall, Winter and Spring"
             };
         } else {
-            return csCourse;
+            return selectedCourse;
         }
     }
 

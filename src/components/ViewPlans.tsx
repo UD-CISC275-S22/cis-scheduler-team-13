@@ -45,13 +45,7 @@ export function ViewPlans({
         plan.totalCredits
     );
     const [core, setCore] = useState<boolean>(plan.core);
-    //const [relatedWork, setRelatedWork] = useState<boolean>(plan.relatedWork);
-    //const [technical, setTechnical] = useState<boolean>(plan.technical);
     const [capstone, setCapstone] = useState<boolean>(plan.capstone);
-    //const [labScience, setLabScience] = useState<boolean>(plan.labScience);
-    //const [additionalScience, setAdditionalScience] = useState<boolean>(
-    //    plan.additionalScience
-    //);
 
     function checkAllRequirements() {
         checkForMulticultural();
@@ -82,11 +76,7 @@ export function ViewPlans({
             MNST: MNST,
             totalCredits: totalCredits,
             core: core,
-            //relatedWork: relatedWork,
-            //technical: technical,
             capstone: capstone
-            //labScience: labScience,
-            //additionalScience: additionalScience
         });
     }
 

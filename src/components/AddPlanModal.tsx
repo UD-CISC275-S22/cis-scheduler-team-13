@@ -28,11 +28,7 @@ export function AddPlan({
             MNST: false,
             totalCredits: false,
             core: false,
-            relatedWork: false,
-            technical: false,
-            capstone: false,
-            labScience: false,
-            additionalScience: false
+            capstone: false
         });
         handleClose();
     }

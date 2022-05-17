@@ -44,13 +44,6 @@ export function EditPlan({
             credits: credits,
             semesters: semesters
         });
-        naturalCreditsPlan();
-        editPlan(plan.name, {
-            ...plan,
-            name: name,
-            credits: credits,
-            semesters: semesters
-        });
         changeEditMode();
     }
     function goBack() {
