@@ -46,13 +46,25 @@ export function ViewSemesters({
                 <p>{semester.credits} Total Credits</p>
             </Row>
             <Row>
-                <Button onClick={changeVisible}> Open/Close Semester</Button>
-                <Button
-                    data-testid="semesterEditButton"
-                    onClick={changeEditMode}
-                >
-                    Edit Semester
-                </Button>
+                <div>
+                    <Col>
+                        <Button onClick={changeVisible}>
+                            {" "}
+                            Open/Close Semester
+                        </Button>
+                    </Col>
+                    <Col>
+                        <p> </p>
+                    </Col>
+                    <Col>
+                        <Button
+                            data-testid="semesterEditButton"
+                            onClick={changeEditMode}
+                        >
+                            Edit Semester
+                        </Button>
+                    </Col>
+                </div>
             </Row>
             {visible && (
                 <Row>
