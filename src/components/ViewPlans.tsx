@@ -29,8 +29,8 @@ export function ViewPlans({
     const [editMode, setEditMode] = useState<boolean>(false);
     const [visible, setVisible] = useState<boolean>(false);
     const [show, setShow] = useState<boolean>(false);
-    const ShowAddModal = () => setShow(true);
-    const CloseAddModal = () => setShow(false);
+    const ShowReqModal = () => setShow(true);
+    const CloseReqModal = () => setShow(false);
     const [engl, setEngl] = useState<boolean>(plan.engl);
     const [multicultural, setMulticultural] = useState<boolean>(
         plan.multicultural
@@ -68,7 +68,7 @@ export function ViewPlans({
     }
 
     function updateRequirements() {
-        ShowAddModal();
+        ShowReqModal();
         checkAllRequirements();
         editPlan(plan.name, {
             ...plan,
@@ -103,7 +103,7 @@ export function ViewPlans({
         courseListSingleArray.map(
             (course: course): number =>
                 (totalRequirementCredits =
-                    Number(totalRequirementCredits) + Number(course.credits))
+                    totalRequirementCredits + parseInt(course.credits))
         );
         if (totalRequirementCredits > 2) {
             setTotalCredits(true);
@@ -125,7 +125,7 @@ export function ViewPlans({
         courseListSingleArray.map((course: course): number =>
             course.code === "ENGL 110"
                 ? (totalRequirementCredits =
-                      Number(totalRequirementCredits) + Number(course.credits))
+                      totalRequirementCredits + parseInt(course.credits))
                 : totalRequirementCredits
         );
         if (totalRequirementCredits > 2) {
@@ -147,7 +147,7 @@ export function ViewPlans({
         courseListSingleArray.map((course: course): number =>
             multicultCourses.includes(course)
                 ? (totalRequirementCredits =
-                      Number(totalRequirementCredits) + Number(course.credits))
+                      totalRequirementCredits + parseInt(course.credits))
                 : totalRequirementCredits
         );
         if (totalRequirementCredits > 2) {
@@ -170,7 +170,7 @@ export function ViewPlans({
         courseListSingleArray.map((course: course): number =>
             cahCourses.includes(course)
                 ? (totalRequirementCredits =
-                      Number(totalRequirementCredits) + Number(course.credits))
+                      totalRequirementCredits + parseInt(course.credits))
                 : totalRequirementCredits
         );
         if (totalRequirementCredits > 2) {
@@ -193,7 +193,7 @@ export function ViewPlans({
         courseListSingleArray.map((course: course): number =>
             capstoneCourses.includes(course)
                 ? (totalRequirementCredits =
-                      Number(totalRequirementCredits) + Number(course.credits))
+                      totalRequirementCredits + parseInt(course.credits))
                 : totalRequirementCredits
         );
         if (totalRequirementCredits > 2) {
@@ -216,7 +216,7 @@ export function ViewPlans({
         courseListSingleArray.map((course: course): number =>
             ciscCoursesForReq.includes(course)
                 ? (totalRequirementCredits =
-                      Number(totalRequirementCredits) + Number(course.credits))
+                      totalRequirementCredits + parseInt(course.credits))
                 : totalRequirementCredits
         );
         if (totalRequirementCredits > 2) {
@@ -239,7 +239,7 @@ export function ViewPlans({
         courseListSingleArray.map((course: course): number =>
             dleCourses.includes(course)
                 ? (totalRequirementCredits =
-                      Number(totalRequirementCredits) + Number(course.credits))
+                      totalRequirementCredits + parseInt(course.credits))
                 : totalRequirementCredits
         );
         if (totalRequirementCredits > 2) {
@@ -262,7 +262,7 @@ export function ViewPlans({
         courseListSingleArray.map((course: course): number =>
             sbsCourses.includes(course)
                 ? (totalRequirementCredits =
-                      Number(totalRequirementCredits) + Number(course.credits))
+                      totalRequirementCredits + parseInt(course.credits))
                 : totalRequirementCredits
         );
         if (totalRequirementCredits > 2) {
@@ -285,7 +285,7 @@ export function ViewPlans({
         courseListSingleArray.map((course: course): number =>
             hccCourses.includes(course)
                 ? (totalRequirementCredits =
-                      Number(totalRequirementCredits) + Number(course.credits))
+                      totalRequirementCredits + parseInt(course.credits))
                 : totalRequirementCredits
         );
         if (totalRequirementCredits > 2) {
@@ -308,7 +308,7 @@ export function ViewPlans({
         courseListSingleArray.map((course: course): number =>
             mnstCourses.includes(course)
                 ? (totalRequirementCredits =
-                      Number(totalRequirementCredits) + Number(course.credits))
+                      totalRequirementCredits + parseInt(course.credits))
                 : totalRequirementCredits
         );
         if (totalRequirementCredits > 2) {
@@ -330,7 +330,7 @@ export function ViewPlans({
         courseListSingleArray.map((course: course): number =>
             fyeCourses.includes(course)
                 ? (totalRequirementCredits =
-                      Number(totalRequirementCredits) + Number(course.credits))
+                      totalRequirementCredits + parseInt(course.credits))
                 : totalRequirementCredits
         );
         if (totalRequirementCredits > 2) {
@@ -402,7 +402,7 @@ export function ViewPlans({
                 </Button>
                 <SeeRequirements
                     show={show}
-                    handleClose={CloseAddModal}
+                    handleClose={CloseReqModal}
                     plan={plan}
                 ></SeeRequirements>
             </Row>

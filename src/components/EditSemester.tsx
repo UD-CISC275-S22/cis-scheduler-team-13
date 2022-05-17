@@ -38,6 +38,11 @@ export function EditSemester({
         setCredits(sum);
     }
 
+    function autoCreditUpdate() {
+        naturalCredits();
+        saveChanges();
+    }
+
     function saveChanges() {
         editSemester(semester.season, semester.year, {
             ...semester,
@@ -46,7 +51,7 @@ export function EditSemester({
             credits: credits,
             courses: courses
         });
-        changeEditMode(); //gets to here just fine
+        changeEditMode();
     }
 
     function goBack() {
@@ -186,7 +191,7 @@ export function EditSemester({
                     </Button>
                     <Button
                         data-testid="semesterEditSave"
-                        onClick={saveChanges}
+                        onClick={autoCreditUpdate}
                         variant="success"
                         className="me-4"
                     >

@@ -2,6 +2,7 @@ import { course } from "../interface/course";
 import React, { useState } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
 import { ciscCourses } from "../lists/ciscCoursesForSearch";
+
 export function AddCourse({
     handleClose,
     addCourse,
@@ -41,6 +42,7 @@ export function AddCourse({
         addCourse(findObject(emotion));
         handleClose();
     }
+
     return (
         <Modal show={show} onHide={handleClose} animation={false}>
             <Modal.Header closeButton>
