@@ -13,40 +13,40 @@
       at onDone (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1034:9)
       at node_modules/react-dom/cjs/react-dom-test-utils.development.js:1073:13
 
-PASS src/App.test.tsx (5.621 s)
+PASS src/App.test.tsx (5.92 s)
   Degree Planner Component Tests
-    ✓ The initial button exists (87 ms)
-    ✓ Add New Plan Button Works and Menu appears (96 ms)
-    ✓ Cancel button and Add Plan Button works (172 ms)
-    ✓ Can Create a Plan with a Name (152 ms)
-    ✓ Edit Plan Works (147 ms)
-    ✓ Cancel Button works (138 ms)
-    ✓ Delete Button works (88 ms)
-    ✓ Can change name and credits and save Button Works (180 ms)
-    ✓ Add A Semester Button works (81 ms)
-    ✓ You can actually add a real semester (154 ms)
-    ✓ Set credits to actual works (228 ms)
-    ✓ Clear Semesters Works (254 ms)
-    ✓ Semester Edit Cancel Button Works (145 ms)
-    ✓ Semester Edit Delete Button Works (132 ms)
-    ✓ Semester Edit Can Actually Edit (210 ms)
+    ✓ The initial button exists (92 ms)
+    ✓ Add New Plan Button Works and Menu appears (100 ms)
+    ✓ Cancel button and Add Plan Button works (178 ms)
+    ✓ Can Create a Plan with a Name (159 ms)
+    ✓ Edit Plan Works (159 ms)
+    ✓ Cancel Button works (150 ms)
+    ✓ Delete Button works (95 ms)
+    ✓ Can change name and credits and save Button Works (190 ms)
+    ✓ Add A Semester Button works (84 ms)
+    ✓ You can actually add a real semester (157 ms)
+    ✓ Set credits to actual works (251 ms)
+    ✓ Clear Semesters Works (265 ms)
+    ✓ Semester Edit Cancel Button Works (148 ms)
+    ✓ Semester Edit Delete Button Works (147 ms)
+    ✓ Semester Edit Can Actually Edit (222 ms)
 
 ---------------------------|---------|----------|---------|---------|---------------------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s               
 ---------------------------|---------|----------|---------|---------|---------------------------------
-All files                  |   44.56 |     22.8 |   45.58 |    44.2 |                                 
+All files                  |   44.94 |    26.51 |   45.98 |    44.6 |                                 
  src                       |   90.47 |       50 |   84.61 |   88.88 |                                 
   App.tsx                  |   90.47 |       50 |   84.61 |   88.88 | 31,71                           
- src/components            |   38.33 |    21.81 |   40.98 |   38.46 |                                 
-  AddCourseModal.tsx       |   27.27 |        0 |   33.33 |   27.27 | 16-42                           
+ src/components            |   38.82 |    25.78 |   41.46 |   38.95 |                                 
+  AddCourseModal.tsx       |   27.27 |        0 |   33.33 |   27.27 | 17-43                           
   AddPlanModal.tsx         |      80 |        0 |   66.66 |      80 | 60                              
   AddSemesterModal.tsx     |     100 |       50 |     100 |     100 | 104                             
   CourseList.tsx           |       0 |      100 |       0 |       0 | 7-10                            
   EditCourse.tsx           |    6.66 |        0 |    6.66 |    6.66 | 13-119,128                      
   EditPlan.tsx             |     100 |       50 |     100 |     100 | 388-425                         
-  EditSemester.tsx         |   61.11 |       20 |      52 |    64.7 | 32,35,57-62,213,236,253,271-290 
+  EditSemester.tsx         |   63.15 |       20 |   53.84 |   66.66 | 32,35,62-67,218,241,258,276-295 
   PlanList.tsx             |     100 |      100 |     100 |     100 |                                 
-  SeeRequirementsModal.tsx |     100 |       50 |     100 |     100 | 22-26                           
+  SeeRequirementsModal.tsx |     100 |       50 |     100 |     100 | 22-61                           
   SemesterList.tsx         |     100 |      100 |     100 |     100 |                                 
   ViewCourses.tsx          |       0 |      100 |       0 |       0 | 6                               
   ViewPlans.tsx            |   17.26 |    15.38 |    15.9 |   17.51 | 57-339                          
@@ -70,5 +70,5 @@ All files                  |   44.56 |     22.8 |   45.58 |    44.2 |
 Test Suites: 1 passed, 1 total
 Tests:       15 passed, 15 total
 Snapshots:   0 total
-Time:        6.232 s
+Time:        6.56 s
 Ran all test suites.
