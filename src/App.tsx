@@ -78,9 +78,12 @@ export function App(): JSX.Element {
                 If you are new here, start by creating a new degree plan.
                 Opening/Closing the degree plan or semester may not seem like
                 its working at first. That would be because that plan/semester
-                is empty! Press Edit on the degree plan to start adding your
-                semesters and courses. Pressing Edit also allows you to see the
-                other features available to you as part of this degree planner!
+                is empty!
+            </h6>
+            <h6>
+                Press Edit on the degree plan to start adding your semesters and
+                courses. Pressing Edit also allows you to see the other features
+                available to you as part of this degree planner!
             </h6>
             <h6>
                 (Be sure to click Edit Plan, then Save, then View Degree

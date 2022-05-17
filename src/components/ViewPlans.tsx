@@ -378,18 +378,32 @@ export function ViewPlans({
                 <p>{plan.credits} Total Credits</p>
             </Row>
             <Row>
-                <Button data-testid="planView" onClick={changeVisible}>
-                    Open/Close Plan
-                </Button>
-                <Button data-testid="planEdit" onClick={changeEditMode}>
-                    Edit Plan
-                </Button>
-                <Button
-                    data-testid="editPlanViewRequirements"
-                    onClick={updateRequirements}
-                >
-                    View Degree Requirements
-                </Button>
+                <div>
+                    <Col>
+                        <Button data-testid="planView" onClick={changeVisible}>
+                            Open/Close Plan
+                        </Button>
+                    </Col>
+                    <Col>
+                        <p> </p>
+                    </Col>
+                    <Col>
+                        <Button data-testid="planEdit" onClick={changeEditMode}>
+                            Edit Plan
+                        </Button>
+                    </Col>
+                    <Col>
+                        <p> </p>
+                    </Col>
+                    <Col>
+                        <Button
+                            data-testid="editPlanViewRequirements"
+                            onClick={updateRequirements}
+                        >
+                            View Degree Requirements
+                        </Button>
+                    </Col>
+                </div>
                 <SeeRequirements
                     show={show}
                     handleClose={closeReqModal}
