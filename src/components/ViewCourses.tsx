@@ -16,12 +16,6 @@ export function ViewCourses({ course }: { course: course }): JSX.Element {
                 <p>Credits: </p>
                 <h4>{course.credits}</h4>
             </Row>
-            {/*
-            <Row>
-                <p>Prerequisites: </p>
-                <h5>{course.prerequisites.toString()}</h5>
-            </Row>
-            */}
         </Container>
     );
 }

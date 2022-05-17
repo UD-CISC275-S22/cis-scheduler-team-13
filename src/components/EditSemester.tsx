@@ -191,7 +191,7 @@ export function EditSemester({
                     </Button>
                     <Button
                         data-testid="semesterEditSave"
-                        onClick={autoCreditUpdate}
+                        onClick={autoCreditUpdate} //does not work for some reason
                         variant="success"
                         className="me-4"
                     >

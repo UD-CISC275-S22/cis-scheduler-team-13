@@ -6,7 +6,6 @@ import { PlanList } from "./components/PlanList";
 import { course } from "./interface/course";
 import { plan } from "./interface/plan";
 import { Form } from "react-bootstrap";
-//import { ciscCourses } from "./lists/ciscCoursesForSearch";
 import { multicultCourses } from "./lists/multicultCourses";
 import { dleCourses } from "./lists/dleCourses";
 import { fyeCourses } from "./lists/fyeCourses";
@@ -77,11 +76,6 @@ export function App(): JSX.Element {
     function deletePlan(name: string) {
         setPlans(plans.filter((plan: plan): boolean => plan.name !== name));
     }
-    /*
-    function deleteExistingSemesters(plan: plan) {
-        setSemesters([]);
-    }
-    */
     function addPlan(newPlan: plan) {
         const existing = plans.find(
             (plan: plan): boolean => plan.name === newPlan.name

@@ -1,8 +1,6 @@
 import React from "react";
 import { Button, Col, Container, Form, ListGroup, Row } from "react-bootstrap";
 import { course } from "../interface/course";
-//import { semester } from "../interface/semester";
-//import { AddCourse } from "./AddCourseModal";
 
 interface CourseEdit {
     course: course;
@@ -54,14 +52,6 @@ export function EditCourseCredits({
     );
 }
 
-/*
-Don't really know what I was going for here, prerqs need to be in the form of course[] but with this method they are string[],
-need to figure out how to make that conversion, possibly need office hours
-export function blankCourse(name: string, id: number): course{
-    const course: course = {courseName: name, courseID: id, credits: 0, prerequisites: []};
-    return course;
-}
-*/
 export function EditCoursePrereqs({
     course,
     setCourse
@@ -106,7 +96,6 @@ export function EditCourseDelete({
 }
 
 export function EditCourses({
-    //Add delete button here I believe
     courses,
     setCourses
 }: {

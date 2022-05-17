@@ -1,7 +1,6 @@
 import { semester } from "../interface/semester";
 import React, { useState } from "react";
 import { Button, Modal, Form, Col, Row } from "react-bootstrap";
-//import { idText } from "typescript";
 
 export function AddSemester({
     handleClose,
@@ -14,7 +13,6 @@ export function AddSemester({
 }) {
     const [season, setSeason] = useState<string>("");
     const [year, setYear] = useState<number>(0);
-    //const [id, setId] = useState<number>(0);
 
     function saveChanges() {
         addSemester({
