@@ -38,6 +38,10 @@ export function EditPlan({
     }
 
     function saveChanges() {
+        semesters.sort((a, b) =>
+            a.year > b.year ? 1 : b.year > a.year ? -1 : 0
+        );
+
         editPlan(plan.name, {
             ...plan,
             name: name,
