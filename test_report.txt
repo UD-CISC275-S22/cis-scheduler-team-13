@@ -2,23 +2,23 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
-FAIL src/App.test.tsx (33.312 s)
+FAIL src/App.test.tsx (24.758 s)
   Degree Planner Component Tests
-    ✓ The initial button exists (853 ms)
-    ✓ Add New Plan Button Works and Menu appears (1291 ms)
-    ✓ Cancel button and Add Plan Button works (2467 ms)
-    ✓ Can Create a Plan with a Name (2039 ms)
-    ✓ Edit Plan Works (1651 ms)
-    ✓ Cancel Button works (1711 ms)
-    ✓ Delete Button works (2222 ms)
-    ✓ Can change name and credits and save Button Works (2237 ms)
-    ✓ Add A Semester Button works (1790 ms)
-    ✕ You can actually add a real semester (2198 ms)
-    ✕ Set credits to actual works (2132 ms)
-    ✕ Clear Semesters Works (2065 ms)
-    ✕ Semester Edit Cancel Button Works (1970 ms)
-    ✕ Semester Edit Delete Button Works (1993 ms)
-    ✕ Semester Edit Can Actually Edit (1992 ms)
+    ✓ The initial button exists (628 ms)
+    ✓ Add New Plan Button Works and Menu appears (917 ms)
+    ✓ Cancel button and Add Plan Button works (1570 ms)
+    ✓ Can Create a Plan with a Name (1562 ms)
+    ✓ Edit Plan Works (1281 ms)
+    ✓ Cancel Button works (1248 ms)
+    ✓ Delete Button works (1398 ms)
+    ✓ Can change name and credits and save Button Works (1519 ms)
+    ✓ Add A Semester Button works (1237 ms)
+    ✕ You can actually add a real semester (1558 ms)
+    ✕ Set credits to actual works (1521 ms)
+    ✕ Clear Semesters Works (1512 ms)
+    ✕ Semester Edit Cancel Button Works (1526 ms)
+    ✕ Semester Edit Delete Button Works (1663 ms)
+    ✕ Semester Edit Can Actually Edit (1581 ms)
 
   ● Degree Planner Component Tests › You can actually add a real semester
 
@@ -1247,5 +1247,5 @@ All files                  |   29.59 |    18.49 |   25.85 |    28.8 |
 Test Suites: 1 failed, 1 total
 Tests:       6 failed, 9 passed, 15 total
 Snapshots:   0 total
-Time:        34.665 s
+Time:        25.736 s
 Ran all test suites.
