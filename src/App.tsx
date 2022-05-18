@@ -46,6 +46,7 @@ export function App(): JSX.Element {
 
         return false;
     });
+    unique.sort((a, b) => (a.code > b.code ? 1 : b.code > a.code ? -1 : 0));
 
     function findObject(code: string) {
         const selectedCourse = unique.find(
