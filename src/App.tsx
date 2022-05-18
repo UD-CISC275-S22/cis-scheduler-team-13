@@ -33,9 +33,22 @@ export function App(): JSX.Element {
         sbsCourses,
         capstoneCourses
     );
+    const uniqueCode: string[] = [];
+
+    const unique = allCourses.filter((element) => {
+        const isDuplicate = uniqueCode.includes(element.code);
+
+        if (!isDuplicate) {
+            uniqueCode.push(element.code);
+
+            return true;
+        }
+
+        return false;
+    });
 
     function findObject(code: string) {
-        const selectedCourse = allCourses.find(
+        const selectedCourse = unique.find(
             (course: course): boolean => course.code == code
         );
         return selectedCourse;
@@ -124,7 +137,7 @@ export function App(): JSX.Element {
                             value={emotion}
                             onChange={updateEmotion}
                         >
-                            {allCourses.map((ciscCourse: course) => (
+                            {unique.map((ciscCourse: course) => (
                                 <option
                                     key={ciscCourse.code}
                                     value={ciscCourse.code}
