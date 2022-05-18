@@ -2,23 +2,23 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
-FAIL src/App.test.tsx (34.078 s)
+FAIL src/App.test.tsx (31.842 s)
   Degree Planner Component Tests
-    ✓ The initial button exists (944 ms)
-    ✓ Add New Plan Button Works and Menu appears (1333 ms)
-    ✓ Cancel button and Add Plan Button works (2278 ms)
-    ✓ Can Create a Plan with a Name (2122 ms)
-    ✓ Edit Plan Works (1816 ms)
-    ✓ Cancel Button works (1742 ms)
-    ✓ Delete Button works (2152 ms)
-    ✓ Can change name and credits and save Button Works (2187 ms)
-    ✓ Add A Semester Button works (1743 ms)
-    ✕ You can actually add a real semester (2191 ms)
-    ✕ Set credits to actual works (2131 ms)
-    ✕ Clear Semesters Works (2133 ms)
-    ✕ Semester Edit Cancel Button Works (2113 ms)
-    ✕ Semester Edit Delete Button Works (2094 ms)
-    ✕ Semester Edit Can Actually Edit (2062 ms)
+    ✓ The initial button exists (831 ms)
+    ✓ Add New Plan Button Works and Menu appears (1299 ms)
+    ✓ Cancel button and Add Plan Button works (2163 ms)
+    ✓ Can Create a Plan with a Name (2136 ms)
+    ✓ Edit Plan Works (1672 ms)
+    ✓ Cancel Button works (1660 ms)
+    ✓ Delete Button works (1760 ms)
+    ✓ Can change name and credits and save Button Works (2134 ms)
+    ✓ Add A Semester Button works (1573 ms)
+    ✕ You can actually add a real semester (2012 ms)
+    ✕ Set credits to actual works (2077 ms)
+    ✕ Clear Semesters Works (1965 ms)
+    ✕ Semester Edit Cancel Button Works (2052 ms)
+    ✕ Semester Edit Delete Button Works (1925 ms)
+    ✕ Semester Edit Can Actually Edit (1917 ms)
 
   ● Degree Planner Component Tests › You can actually add a real semester
 
@@ -1211,16 +1211,16 @@ FAIL src/App.test.tsx (34.078 s)
 ---------------------------|---------|----------|---------|---------|------------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s      
 ---------------------------|---------|----------|---------|---------|------------------------
-All files                  |   29.24 |    18.75 |   26.02 |   28.43 |                        
+All files                  |   29.37 |    18.24 |   25.85 |   28.57 |                        
  src                       |   93.54 |       70 |   86.66 |   92.59 |                        
   App.tsx                  |   93.54 |       70 |   86.66 |   92.59 | 58,74                  
- src/components            |   19.92 |    14.92 |   19.23 |   19.77 |                        
+ src/components            |   20.14 |    14.49 |   19.08 |      20 |                        
   AddCourseModal.tsx       |       0 |        0 |       0 |       0 | 23-89                  
   AddPlanModal.tsx         |      80 |        0 |   66.66 |      80 | 56                     
   AddSemesterModal.tsx     |     100 |       50 |     100 |     100 | 102                    
   CourseList.tsx           |       0 |      100 |       0 |       0 | 7-10                   
   EditCourse.tsx           |       0 |        0 |       0 |       0 | 11-117                 
-  EditPlan.tsx             |   70.83 |     37.5 |   64.28 |   68.18 | 30-37,55,118           
+  EditPlan.tsx             |   69.23 |       25 |      60 |   66.66 | 30-37,42,59,122        
   EditSemester.tsx         |   13.15 |       10 |   19.23 |   13.88 | 23-218,241,258,276-295 
   PlanList.tsx             |     100 |      100 |     100 |     100 |                        
   SeeRequirementsModal.tsx |     100 |       50 |     100 |     100 | 22-61                  
@@ -1247,5 +1247,5 @@ All files                  |   29.24 |    18.75 |   26.02 |   28.43 |
 Test Suites: 1 failed, 1 total
 Tests:       6 failed, 9 passed, 15 total
 Snapshots:   0 total
-Time:        35.418 s
+Time:        33.057 s
 Ran all test suites.
