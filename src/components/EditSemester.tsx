@@ -135,7 +135,7 @@ export function EditSemester({
                             <Form.Control
                                 data-testid="semesterEditYear"
                                 as="textarea"
-                                rows={3}
+                                rows={1}
                                 value={year}
                                 onChange={(
                                     event: React.ChangeEvent<HTMLInputElement>
@@ -151,7 +151,7 @@ export function EditSemester({
                             <Form.Control
                                 data-testid="editSemesterCreditsInputBox"
                                 as="textarea"
-                                rows={3}
+                                rows={1}
                                 value={credits}
                                 onChange={(
                                     event: React.ChangeEvent<HTMLInputElement>
