@@ -60,7 +60,21 @@ export function ViewPlans({
         checkForEngl();
         checkForTotalCredits();
     }
-
+    function exportPlan(exportedPlan: plan) {
+        const planName = [[exportedPlan.name]];
+        const semesters = exportedPlan.semesters;
+        const semesterNames = semesters.map((sem) =>
+            [sem.season + " " + sem.year.toString()].concat(
+                sem.courses.map((cour) => cour.code)
+            )
+        );
+        const rows = planName.concat(semesterNames);
+        const csvContent = rows.map((e) => e.join(",")).join("\n");
+        const csv = document.createElement("a");
+        csv.href = URL.createObjectURL(new Blob([csvContent]));
+        csv.setAttribute("download", "exportedCSV.csv");
+        csv.click();
+    }
     function updateRequirements() {
         showReqModal();
         checkAllRequirements();
@@ -397,6 +411,14 @@ export function ViewPlans({
                             onClick={updateRequirements}
                         >
                             View Degree Requirements
+                        </Button>
+                    </Col>
+                    <Col>
+                        <Button
+                            data-testid="exportPlan"
+                            onClick={() => exportPlan(plan)}
+                        >
+                            Export Plan to CSV
                         </Button>
                     </Col>
                 </div>
