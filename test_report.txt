@@ -2,23 +2,23 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
-FAIL src/App.test.tsx (20.321 s)
+FAIL src/App.test.tsx (34.078 s)
   Degree Planner Component Tests
-    ✓ The initial button exists (474 ms)
-    ✓ Add New Plan Button Works and Menu appears (760 ms)
-    ✓ Cancel button and Add Plan Button works (1314 ms)
-    ✓ Can Create a Plan with a Name (1283 ms)
-    ✓ Edit Plan Works (1077 ms)
-    ✓ Cancel Button works (1051 ms)
-    ✓ Delete Button works (1175 ms)
-    ✓ Can change name and credits and save Button Works (1289 ms)
-    ✓ Add A Semester Button works (1010 ms)
-    ✕ You can actually add a real semester (1276 ms)
-    ✕ Set credits to actual works (1266 ms)
-    ✕ Clear Semesters Works (1266 ms)
-    ✕ Semester Edit Cancel Button Works (1249 ms)
-    ✕ Semester Edit Delete Button Works (1246 ms)
-    ✕ Semester Edit Can Actually Edit (1266 ms)
+    ✓ The initial button exists (944 ms)
+    ✓ Add New Plan Button Works and Menu appears (1333 ms)
+    ✓ Cancel button and Add Plan Button works (2278 ms)
+    ✓ Can Create a Plan with a Name (2122 ms)
+    ✓ Edit Plan Works (1816 ms)
+    ✓ Cancel Button works (1742 ms)
+    ✓ Delete Button works (2152 ms)
+    ✓ Can change name and credits and save Button Works (2187 ms)
+    ✓ Add A Semester Button works (1743 ms)
+    ✕ You can actually add a real semester (2191 ms)
+    ✕ Set credits to actual works (2131 ms)
+    ✕ Clear Semesters Works (2133 ms)
+    ✕ Semester Edit Cancel Button Works (2113 ms)
+    ✕ Semester Edit Delete Button Works (2094 ms)
+    ✕ Semester Edit Can Actually Edit (2062 ms)
 
   ● Degree Planner Component Tests › You can actually add a real semester
 
@@ -124,6 +124,17 @@ FAIL src/App.test.tsx (20.321 s)
                             [0mView Degree Requirements[0m
                           [36m</button>[39m
                         [36m</div>[39m
+                        [36m<div[39m
+                          [33mclass[39m=[32m"col"[39m
+                        [36m>[39m
+                          [36m<button[39m
+                            [33mclass[39m=[32m"btn btn-primary"[39m
+                            [33mdata-testid[39m=[32m"exportPlan"[39m
+                            [33mtype[39m=[32m"button"[39m
+                          [36m>[39m
+                            [0mExport Plan to CSV[0m
+                          [36m</button>[39m
+                        [36m</div>[39m
                       [36m</div>[39m
                     [36m</div>[39m
                   [36m</div>[39m
@@ -187,22 +198,7 @@ FAIL src/App.test.tsx (20.321 s)
                   [36m<option[39m
                     [33mvalue[39m=[32m"AFRA 206"[39m
                   [36m>[39m
-                    [0mAFRA 206[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"AFRA 220"[39m
-                  [36m>[39m
-                    [0mAFRA 220[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"AFRA 221"[39m
-                  [36m>[39m
-                    [0mAFRA 221[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"AFRA 222"[39m
-                  [36m>[39m
-       ...
+                    ...
 
       141 |         const editPlanSaveButton = screen.getByTestId("editPlanSaveButton");
       142 |         editPlanSaveButton.click();
@@ -326,6 +322,17 @@ FAIL src/App.test.tsx (20.321 s)
                             [0mView Degree Requirements[0m
                           [36m</button>[39m
                         [36m</div>[39m
+                        [36m<div[39m
+                          [33mclass[39m=[32m"col"[39m
+                        [36m>[39m
+                          [36m<button[39m
+                            [33mclass[39m=[32m"btn btn-primary"[39m
+                            [33mdata-testid[39m=[32m"exportPlan"[39m
+                            [33mtype[39m=[32m"button"[39m
+                          [36m>[39m
+                            [0mExport Plan to CSV[0m
+                          [36m</button>[39m
+                        [36m</div>[39m
                       [36m</div>[39m
                     [36m</div>[39m
                   [36m</div>[39m
@@ -389,22 +396,7 @@ FAIL src/App.test.tsx (20.321 s)
                   [36m<option[39m
                     [33mvalue[39m=[32m"AFRA 206"[39m
                   [36m>[39m
-                    [0mAFRA 206[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"AFRA 220"[39m
-                  [36m>[39m
-                    [0mAFRA 220[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"AFRA 221"[39m
-                  [36m>[39m
-                    [0mAFRA 221[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"AFRA 222"[39m
-                  [36m>[39m
-       ...
+                    ...
 
       163 |         const editPlanSaveButton = screen.getByTestId("editPlanSaveButton");
       164 |         editPlanSaveButton.click();
@@ -528,6 +520,17 @@ FAIL src/App.test.tsx (20.321 s)
                             [0mView Degree Requirements[0m
                           [36m</button>[39m
                         [36m</div>[39m
+                        [36m<div[39m
+                          [33mclass[39m=[32m"col"[39m
+                        [36m>[39m
+                          [36m<button[39m
+                            [33mclass[39m=[32m"btn btn-primary"[39m
+                            [33mdata-testid[39m=[32m"exportPlan"[39m
+                            [33mtype[39m=[32m"button"[39m
+                          [36m>[39m
+                            [0mExport Plan to CSV[0m
+                          [36m</button>[39m
+                        [36m</div>[39m
                       [36m</div>[39m
                     [36m</div>[39m
                   [36m</div>[39m
@@ -591,22 +594,7 @@ FAIL src/App.test.tsx (20.321 s)
                   [36m<option[39m
                     [33mvalue[39m=[32m"AFRA 206"[39m
                   [36m>[39m
-                    [0mAFRA 206[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"AFRA 220"[39m
-                  [36m>[39m
-                    [0mAFRA 220[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"AFRA 221"[39m
-                  [36m>[39m
-                    [0mAFRA 221[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"AFRA 222"[39m
-                  [36m>[39m
-       ...
+                    ...
 
       200 |         const editPlanSaveButton = screen.getByTestId("editPlanSaveButton");
       201 |         editPlanSaveButton.click();
@@ -730,6 +718,17 @@ FAIL src/App.test.tsx (20.321 s)
                             [0mView Degree Requirements[0m
                           [36m</button>[39m
                         [36m</div>[39m
+                        [36m<div[39m
+                          [33mclass[39m=[32m"col"[39m
+                        [36m>[39m
+                          [36m<button[39m
+                            [33mclass[39m=[32m"btn btn-primary"[39m
+                            [33mdata-testid[39m=[32m"exportPlan"[39m
+                            [33mtype[39m=[32m"button"[39m
+                          [36m>[39m
+                            [0mExport Plan to CSV[0m
+                          [36m</button>[39m
+                        [36m</div>[39m
                       [36m</div>[39m
                     [36m</div>[39m
                   [36m</div>[39m
@@ -793,22 +792,7 @@ FAIL src/App.test.tsx (20.321 s)
                   [36m<option[39m
                     [33mvalue[39m=[32m"AFRA 206"[39m
                   [36m>[39m
-                    [0mAFRA 206[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"AFRA 220"[39m
-                  [36m>[39m
-                    [0mAFRA 220[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"AFRA 221"[39m
-                  [36m>[39m
-                    [0mAFRA 221[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"AFRA 222"[39m
-                  [36m>[39m
-       ...
+                    ...
 
       255 |         const editPlanSaveButton = screen.getByTestId("editPlanSaveButton");
       256 |         editPlanSaveButton.click();
@@ -932,6 +916,17 @@ FAIL src/App.test.tsx (20.321 s)
                             [0mView Degree Requirements[0m
                           [36m</button>[39m
                         [36m</div>[39m
+                        [36m<div[39m
+                          [33mclass[39m=[32m"col"[39m
+                        [36m>[39m
+                          [36m<button[39m
+                            [33mclass[39m=[32m"btn btn-primary"[39m
+                            [33mdata-testid[39m=[32m"exportPlan"[39m
+                            [33mtype[39m=[32m"button"[39m
+                          [36m>[39m
+                            [0mExport Plan to CSV[0m
+                          [36m</button>[39m
+                        [36m</div>[39m
                       [36m</div>[39m
                     [36m</div>[39m
                   [36m</div>[39m
@@ -995,22 +990,7 @@ FAIL src/App.test.tsx (20.321 s)
                   [36m<option[39m
                     [33mvalue[39m=[32m"AFRA 206"[39m
                   [36m>[39m
-                    [0mAFRA 206[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"AFRA 220"[39m
-                  [36m>[39m
-                    [0mAFRA 220[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"AFRA 221"[39m
-                  [36m>[39m
-                    [0mAFRA 221[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"AFRA 222"[39m
-                  [36m>[39m
-       ...
+                    ...
 
       282 |         const editPlanSaveButton = screen.getByTestId("editPlanSaveButton");
       283 |         editPlanSaveButton.click();
@@ -1134,6 +1114,17 @@ FAIL src/App.test.tsx (20.321 s)
                             [0mView Degree Requirements[0m
                           [36m</button>[39m
                         [36m</div>[39m
+                        [36m<div[39m
+                          [33mclass[39m=[32m"col"[39m
+                        [36m>[39m
+                          [36m<button[39m
+                            [33mclass[39m=[32m"btn btn-primary"[39m
+                            [33mdata-testid[39m=[32m"exportPlan"[39m
+                            [33mtype[39m=[32m"button"[39m
+                          [36m>[39m
+                            [0mExport Plan to CSV[0m
+                          [36m</button>[39m
+                        [36m</div>[39m
                       [36m</div>[39m
                     [36m</div>[39m
                   [36m</div>[39m
@@ -1197,22 +1188,7 @@ FAIL src/App.test.tsx (20.321 s)
                   [36m<option[39m
                     [33mvalue[39m=[32m"AFRA 206"[39m
                   [36m>[39m
-                    [0mAFRA 206[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"AFRA 220"[39m
-                  [36m>[39m
-                    [0mAFRA 220[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"AFRA 221"[39m
-                  [36m>[39m
-                    [0mAFRA 221[0m
-                  [36m</option>[39m
-                  [36m<option[39m
-                    [33mvalue[39m=[32m"AFRA 222"[39m
-                  [36m>[39m
-       ...
+                    ...
 
       309 |         const editPlanSaveButton = screen.getByTestId("editPlanSaveButton");
       310 |         editPlanSaveButton.click();
@@ -1235,10 +1211,10 @@ FAIL src/App.test.tsx (20.321 s)
 ---------------------------|---------|----------|---------|---------|------------------------
 File                       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s      
 ---------------------------|---------|----------|---------|---------|------------------------
-All files                  |   30.49 |    18.75 |   26.95 |   29.59 |                        
+All files                  |   29.24 |    18.75 |   26.02 |   28.43 |                        
  src                       |   93.54 |       70 |   86.66 |   92.59 |                        
   App.tsx                  |   93.54 |       70 |   86.66 |   92.59 | 58,74                  
- src/components            |   20.91 |    14.92 |      20 |    20.7 |                        
+ src/components            |   19.92 |    14.92 |   19.23 |   19.77 |                        
   AddCourseModal.tsx       |       0 |        0 |       0 |       0 | 23-89                  
   AddPlanModal.tsx         |      80 |        0 |   66.66 |      80 | 56                     
   AddSemesterModal.tsx     |     100 |       50 |     100 |     100 | 102                    
@@ -1250,7 +1226,7 @@ All files                  |   30.49 |    18.75 |   26.95 |   29.59 |
   SeeRequirementsModal.tsx |     100 |       50 |     100 |     100 | 22-61                  
   SemesterList.tsx         |       0 |        0 |       0 |       0 | 15-18                  
   ViewCourses.tsx          |       0 |      100 |       0 |       0 | 6                      
-  ViewPlans.tsx            |   13.66 |     5.76 |    4.54 |   13.86 | 51-334,342-356         
+  ViewPlans.tsx            |    12.5 |     5.76 |    4.08 |   12.75 | 51-348,356-370,419     
   ViewSemesters.tsx        |       0 |        0 |       0 |       0 | 17-29                  
  src/interface             |       0 |        0 |       0 |       0 |                        
   course.ts                |       0 |        0 |       0 |       0 |                        
@@ -1271,5 +1247,5 @@ All files                  |   30.49 |    18.75 |   26.95 |   29.59 |
 Test Suites: 1 failed, 1 total
 Tests:       6 failed, 9 passed, 15 total
 Snapshots:   0 total
-Time:        21.212 s
+Time:        35.418 s
 Ran all test suites.
