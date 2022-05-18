@@ -38,6 +38,14 @@ export function EditPlan({
     }
 
     function saveChanges() {
+        semesters.sort((a, b) =>
+            a.year.toString() + a.season > b.year.toString() + b.season
+                ? 1
+                : b.year.toString() + b.season > a.year.toString() + a.season
+                ? -1
+                : 0
+        );
+
         editPlan(plan.name, {
             ...plan,
             name: name,
