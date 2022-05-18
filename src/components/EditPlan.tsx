@@ -38,8 +38,11 @@ export function EditPlan({
     }
 
     function saveChanges() {
-        semesters.sort((a, b) =>
-            a.year > b.year ? 1 : b.year > a.year ? -1 : 0
+        const season = ["Spring", " Summer", "Winter", "Fall"];
+        semesters.sort(
+            (a, b) =>
+                a.year - b.year ||
+                season.indexOf(a.season) - season.indexOf(b.season)
         );
 
         editPlan(plan.name, {
